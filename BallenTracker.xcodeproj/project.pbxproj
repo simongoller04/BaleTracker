@@ -1,0 +1,729 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC29295728A1300C009E211D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29295628A1300C009E211D /* RegisterView.swift */; };
+		EC29295928A158F0009E211D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29295828A158F0009E211D /* LoginView.swift */; };
+		EC56D3F1289FADC700C2FE00 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC56D3F0289FADC700C2FE00 /* LocationViewModel.swift */; };
+		EC86F4CF2891403E003905B7 /* BallenTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F4CE2891403E003905B7 /* BallenTrackerApp.swift */; };
+		EC86F4D32891403F003905B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC86F4D22891403F003905B7 /* Assets.xcassets */; };
+		EC86F4D62891403F003905B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC86F4D52891403F003905B7 /* Preview Assets.xcassets */; };
+		EC86F4D82891403F003905B7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F4D72891403F003905B7 /* Persistence.swift */; };
+		EC86F4DB2891403F003905B7 /* BallenTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC86F4D92891403F003905B7 /* BallenTracker.xcdatamodeld */; };
+		EC86F4E52891403F003905B7 /* BallenTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F4E42891403F003905B7 /* BallenTrackerTests.swift */; };
+		EC86F4EF2891403F003905B7 /* BallenTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F4EE2891403F003905B7 /* BallenTrackerUITests.swift */; };
+		EC86F4F12891403F003905B7 /* BallenTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F4F02891403F003905B7 /* BallenTrackerUITestsLaunchTests.swift */; };
+		EC86F50028914544003905B7 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F4FF28914544003905B7 /* MapView.swift */; };
+		EC86F5022891457C003905B7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F5012891457C003905B7 /* ListView.swift */; };
+		EC86F504289166C0003905B7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F503289166C0003905B7 /* ViewModel.swift */; };
+		EC86F50628919B07003905B7 /* BalePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC86F50528919B07003905B7 /* BalePreferences.swift */; };
+		ECAA543028A06E5C00FA09D5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAA542F28A06E5C00FA09D5 /* ProfileView.swift */; };
+		ECB1CE4728AA4D9300D5768B /* DetailedBaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1CE4628AA4D9300D5768B /* DetailedBaleView.swift */; };
+		ECB1CE4A28AA54FC00D5768B /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = ECB1CE4928AA54FC00D5768B /* HalfASheet */; };
+		ECC1D12928CA52C8006C87F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECC1D12828CA52C8006C87F2 /* GoogleService-Info.plist */; };
+		ECC1D12C28CA60CC006C87F2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ECC1D12B28CA60CC006C87F2 /* FirebaseAnalytics */; };
+		ECC1D12E28CA60CC006C87F2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ECC1D12D28CA60CC006C87F2 /* FirebaseFirestore */; };
+		ECC1D13028CA60CC006C87F2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECC1D12F28CA60CC006C87F2 /* FirebaseFirestoreSwift */; };
+		ECE2312F28D3AA3700FA5F0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE2312E28D3AA3700FA5F0F /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC86F4E12891403F003905B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC86F4C32891403E003905B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC86F4CA2891403E003905B7;
+			remoteInfo = BallenTracker;
+		};
+		EC86F4EB2891403F003905B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC86F4C32891403E003905B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC86F4CA2891403E003905B7;
+			remoteInfo = BallenTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC29295628A1300C009E211D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		EC29295828A158F0009E211D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EC56D3F0289FADC700C2FE00 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		EC86F4CB2891403E003905B7 /* BallenTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BallenTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC86F4CE2891403E003905B7 /* BallenTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallenTrackerApp.swift; sourceTree = "<group>"; };
+		EC86F4D22891403F003905B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC86F4D52891403F003905B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC86F4D72891403F003905B7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EC86F4DA2891403F003905B7 /* BallenTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BallenTracker.xcdatamodel; sourceTree = "<group>"; };
+		EC86F4E02891403F003905B7 /* BallenTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BallenTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC86F4E42891403F003905B7 /* BallenTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallenTrackerTests.swift; sourceTree = "<group>"; };
+		EC86F4EA2891403F003905B7 /* BallenTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BallenTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC86F4EE2891403F003905B7 /* BallenTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallenTrackerUITests.swift; sourceTree = "<group>"; };
+		EC86F4F02891403F003905B7 /* BallenTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallenTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC86F4FF28914544003905B7 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EC86F5012891457C003905B7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		EC86F503289166C0003905B7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EC86F50528919B07003905B7 /* BalePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalePreferences.swift; sourceTree = "<group>"; };
+		ECAA542F28A06E5C00FA09D5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		ECB1CE4628AA4D9300D5768B /* DetailedBaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedBaleView.swift; sourceTree = "<group>"; };
+		ECC1D12828CA52C8006C87F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECE2312E28D3AA3700FA5F0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC86F4C82891403E003905B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1D12C28CA60CC006C87F2 /* FirebaseAnalytics in Frameworks */,
+				ECB1CE4A28AA54FC00D5768B /* HalfASheet in Frameworks */,
+				ECC1D12E28CA60CC006C87F2 /* FirebaseFirestore in Frameworks */,
+				ECC1D13028CA60CC006C87F2 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC86F4DD2891403F003905B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC86F4E72891403F003905B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC86F4C22891403E003905B7 = {
+			isa = PBXGroup;
+			children = (
+				EC86F4CD2891403E003905B7 /* BallenTracker */,
+				EC86F4E32891403F003905B7 /* BallenTrackerTests */,
+				EC86F4ED2891403F003905B7 /* BallenTrackerUITests */,
+				EC86F4CC2891403E003905B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC86F4CC2891403E003905B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC86F4CB2891403E003905B7 /* BallenTracker.app */,
+				EC86F4E02891403F003905B7 /* BallenTrackerTests.xctest */,
+				EC86F4EA2891403F003905B7 /* BallenTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC86F4CD2891403E003905B7 /* BallenTracker */ = {
+			isa = PBXGroup;
+			children = (
+				EC86F4FE2891451A003905B7 /* View */,
+				EC86F4FD28914514003905B7 /* Model */,
+				EC86F4CE2891403E003905B7 /* BallenTrackerApp.swift */,
+				EC86F4D22891403F003905B7 /* Assets.xcassets */,
+				EC86F4D72891403F003905B7 /* Persistence.swift */,
+				ECC1D12828CA52C8006C87F2 /* GoogleService-Info.plist */,
+				EC86F4D92891403F003905B7 /* BallenTracker.xcdatamodeld */,
+				EC86F4D42891403F003905B7 /* Preview Content */,
+			);
+			path = BallenTracker;
+			sourceTree = "<group>";
+		};
+		EC86F4D42891403F003905B7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC86F4D52891403F003905B7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC86F4E32891403F003905B7 /* BallenTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC86F4E42891403F003905B7 /* BallenTrackerTests.swift */,
+			);
+			path = BallenTrackerTests;
+			sourceTree = "<group>";
+		};
+		EC86F4ED2891403F003905B7 /* BallenTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC86F4EE2891403F003905B7 /* BallenTrackerUITests.swift */,
+				EC86F4F02891403F003905B7 /* BallenTrackerUITestsLaunchTests.swift */,
+			);
+			path = BallenTrackerUITests;
+			sourceTree = "<group>";
+		};
+		EC86F4FD28914514003905B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC86F503289166C0003905B7 /* ViewModel.swift */,
+				EC56D3F0289FADC700C2FE00 /* LocationViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC86F4FE2891451A003905B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC86F4FF28914544003905B7 /* MapView.swift */,
+				EC86F5012891457C003905B7 /* ListView.swift */,
+				EC86F50528919B07003905B7 /* BalePreferences.swift */,
+				ECAA542F28A06E5C00FA09D5 /* ProfileView.swift */,
+				EC29295628A1300C009E211D /* RegisterView.swift */,
+				EC29295828A158F0009E211D /* LoginView.swift */,
+				ECB1CE4628AA4D9300D5768B /* DetailedBaleView.swift */,
+				ECE2312E28D3AA3700FA5F0F /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC86F4CA2891403E003905B7 /* BallenTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC86F4F42891403F003905B7 /* Build configuration list for PBXNativeTarget "BallenTracker" */;
+			buildPhases = (
+				EC86F4C72891403E003905B7 /* Sources */,
+				EC86F4C82891403E003905B7 /* Frameworks */,
+				EC86F4C92891403E003905B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BallenTracker;
+			packageProductDependencies = (
+				ECB1CE4928AA54FC00D5768B /* HalfASheet */,
+				ECC1D12B28CA60CC006C87F2 /* FirebaseAnalytics */,
+				ECC1D12D28CA60CC006C87F2 /* FirebaseFirestore */,
+				ECC1D12F28CA60CC006C87F2 /* FirebaseFirestoreSwift */,
+			);
+			productName = BallenTracker;
+			productReference = EC86F4CB2891403E003905B7 /* BallenTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC86F4DF2891403F003905B7 /* BallenTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC86F4F72891403F003905B7 /* Build configuration list for PBXNativeTarget "BallenTrackerTests" */;
+			buildPhases = (
+				EC86F4DC2891403F003905B7 /* Sources */,
+				EC86F4DD2891403F003905B7 /* Frameworks */,
+				EC86F4DE2891403F003905B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC86F4E22891403F003905B7 /* PBXTargetDependency */,
+			);
+			name = BallenTrackerTests;
+			productName = BallenTrackerTests;
+			productReference = EC86F4E02891403F003905B7 /* BallenTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC86F4E92891403F003905B7 /* BallenTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC86F4FA2891403F003905B7 /* Build configuration list for PBXNativeTarget "BallenTrackerUITests" */;
+			buildPhases = (
+				EC86F4E62891403F003905B7 /* Sources */,
+				EC86F4E72891403F003905B7 /* Frameworks */,
+				EC86F4E82891403F003905B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC86F4EC2891403F003905B7 /* PBXTargetDependency */,
+			);
+			name = BallenTrackerUITests;
+			productName = BallenTrackerUITests;
+			productReference = EC86F4EA2891403F003905B7 /* BallenTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC86F4C32891403E003905B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					EC86F4CA2891403E003905B7 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					EC86F4DF2891403F003905B7 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = EC86F4CA2891403E003905B7;
+					};
+					EC86F4E92891403F003905B7 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = EC86F4CA2891403E003905B7;
+					};
+				};
+			};
+			buildConfigurationList = EC86F4C62891403E003905B7 /* Build configuration list for PBXProject "BallenTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC86F4C22891403E003905B7;
+			packageReferences = (
+				ECB1CE4828AA54FC00D5768B /* XCRemoteSwiftPackageReference "HalfASheet" */,
+				ECC1D12A28CA60CC006C87F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = EC86F4CC2891403E003905B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC86F4CA2891403E003905B7 /* BallenTracker */,
+				EC86F4DF2891403F003905B7 /* BallenTrackerTests */,
+				EC86F4E92891403F003905B7 /* BallenTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC86F4C92891403E003905B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC86F4D62891403F003905B7 /* Preview Assets.xcassets in Resources */,
+				EC86F4D32891403F003905B7 /* Assets.xcassets in Resources */,
+				ECC1D12928CA52C8006C87F2 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC86F4DE2891403F003905B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC86F4E82891403F003905B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC86F4C72891403E003905B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC29295728A1300C009E211D /* RegisterView.swift in Sources */,
+				EC86F4DB2891403F003905B7 /* BallenTracker.xcdatamodeld in Sources */,
+				ECE2312F28D3AA3700FA5F0F /* ContentView.swift in Sources */,
+				EC86F4D82891403F003905B7 /* Persistence.swift in Sources */,
+				ECAA543028A06E5C00FA09D5 /* ProfileView.swift in Sources */,
+				EC86F5022891457C003905B7 /* ListView.swift in Sources */,
+				EC86F50028914544003905B7 /* MapView.swift in Sources */,
+				EC29295928A158F0009E211D /* LoginView.swift in Sources */,
+				EC86F4CF2891403E003905B7 /* BallenTrackerApp.swift in Sources */,
+				EC86F50628919B07003905B7 /* BalePreferences.swift in Sources */,
+				EC56D3F1289FADC700C2FE00 /* LocationViewModel.swift in Sources */,
+				ECB1CE4728AA4D9300D5768B /* DetailedBaleView.swift in Sources */,
+				EC86F504289166C0003905B7 /* ViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC86F4DC2891403F003905B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC86F4E52891403F003905B7 /* BallenTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC86F4E62891403F003905B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC86F4EF2891403F003905B7 /* BallenTrackerUITests.swift in Sources */,
+				EC86F4F12891403F003905B7 /* BallenTrackerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC86F4E22891403F003905B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC86F4CA2891403E003905B7 /* BallenTracker */;
+			targetProxy = EC86F4E12891403F003905B7 /* PBXContainerItemProxy */;
+		};
+		EC86F4EC2891403F003905B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC86F4CA2891403E003905B7 /* BallenTracker */;
+			targetProxy = EC86F4EB2891403F003905B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC86F4F22891403F003905B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC86F4F32891403F003905B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC86F4F52891403F003905B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BallenTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = WNK6N53S3L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs your location to show it on the map";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimonGoller.BallenTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC86F4F62891403F003905B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BallenTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = WNK6N53S3L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App needs your location to show it on the map";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimonGoller.BallenTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC86F4F82891403F003905B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WNK6N53S3L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimonGoller.BallenTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BallenTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BallenTracker";
+			};
+			name = Debug;
+		};
+		EC86F4F92891403F003905B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WNK6N53S3L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimonGoller.BallenTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BallenTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BallenTracker";
+			};
+			name = Release;
+		};
+		EC86F4FB2891403F003905B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WNK6N53S3L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimonGoller.BallenTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BallenTracker;
+			};
+			name = Debug;
+		};
+		EC86F4FC2891403F003905B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WNK6N53S3L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SimonGoller.BallenTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BallenTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC86F4C62891403E003905B7 /* Build configuration list for PBXProject "BallenTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC86F4F22891403F003905B7 /* Debug */,
+				EC86F4F32891403F003905B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC86F4F42891403F003905B7 /* Build configuration list for PBXNativeTarget "BallenTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC86F4F52891403F003905B7 /* Debug */,
+				EC86F4F62891403F003905B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC86F4F72891403F003905B7 /* Build configuration list for PBXNativeTarget "BallenTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC86F4F82891403F003905B7 /* Debug */,
+				EC86F4F92891403F003905B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC86F4FA2891403F003905B7 /* Build configuration list for PBXNativeTarget "BallenTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC86F4FB2891403F003905B7 /* Debug */,
+				EC86F4FC2891403F003905B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECB1CE4828AA54FC00D5768B /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		ECC1D12A28CA60CC006C87F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECB1CE4928AA54FC00D5768B /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB1CE4828AA54FC00D5768B /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
+		};
+		ECC1D12B28CA60CC006C87F2 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECC1D12A28CA60CC006C87F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		ECC1D12D28CA60CC006C87F2 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECC1D12A28CA60CC006C87F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		ECC1D12F28CA60CC006C87F2 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECC1D12A28CA60CC006C87F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		EC86F4D92891403F003905B7 /* BallenTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC86F4DA2891403F003905B7 /* BallenTracker.xcdatamodel */,
+			);
+			currentVersion = EC86F4DA2891403F003905B7 /* BallenTracker.xcdatamodel */;
+			path = BallenTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EC86F4C32891403E003905B7 /* Project object */;
+}

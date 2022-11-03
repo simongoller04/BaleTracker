@@ -31,12 +31,28 @@ struct MapView: View {
                 annotationItems: viewModel.baleArray,
                 annotationContent: { bale in
                     MapAnnotation(coordinate: bale.coordinate) {
-                        Circle()
-                            .strokeBorder(bale.collected ? .green : .yellow, lineWidth: 6)
-                            .frame(width: 40, height: 40)
-                            .onTapGesture {
-                                selectedBale = bale
-                            }
+                        if (bale.collected) {
+                            Image("Bale_Green")
+                                .resizable()
+                                .frame(width: 32.0, height: 32.0)
+                                .onTapGesture {
+                                    selectedBale = bale
+                                }
+                        } else {
+                            Image("Bale_Yellow")
+                                .resizable()
+                                .frame(width: 32.0, height: 32.0)
+                                .onTapGesture {
+                                    selectedBale = bale
+                                }
+                        }
+                        
+                    //     Circle()
+                     //       .strokeBorder(bale.collected ? .green : .yellow, //lineWidth: 6)
+                           // .frame(width: 40, height: 40)
+                            //.onTapGesture {
+                              //  selectedBale = bale
+                         //   }
                     }
                 }
             )

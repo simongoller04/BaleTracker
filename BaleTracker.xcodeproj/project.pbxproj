@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */; };
+		ECAAFEE32A5EF00200EE8CD3 /* Spacer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE22A5EF00200EE8CD3 /* Spacer+Extension.swift */; };
+		ECAAFEE62A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE52A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift */; };
+		ECAAFEE82A5EF22C00EE8CD3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE72A5EF22C00EE8CD3 /* String+Extension.swift */; };
+		ECAAFEEA2A5EF27300EE8CD3 /* Character+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE92A5EF27300EE8CD3 /* Character+Extension.swift */; };
+		ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */; };
 		ECF266742A560DAF00CE33AD /* BaleTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */; };
 		ECF266762A560DAF00CE33AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266752A560DAF00CE33AD /* ContentView.swift */; };
 		ECF266782A560DB000CE33AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF266772A560DB000CE33AD /* Assets.xcassets */; };
 		ECF2667B2A560DB000CE33AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF2667A2A560DB000CE33AD /* Preview Assets.xcassets */; };
-		ECF2667D2A560DB000CE33AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2667C2A560DB000CE33AD /* Persistence.swift */; };
 		ECF266802A560DB000CE33AD /* BaleTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECF2667E2A560DB000CE33AD /* BaleTracker.xcdatamodeld */; };
 		ECF2668A2A560DB000CE33AD /* BaleTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266892A560DB000CE33AD /* BaleTrackerTests.swift */; };
 		ECF266942A560DB000CE33AD /* BaleTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266932A560DB000CE33AD /* BaleTrackerUITests.swift */; };
@@ -36,12 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		ECAAFEE22A5EF00200EE8CD3 /* Spacer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spacer+Extension.swift"; sourceTree = "<group>"; };
+		ECAAFEE52A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingViewModifier.swift; sourceTree = "<group>"; };
+		ECAAFEE72A5EF22C00EE8CD3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		ECAAFEE92A5EF27300EE8CD3 /* Character+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Extension.swift"; sourceTree = "<group>"; };
+		ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		ECF266702A560DAF00CE33AD /* BaleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleTrackerApp.swift; sourceTree = "<group>"; };
 		ECF266752A560DAF00CE33AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ECF266772A560DB000CE33AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECF2667A2A560DB000CE33AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ECF2667C2A560DB000CE33AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		ECF2667F2A560DB000CE33AD /* BaleTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaleTracker.xcdatamodel; sourceTree = "<group>"; };
 		ECF266852A560DB000CE33AD /* BaleTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaleTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF266892A560DB000CE33AD /* BaleTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleTrackerTests.swift; sourceTree = "<group>"; };
@@ -75,6 +85,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ECAAFED82A5EEE1600EE8CD3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		ECAAFED92A5EEE1F00EE8CD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECAAFEDA2A5EEE2800EE8CD3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ECF266752A560DAF00CE33AD /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		ECAAFEDB2A5EEE3900EE8CD3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		ECAAFEDD2A5EEF1000EE8CD3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ECAAFEDF2A5EEF8300EE8CD3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */,
+				ECAAFEE22A5EF00200EE8CD3 /* Spacer+Extension.swift */,
+				ECAAFEE72A5EF22C00EE8CD3 /* String+Extension.swift */,
+				ECAAFEE92A5EF27300EE8CD3 /* Character+Extension.swift */,
+				ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ECAAFEE42A5EF17200EE8CD3 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				ECAAFEE52A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		ECF266672A560DAF00CE33AD = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +165,14 @@
 		ECF266722A560DAF00CE33AD /* BaleTracker */ = {
 			isa = PBXGroup;
 			children = (
-				ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */,
-				ECF266752A560DAF00CE33AD /* ContentView.swift */,
+				ECAAFED82A5EEE1600EE8CD3 /* Core */,
+				ECAAFEDA2A5EEE2800EE8CD3 /* UI */,
+				ECAAFED92A5EEE1F00EE8CD3 /* Model */,
+				ECAAFEDD2A5EEF1000EE8CD3 /* Utils */,
+				ECAAFEDB2A5EEE3900EE8CD3 /* Repositories */,
+				ECAAFEE42A5EF17200EE8CD3 /* Error */,
+				ECAAFEDF2A5EEF8300EE8CD3 /* Extensions */,
 				ECF266772A560DB000CE33AD /* Assets.xcassets */,
-				ECF2667C2A560DB000CE33AD /* Persistence.swift */,
 				ECF2667E2A560DB000CE33AD /* BaleTracker.xcdatamodeld */,
 				ECF266792A560DB000CE33AD /* Preview Content */,
 			);
@@ -264,9 +335,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF266802A560DB000CE33AD /* BaleTracker.xcdatamodeld in Sources */,
-				ECF2667D2A560DB000CE33AD /* Persistence.swift in Sources */,
+				ECAAFEEA2A5EF27300EE8CD3 /* Character+Extension.swift in Sources */,
+				ECAAFEE82A5EF22C00EE8CD3 /* String+Extension.swift in Sources */,
 				ECF266762A560DAF00CE33AD /* ContentView.swift in Sources */,
+				ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */,
+				ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */,
 				ECF266742A560DAF00CE33AD /* BaleTrackerApp.swift in Sources */,
+				ECAAFEE32A5EF00200EE8CD3 /* Spacer+Extension.swift in Sources */,
+				ECAAFEE62A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

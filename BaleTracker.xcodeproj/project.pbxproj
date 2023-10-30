@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC1F0D3B2AEBED1200D4DBC1 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3A2AEBED1200D4DBC1 /* CombineMoya */; };
+		EC1F0D3D2AEBED1200D4DBC1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3C2AEBED1200D4DBC1 /* Moya */; };
+		EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */; };
+		EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */; };
+		EC54FBE22A5EFE5A007911FC /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = EC54FBE12A5EFE5A007911FC /* RswiftLibrary */; };
 		ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */; };
 		ECAAFEE32A5EF00200EE8CD3 /* Spacer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE22A5EF00200EE8CD3 /* Spacer+Extension.swift */; };
 		ECAAFEE62A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE52A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift */; };
 		ECAAFEE82A5EF22C00EE8CD3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE72A5EF22C00EE8CD3 /* String+Extension.swift */; };
 		ECAAFEEA2A5EF27300EE8CD3 /* Character+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE92A5EF27300EE8CD3 /* Character+Extension.swift */; };
 		ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */; };
+		ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */; };
+		ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */; };
+		ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D432AED6C1F002B4131 /* Bale.swift */; };
 		ECF266742A560DAF00CE33AD /* BaleTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */; };
 		ECF266762A560DAF00CE33AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266752A560DAF00CE33AD /* ContentView.swift */; };
 		ECF266782A560DB000CE33AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF266772A560DB000CE33AD /* Assets.xcassets */; };
@@ -41,12 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleApi.swift; sourceTree = "<group>"; };
 		ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		ECAAFEE22A5EF00200EE8CD3 /* Spacer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spacer+Extension.swift"; sourceTree = "<group>"; };
 		ECAAFEE52A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingViewModifier.swift; sourceTree = "<group>"; };
 		ECAAFEE72A5EF22C00EE8CD3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		ECAAFEE92A5EF27300EE8CD3 /* Character+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Extension.swift"; sourceTree = "<group>"; };
 		ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleRepository.swift; sourceTree = "<group>"; };
+		ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestHandler.swift; sourceTree = "<group>"; };
+		ECAC8D432AED6C1F002B4131 /* Bale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bale.swift; sourceTree = "<group>"; };
 		ECF266702A560DAF00CE33AD /* BaleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleTrackerApp.swift; sourceTree = "<group>"; };
 		ECF266752A560DAF00CE33AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1F0D3B2AEBED1200D4DBC1 /* CombineMoya in Frameworks */,
+				EC54FBE22A5EFE5A007911FC /* RswiftLibrary in Frameworks */,
+				EC1F0D3D2AEBED1200D4DBC1 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +101,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC1F0D3E2AEBED2E00D4DBC1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EC1F0D3F2AEBED9400D4DBC1 /* Services */,
+				EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */,
+				ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EC1F0D3F2AEBED9400D4DBC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		ECAAFED82A5EEE1600EE8CD3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +130,7 @@
 		ECAAFED92A5EEE1F00EE8CD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ECAC8D432AED6C1F002B4131 /* Bale.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +146,7 @@
 		ECAAFEDB2A5EEE3900EE8CD3 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -165,6 +201,7 @@
 		ECF266722A560DAF00CE33AD /* BaleTracker */ = {
 			isa = PBXGroup;
 			children = (
+				EC1F0D3E2AEBED2E00D4DBC1 /* Networking */,
 				ECAAFED82A5EEE1600EE8CD3 /* Core */,
 				ECAAFEDA2A5EEE2800EE8CD3 /* UI */,
 				ECAAFED92A5EEE1F00EE8CD3 /* Model */,
@@ -218,8 +255,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC54FBE42A5EFE66007911FC /* PBXTargetDependency */,
 			);
 			name = BaleTracker;
+			packageProductDependencies = (
+				EC54FBE12A5EFE5A007911FC /* RswiftLibrary */,
+				EC1F0D3A2AEBED1200D4DBC1 /* CombineMoya */,
+				EC1F0D3C2AEBED1200D4DBC1 /* Moya */,
+			);
 			productName = BaleTracker;
 			productReference = ECF266702A560DAF00CE33AD /* BaleTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +335,10 @@
 				Base,
 			);
 			mainGroup = ECF266672A560DAF00CE33AD;
+			packageReferences = (
+				EC54FBE02A5EFE5A007911FC /* XCRemoteSwiftPackageReference "R" */,
+				EC1F0D392AEBED1200D4DBC1 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = ECF266712A560DAF00CE33AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +386,11 @@
 				ECAAFEE82A5EF22C00EE8CD3 /* String+Extension.swift in Sources */,
 				ECF266762A560DAF00CE33AD /* ContentView.swift in Sources */,
 				ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */,
+				ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */,
+				EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */,
+				EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */,
+				ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */,
+				ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */,
 				ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */,
 				ECF266742A560DAF00CE33AD /* BaleTrackerApp.swift in Sources */,
 				ECAAFEE32A5EF00200EE8CD3 /* Spacer+Extension.swift in Sources */,
@@ -366,6 +418,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EC54FBE42A5EFE66007911FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = EC54FBE32A5EFE66007911FC /* RswiftGenerateInternalResources */;
+		};
 		ECF266872A560DB000CE33AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ECF2666F2A560DAF00CE33AD /* BaleTracker */;
@@ -667,6 +723,47 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC1F0D392AEBED1200D4DBC1 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		EC54FBE02A5EFE5A007911FC /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 7.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC1F0D3A2AEBED1200D4DBC1 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC1F0D392AEBED1200D4DBC1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		EC1F0D3C2AEBED1200D4DBC1 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC1F0D392AEBED1200D4DBC1 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		EC54FBE12A5EFE5A007911FC /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC54FBE02A5EFE5A007911FC /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		EC54FBE32A5EFE66007911FC /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		ECF2667E2A560DB000CE33AD /* BaleTracker.xcdatamodeld */ = {

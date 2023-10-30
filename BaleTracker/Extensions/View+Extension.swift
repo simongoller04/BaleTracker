@@ -16,9 +16,9 @@ extension View {
         modifier(FullHeightModifier(alignment: alignment))
     }
 
-    func handle(_ error: Binding<Error?>, type: ErrorHandlingType = .alert()) -> some View {
-        modifier(ErrorHandlingViewModifier(error: error, type: type))
-    }
+//    func handle(_ error: Binding<Error?>, type: ErrorHandlingType = .alert()) -> some View {
+//        modifier(ErrorHandlingViewModifier(error: error, type: type))
+//    }
 
     func lightPreview(_ state: String = "") -> some View {
         return modifier(LightPreviewModifier(state: state))

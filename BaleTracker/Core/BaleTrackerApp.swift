@@ -7,14 +7,15 @@
 
 import SwiftUI
 
+//private class BundleFinder {}
+//var R = _R(bundle: Bundle(for: BundleFinder.self))
+
 @main
 struct BaleTrackerApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

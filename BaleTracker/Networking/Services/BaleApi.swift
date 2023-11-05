@@ -40,8 +40,14 @@ extension BaleApi: BaseTargetType {
         switch self {
         case .getAllBales, .getBale:
             return .requestPlain
+            
         case .uploadBale(bale: let bale):
-            return .requestJSONEncodable(bale)
+            do {
+                let jsonData = try JSONEncoder().encode(bale)
+                return .requestData(jsonData)
+            } catch {
+                return .requestPlain
+            }
         }
     }
     

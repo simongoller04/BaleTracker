@@ -13,9 +13,8 @@ protocol BaleRepository {
     static var shared: BaleRepositoryImpl { get }
     var apiHandler: APIRequestHandler<BaleApi> { get }
     
-    func fetchBales(completion: @escaping (Result<[Bale], Error>) -> ())
     func fetchBales()
-    func uploadBale(completion: )
+    func uploadBale(bale: Bale, completion: @escaping (Result<Bale, Error>) -> ())
 }
 
 class BaleRepositoryImpl: BaleRepository, ObservableObject {
@@ -37,5 +36,9 @@ class BaleRepositoryImpl: BaleRepository, ObservableObject {
                 print("Failed to fetch bales: \(error)")
             }
         })
+    }
+    
+    func uploadBale(bale: Bale, completion: @escaping (Result<Bale, Error>) -> ()) {
+        apiHandler.request(target: .uploadBale(bale: bale), completion: completion)
     }
 }

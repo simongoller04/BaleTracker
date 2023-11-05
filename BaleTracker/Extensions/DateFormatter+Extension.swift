@@ -38,6 +38,13 @@ extension DateFormatter {
         formatter.dateFormat = DateFormat.timeFormat
         return formatter
     }
+    
+    /// eg. "2023-11-03T14:54:07.427Z"
+    static var iso8601withFractionalSeconds: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        return formatter
+    }()
 }
 
 enum DateFormat {

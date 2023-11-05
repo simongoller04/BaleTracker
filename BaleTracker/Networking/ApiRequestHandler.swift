@@ -27,8 +27,4 @@ class APIRequestHandler<API: TargetType> {
             }
         }
     }
-    
-//    func upload() {
-//        provider.reque
-//    }
 }

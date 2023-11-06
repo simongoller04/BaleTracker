@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  BaleTracker
+
+  Created by Simon Goller on 05.11.23.
+  
+*/
+
+// MARK: TabBar
+"map" = "Map";
+"farms" = "Farms";
+
+// MARK: Bale Information
+"created" = "Created by:";
+"collected" = "Collected by:";
+
+// MARK: FarmView
+"searchablePlaceholderFarm" = "Search for a farm";
+"member" = "Member";
+"members" = "Members";
+

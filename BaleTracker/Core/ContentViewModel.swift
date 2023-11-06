@@ -1,26 +1,11 @@
 //
-//  ContentView.swift
+//  ContentViewModel.swift
 //  BaleTracker
 //
-//  Created by Simon Goller on 05.07.23.
+//  Created by Simon Goller on 05.11.23.
 //
 
-import SwiftUI
-import CoreData
-
-struct ContentView: View {
-    @StateObject private var viewModel = ContentViewModel()
-
-    var body: some View {
-        VStack {
-            Button("Networkcall") {
-                viewModel.uploadBale()
-            }
-
-            Text(viewModel.title)
-        }
-    }
-}
+import Foundation
 
 class ContentViewModel: ObservableObject {
     @Published var title: String = "test"
@@ -45,11 +30,5 @@ class ContentViewModel: ObservableObject {
                 print("Failed to upload the bale \(error)")
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

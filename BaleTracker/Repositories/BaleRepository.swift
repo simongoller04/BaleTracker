@@ -23,9 +23,9 @@ class BaleRepositoryImpl: BaleRepository, ObservableObject {
     
     @Published var bales: [Bale]?
     
-    func fetchBales(completion: @escaping (Result<[Bale], Error>) -> ()) {
-        apiHandler.request(target: .getAllBales, completion: completion)
-    }
+//    func fetchBales(completion: @escaping (Result<[Bale], Error>) -> ()) {
+//        apiHandler.request(target: .getAllBales, completion: completion)
+//    }
     
     func fetchBales() {
         apiHandler.request(target: BaleApi.getAllBales, completion: { (result: Result<[Bale], Error>) in

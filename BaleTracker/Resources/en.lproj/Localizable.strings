@@ -19,3 +19,15 @@
 "member" = "Member";
 "members" = "Members";
 
+// MARK: CreateNewFarmView
+"namePlaceholder" = "Name of the farm";
+"description" = "Description (optional)";
+"newFarm" = "New Farm";
+"create" = "Create";
+"cancel" = "Cancel";
+"createFarm" = "Create Farm";
+
+// MARK: SelectMembersView
+"search" = "Search";
+"selectMembers" = "Select Members";
+

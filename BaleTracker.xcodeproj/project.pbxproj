@@ -12,13 +12,27 @@
 		EC1F0D3D2AEBED1200D4DBC1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3C2AEBED1200D4DBC1 /* Moya */; };
 		EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */; };
 		EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */; };
+		EC2D3CA82AFAD44C00059781 /* CreateNewFarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D3CA72AFAD44C00059781 /* CreateNewFarmView.swift */; };
+		EC2D3CAB2AFAD47300059781 /* CreateNewFarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D3CAA2AFAD47300059781 /* CreateNewFarmViewModel.swift */; };
 		EC3DF0062AF7C868006B29E0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0042AF7C868006B29E0 /* ContentViewModel.swift */; };
 		EC3DF0072AF7C868006B29E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0052AF7C868006B29E0 /* ContentView.swift */; };
 		EC3DF00A2AF7C878006B29E0 /* FarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0082AF7C878006B29E0 /* FarmView.swift */; };
 		EC3DF00B2AF7C878006B29E0 /* FarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0092AF7C878006B29E0 /* FarmViewModel.swift */; };
 		EC3DF00E2AF7C885006B29E0 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF00C2AF7C885006B29E0 /* MapViewModel.swift */; };
 		EC3DF00F2AF7C885006B29E0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF00D2AF7C885006B29E0 /* MapView.swift */; };
+		EC4613DE2AFE8773006D0341 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4613DD2AFE8773006D0341 /* Image+Extension.swift */; };
 		EC4F99352AF7A63900645275 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = EC4F99342AF7A63900645275 /* RswiftLibrary */; };
+		EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */; };
+		EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */; };
+		EC57C5262AFBF3C0004BF48B /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5252AFBF3C0004BF48B /* CircularButton.swift */; };
+		EC57C5292AFBF7FA004BF48B /* SelectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5282AFBF7FA004BF48B /* SelectMembersView.swift */; };
+		EC57C52C2AFC08D5004BF48B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C52B2AFC08D5004BF48B /* CameraView.swift */; };
+		EC57C52F2AFC121D004BF48B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C52E2AFC121D004BF48B /* ImagePicker.swift */; };
+		EC57C5322AFC1D4B004BF48B /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5312AFC1D4B004BF48B /* UserApi.swift */; };
+		EC57C5352AFC1E69004BF48B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5342AFC1E69004BF48B /* User.swift */; };
+		EC57C5372AFC20AC004BF48B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5362AFC20AC004BF48B /* UserRepository.swift */; };
+		EC57C5392AFC247C004BF48B /* SelectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5382AFC247C004BF48B /* SelectMembersViewModel.swift */; };
+		EC8767292AFF7DCC00A36AF6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8767282AFF7DCC00A36AF6 /* ActionButton.swift */; };
 		ECA274B92AF8204200C0B3CC /* FarmApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA274B82AF8204200C0B3CC /* FarmApi.swift */; };
 		ECA274BC2AF8207D00C0B3CC /* Farm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA274BB2AF8207D00C0B3CC /* Farm.swift */; };
 		ECA274BE2AF825EC00C0B3CC /* FarmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA274BD2AF825EC00C0B3CC /* FarmRepository.swift */; };
@@ -31,6 +45,9 @@
 		ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */; };
 		ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */; };
 		ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D432AED6C1F002B4131 /* Bale.swift */; };
+		ECDDFAB12AF9864300211BB0 /* FarmDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDFAB02AF9864300211BB0 /* FarmDetailView.swift */; };
+		ECDDFAB42AF9865900211BB0 /* FarmDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDFAB32AF9865900211BB0 /* FarmDetailViewModel.swift */; };
+		ECDDFAB62AF9883D00211BB0 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDFAB52AF9883D00211BB0 /* Fixtures.swift */; };
 		ECF266742A560DAF00CE33AD /* BaleTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */; };
 		ECF266782A560DB000CE33AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF266772A560DB000CE33AD /* Assets.xcassets */; };
 		ECF2667B2A560DB000CE33AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF2667A2A560DB000CE33AD /* Preview Assets.xcassets */; };
@@ -62,12 +79,26 @@
 		EC0B69612AF7C507002A18B9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleApi.swift; sourceTree = "<group>"; };
+		EC2D3CA72AFAD44C00059781 /* CreateNewFarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewFarmView.swift; sourceTree = "<group>"; };
+		EC2D3CAA2AFAD47300059781 /* CreateNewFarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewFarmViewModel.swift; sourceTree = "<group>"; };
 		EC3DF0042AF7C868006B29E0 /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		EC3DF0052AF7C868006B29E0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC3DF0082AF7C878006B29E0 /* FarmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmView.swift; sourceTree = "<group>"; };
 		EC3DF0092AF7C878006B29E0 /* FarmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmViewModel.swift; sourceTree = "<group>"; };
 		EC3DF00C2AF7C885006B29E0 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		EC3DF00D2AF7C885006B29E0 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EC4613DD2AFE8773006D0341 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationView.swift; sourceTree = "<group>"; };
+		EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationViewModel.swift; sourceTree = "<group>"; };
+		EC57C5252AFBF3C0004BF48B /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		EC57C5282AFBF7FA004BF48B /* SelectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMembersView.swift; sourceTree = "<group>"; };
+		EC57C52B2AFC08D5004BF48B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		EC57C52E2AFC121D004BF48B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EC57C5312AFC1D4B004BF48B /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		EC57C5342AFC1E69004BF48B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EC57C5362AFC20AC004BF48B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		EC57C5382AFC247C004BF48B /* SelectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMembersViewModel.swift; sourceTree = "<group>"; };
+		EC8767282AFF7DCC00A36AF6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		ECA274B82AF8204200C0B3CC /* FarmApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmApi.swift; sourceTree = "<group>"; };
 		ECA274BB2AF8207D00C0B3CC /* Farm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Farm.swift; sourceTree = "<group>"; };
 		ECA274BD2AF825EC00C0B3CC /* FarmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmRepository.swift; sourceTree = "<group>"; };
@@ -80,6 +111,9 @@
 		ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleRepository.swift; sourceTree = "<group>"; };
 		ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestHandler.swift; sourceTree = "<group>"; };
 		ECAC8D432AED6C1F002B4131 /* Bale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bale.swift; sourceTree = "<group>"; };
+		ECDDFAB02AF9864300211BB0 /* FarmDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDetailView.swift; sourceTree = "<group>"; };
+		ECDDFAB32AF9865900211BB0 /* FarmDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDetailViewModel.swift; sourceTree = "<group>"; };
+		ECDDFAB52AF9883D00211BB0 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		ECF266702A560DAF00CE33AD /* BaleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleTrackerApp.swift; sourceTree = "<group>"; };
 		ECF266772A560DB000CE33AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,8 +177,22 @@
 			children = (
 				EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */,
 				ECA274B82AF8204200C0B3CC /* FarmApi.swift */,
+				EC57C5312AFC1D4B004BF48B /* UserApi.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		EC2D3CA42AFAD42F00059781 /* CreateNewFarmView */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D3CA72AFAD44C00059781 /* CreateNewFarmView.swift */,
+				EC2D3CAA2AFAD47300059781 /* CreateNewFarmViewModel.swift */,
+				EC57C5282AFBF7FA004BF48B /* SelectMembersView.swift */,
+				EC57C5382AFC247C004BF48B /* SelectMembersViewModel.swift */,
+				EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */,
+				EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */,
+			);
+			path = CreateNewFarmView;
 			sourceTree = "<group>";
 		};
 		EC3DF0032AF7C842006B29E0 /* View */ = {
@@ -168,10 +216,23 @@
 		EC3DF0112AF7C8A4006B29E0 /* FarmView */ = {
 			isa = PBXGroup;
 			children = (
+				EC2D3CA42AFAD42F00059781 /* CreateNewFarmView */,
+				ECDDFAAF2AF9862D00211BB0 /* FarmDetailView */,
 				EC3DF0082AF7C878006B29E0 /* FarmView.swift */,
 				EC3DF0092AF7C878006B29E0 /* FarmViewModel.swift */,
 			);
 			path = FarmView;
+			sourceTree = "<group>";
+		};
+		EC57C5242AFBF37E004BF48B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EC57C5252AFBF3C0004BF48B /* CircularButton.swift */,
+				EC57C52B2AFC08D5004BF48B /* CameraView.swift */,
+				EC57C52E2AFC121D004BF48B /* ImagePicker.swift */,
+				EC8767282AFF7DCC00A36AF6 /* ActionButton.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		ECAAFED82A5EEE1600EE8CD3 /* Core */ = {
@@ -189,6 +250,7 @@
 			children = (
 				ECAC8D432AED6C1F002B4131 /* Bale.swift */,
 				ECA274BB2AF8207D00C0B3CC /* Farm.swift */,
+				EC57C5342AFC1E69004BF48B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +260,7 @@
 			children = (
 				ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */,
 				ECA274BD2AF825EC00C0B3CC /* FarmRepository.swift */,
+				EC57C5362AFC20AC004BF48B /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -205,6 +268,7 @@
 		ECAAFEDD2A5EEF1000EE8CD3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ECDDFAB52AF9883D00211BB0 /* Fixtures.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -217,6 +281,7 @@
 				ECAAFEE72A5EF22C00EE8CD3 /* String+Extension.swift */,
 				ECAAFEE92A5EF27300EE8CD3 /* Character+Extension.swift */,
 				ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */,
+				EC4613DD2AFE8773006D0341 /* Image+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +292,15 @@
 				ECAAFEE52A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		ECDDFAAF2AF9862D00211BB0 /* FarmDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				ECDDFAB02AF9864300211BB0 /* FarmDetailView.swift */,
+				ECDDFAB32AF9865900211BB0 /* FarmDetailViewModel.swift */,
+			);
+			path = FarmDetailView;
 			sourceTree = "<group>";
 		};
 		ECF266672A560DAF00CE33AD = {
@@ -262,6 +336,7 @@
 				ECF266792A560DB000CE33AD /* Preview Content */,
 				ECAAFEDB2A5EEE3900EE8CD3 /* Repositories */,
 				EC0B694A2AF7BF3F002A18B9 /* Resources */,
+				EC57C5242AFBF37E004BF48B /* UI */,
 				ECAAFEDD2A5EEF1000EE8CD3 /* Utils */,
 				EC3DF0032AF7C842006B29E0 /* View */,
 			);
@@ -436,9 +511,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF266802A560DB000CE33AD /* BaleTracker.xcdatamodeld in Sources */,
+				EC57C5322AFC1D4B004BF48B /* UserApi.swift in Sources */,
+				EC2D3CA82AFAD44C00059781 /* CreateNewFarmView.swift in Sources */,
+				ECDDFAB42AF9865900211BB0 /* FarmDetailViewModel.swift in Sources */,
+				EC57C52C2AFC08D5004BF48B /* CameraView.swift in Sources */,
 				ECAAFEEA2A5EF27300EE8CD3 /* Character+Extension.swift in Sources */,
+				EC57C5392AFC247C004BF48B /* SelectMembersViewModel.swift in Sources */,
+				EC57C5372AFC20AC004BF48B /* UserRepository.swift in Sources */,
+				ECDDFAB62AF9883D00211BB0 /* Fixtures.swift in Sources */,
+				EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */,
 				ECAAFEE82A5EF22C00EE8CD3 /* String+Extension.swift in Sources */,
 				ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */,
+				EC4613DE2AFE8773006D0341 /* Image+Extension.swift in Sources */,
 				ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */,
 				EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */,
 				EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */,
@@ -447,16 +531,24 @@
 				ECA274B92AF8204200C0B3CC /* FarmApi.swift in Sources */,
 				ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */,
 				ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */,
+				EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */,
 				ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */,
 				EC3DF00A2AF7C878006B29E0 /* FarmView.swift in Sources */,
 				EC3DF0062AF7C868006B29E0 /* ContentViewModel.swift in Sources */,
 				EC3DF0072AF7C868006B29E0 /* ContentView.swift in Sources */,
 				ECA274BC2AF8207D00C0B3CC /* Farm.swift in Sources */,
+				EC57C5262AFBF3C0004BF48B /* CircularButton.swift in Sources */,
+				EC2D3CAB2AFAD47300059781 /* CreateNewFarmViewModel.swift in Sources */,
+				EC57C52F2AFC121D004BF48B /* ImagePicker.swift in Sources */,
 				ECF266742A560DAF00CE33AD /* BaleTrackerApp.swift in Sources */,
+				ECDDFAB12AF9864300211BB0 /* FarmDetailView.swift in Sources */,
+				EC57C5292AFBF7FA004BF48B /* SelectMembersView.swift in Sources */,
 				EC3DF00F2AF7C885006B29E0 /* MapView.swift in Sources */,
 				ECAAFEE32A5EF00200EE8CD3 /* Spacer+Extension.swift in Sources */,
+				EC8767292AFF7DCC00A36AF6 /* ActionButton.swift in Sources */,
 				ECAAFEE62A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift in Sources */,
 				EC3DF00E2AF7C885006B29E0 /* MapViewModel.swift in Sources */,
+				EC57C5352AFC1E69004BF48B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,11 +726,14 @@
 				DEVELOPMENT_TEAM = WNK6N53S3L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(PRODUCT_NAME) uses location";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BaleTracker photo use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,11 +758,14 @@
 				DEVELOPMENT_TEAM = WNK6N53S3L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(PRODUCT_NAME) uses location";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BaleTracker photo use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

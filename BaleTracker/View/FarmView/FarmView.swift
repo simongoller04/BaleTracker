@@ -42,7 +42,7 @@ struct FarmView: View {
                     viewModel.fetchFarms()
                 }
                 .sheet(isPresented: $showAddFarm) {
-                    addFarm()
+                    CreateNewFarmView()
                 }
                 .sheet(isPresented: $showProfile) {
                     profile()
@@ -77,13 +77,6 @@ struct FarmView: View {
                     Text("\(farm.members.count) \(R.string.localizable.member())")
                 }
             }
-        }
-    }
-    
-    private func addFarm() -> some View {
-        VStack {
-            // TODO: implement add farm screen
-            Text("todo")
         }
     }
     

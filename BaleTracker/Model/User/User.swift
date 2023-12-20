@@ -8,13 +8,14 @@
 import Foundation
 
 struct User: Codable, Identifiable {
-    let id: String?
+    let id: String
     let email: String
+    let username: String
     let password: String
-    let firstName: String
-    let lastName: String
-    let dateOfBirth: String
-    var profilePicture: Data?
+//    let firstName: String
+//    let lastName: String
+//    let dateOfBirth: String
+//    var profilePicture: Data?
 }
 
 extension User: Equatable {

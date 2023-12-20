@@ -31,3 +31,17 @@
 "search" = "Search";
 "selectMembers" = "Select Members";
 
+//MARK: LoginView
+"email" = "Email";
+"password" = "Password";
+"forgotPassword" = "Forgot Password?";
+"signUp" = "Sign up";
+"signIn" = "Sign in";
+"continueWithApple" = "Continue with Apple";
+"continueWithGoogle" = "Continue with Google";
+"noAccount" = "Don't have an account yet?";
+"or" = "OR";
+
+// MARK: SuccessfulRegistrationView
+"successfullyCreated" = "Your account has been successfully created!";
+"loginToContinue" = "Please sign in to continue";

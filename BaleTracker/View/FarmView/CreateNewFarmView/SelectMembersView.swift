@@ -64,21 +64,21 @@ struct SelectMembersView: View {
     private func userCell(user: User) -> some View {
         VStack {
             ZStack(alignment: .bottomTrailing) {
-                if let picture = user.profilePicture {
-                    Image(data: picture)?
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 56, height: 56)
-                        .clipShape(Circle())
-                        .padding(.horizontal, Spacing.spacingXS)
-                } else {
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 56, height: 56)
-                        .foregroundStyle(Color(uiColor: UIColor.secondaryLabel))
-                        .padding(.horizontal, Spacing.spacingXS)
-                }
+//                if let picture = user.profilePicture {
+//                    Image(data: picture)?
+//                        .resizable()
+//                        .scaledToFill()
+//                        .frame(width: 56, height: 56)
+//                        .clipShape(Circle())
+//                        .padding(.horizontal, Spacing.spacingXS)
+//                } else {
+//                    Image(systemName: "person.circle.fill")
+//                        .resizable()
+//                        .scaledToFill()
+//                        .frame(width: 56, height: 56)
+//                        .foregroundStyle(Color(uiColor: UIColor.secondaryLabel))
+//                        .padding(.horizontal, Spacing.spacingXS)
+//                }
                 
                 if viewModel.selectedUsers.contains(user) {
                     Image(systemName: "checkmark.circle.fill")
@@ -86,7 +86,7 @@ struct SelectMembersView: View {
 
             }
         
-            Text("\(user.firstName) \(user.lastName)")
+            Text(user.username)
                 .bold()
                 .multilineTextAlignment(.center)
                 .foregroundStyle(Color(uiColor: .label))

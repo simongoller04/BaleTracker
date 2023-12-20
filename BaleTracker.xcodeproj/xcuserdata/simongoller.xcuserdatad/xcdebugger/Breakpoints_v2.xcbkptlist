@@ -7,95 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "46DAE102-FD07-434A-8F57-4CAB6E0BAB26"
+            uuid = "DE39A1B5-7985-4670-9E8A-2B2DBB4E089C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BaleTracker/View/FarmView/CreateNewFarmView/SelectMembersView.swift"
+            filePath = "BaleTracker/Networking/ApiRequestHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "userCell(user:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "request(target:completion:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "37F7F0EF-FDAE-43C8-8DB0-E739BA186D42"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BaleTracker/View/FarmView/FarmViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "fetchFarms()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "37F7F0EF-FDAE-43C8-8DB0-E739BA186D42 - 660b49c650d3b713"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.FarmViewModel.fetchFarms() -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/FarmView/FarmViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  uuid = "37F7F0EF-FDAE-43C8-8DB0-E739BA186D42 - e10ebf706c8e828"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.FarmViewModel.fetchFarms() -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/FarmView/FarmViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "37F7F0EF-FDAE-43C8-8DB0-E739BA186D42 - 21ed07caeafaf315"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.FarmViewModel.fetchFarms() -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/FarmView/FarmViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "37F7F0EF-FDAE-43C8-8DB0-E739BA186D42 - 43721ccb31e9ad14"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.FarmViewModel.fetchFarms() -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/FarmView/FarmViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

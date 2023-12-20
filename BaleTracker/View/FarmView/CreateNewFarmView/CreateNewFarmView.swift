@@ -106,22 +106,22 @@ struct CreateNewFarmView: View {
     
     private func member(user: User) -> some View {
         ZStack (alignment: .bottomTrailing) {
-            if let picture = user.profilePicture {
-                Image(data: picture)?
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 56, height: 56)
-                    .clipShape(Circle())
-                    .padding(.horizontal, Spacing.spacingXS)
-            } else {
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 56, height: 56)
-                    .foregroundStyle(Color(uiColor: UIColor.secondaryLabel))
-                    .padding(.horizontal, Spacing.spacingXS)
-            }
-            
+//            if let picture = user.profilePicture {
+//                Image(data: picture)?
+//                    .resizable()
+//                    .scaledToFill()
+//                    .frame(width: 56, height: 56)
+//                    .clipShape(Circle())
+//                    .padding(.horizontal, Spacing.spacingXS)
+//            } else {
+//                Image(systemName: "person.circle.fill")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .frame(width: 56, height: 56)
+//                    .foregroundStyle(Color(uiColor: UIColor.secondaryLabel))
+//                    .padding(.horizontal, Spacing.spacingXS)
+//            }
+//            
             Image(systemName: "xmark.circle.fill")
                 .padding(.leading, Spacing.spacingM)
                 .foregroundStyle(Color(uiColor: UIColor.secondaryLabel))

@@ -7,15 +7,12 @@
 
 import Foundation
 
-protocol UserRepository {
-    static var shared: UserRepositoryImpl { get }
-    var apiHandler: APIRequestHandler<UserApi> { get }
-    
+protocol UserRepository: Repository {
     func fetchAllUsers() async throws -> [User]
     func createUser(user: User) async throws -> User
 }
 
-class UserRepositoryImpl: UserRepository, ObservableObject {
+final class UserRepositoryImpl: UserRepository, ObservableObject {
     static var shared = UserRepositoryImpl()
     var apiHandler = APIRequestHandler<UserApi>()
     

@@ -48,8 +48,7 @@ class SelectMembersViewModel: ObservableObject {
                 filterdUsers = users
             } else {
                 filterdUsers = users.filter {
-                    $0.firstName.localizedCaseInsensitiveContains(searchableText) ||
-                    $0.lastName.localizedCaseInsensitiveContains(searchableText)
+                    $0.username.localizedCaseInsensitiveContains(searchableText)
                 }
             }
         }

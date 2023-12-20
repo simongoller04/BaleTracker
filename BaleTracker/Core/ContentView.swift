@@ -10,8 +10,18 @@ import CoreData
 
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
+    private var authenticationRepository = AuthenticationRepositoryImpl.shared
 
     var body: some View {
+        switch authenticationRepository.loggedInfo {
+        case .loggedOut:
+            LoginView()
+        case .loggedIn:
+            main
+        }
+    }
+    
+    private var main: some View {
         TabView {
             MapView()
                 .tabItem {

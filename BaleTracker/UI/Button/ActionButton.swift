@@ -12,6 +12,9 @@ struct ActionButton: View {
     var text = "Press me"
     var isDisabled = false
     var onClick: () -> Void
+    var buttonHeight: CGFloat = 50
+    var textColor: Color = .white
+    var backgroundColor: Color = .accentColor
     
     var body: some View {
         Button {
@@ -22,17 +25,18 @@ struct ActionButton: View {
             if isLoading {
                 ProgressView()
                     .fullWidth()
-                    .frame(height: 40)
-                    .tint(Color.white)
+                    .tint(textColor)
             } else {
                 Text(text)
                     .bold()
+                    .foregroundStyle(textColor)
                     .fullWidth()
-                    .frame(height: 40)
             }
         }
-        .buttonStyle(.borderedProminent)
         .disabled(isDisabled)
+        .frame(height: buttonHeight)
+        .background(backgroundColor)
+        .cornerRadius(14)
     }
 }
 

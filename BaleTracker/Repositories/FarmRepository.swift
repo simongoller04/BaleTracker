@@ -9,15 +9,12 @@ import Foundation
 import Combine
 
 protocol FarmRepository {
-    static var shared: FarmRepositoryImpl { get }
-    var apiHandler: APIRequestHandler<FarmApi> { get }
-    
     func fetchFarms() async throws -> [Farm]
     func uploadFarm(farm: Farm) async throws -> Farm
     func getFarm(id: String) async throws -> Farm
 }
 
-class FarmRepositoryImpl: FarmRepository, ObservableObject {
+final class FarmRepositoryImpl: Repository, FarmRepository, ObservableObject {
     static var shared = FarmRepositoryImpl()
     var apiHandler = APIRequestHandler<FarmApi>()
     

@@ -8,11 +8,41 @@
 
 // MARK: TabBar
 "map" = "Karte";
-"farms" = "Höfe";
+"farms" = "Bauernhöfe";
 
 // MARK: Bale Information
 "created" = "Erstellt von:";
-"collected" = "Eingesammelt von:";
+"collected" = "Gesammelt von:";
 
 // MARK: FarmView
-"searchablePlaceholderFarm" = "Suche nache einem Hof";
+"searchablePlaceholderFarm" = "Suchen Sie nach einem Bauernhof";
+"member" = "Mitglied";
+"members" = "Mitglieder";
+
+// MARK: CreateNewFarmView
+"namePlaceholder" = "Name des Bauernhofs";
+"description" = "Beschreibung (optional)";
+"newFarm" = "Neuer Bauernhof";
+"create" = "Erstellen";
+"cancel" = "Abbrechen";
+"createFarm" = "Bauernhof erstellen";
+
+// MARK: SelectMembersView
+"search" = "Suchen";
+"selectMembers" = "Mitglieder auswählen";
+
+// MARK: LoginView
+"email" = "E-Mail";
+"password" = "Passwort";
+"forgotPassword" = "Passwort vergessen?";
+"signUp" = "Registrieren";
+"signIn" = "Anmelden";
+"continueWithApple" = "Mit Apple fortfahren";
+"continueWithGoogle" = "Mit Google fortfahren";
+"noAccount" = "Sie haben noch kein Konto?";
+"or" = "ODER";
+
+// MARK: SuccessfulRegistrationView
+"successfullyCreated" = "Ihr Konto wurde erfolgreich erstellt!";
+"loginToContinue" = "Bitte melden Sie sich an, um fortzufahren";
+

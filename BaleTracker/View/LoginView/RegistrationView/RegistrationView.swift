@@ -37,6 +37,7 @@ struct RegistrationView: View {
             }
         }
         .padding(Spacing.spacingM)
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     private func textFieldWithError(errorMessage: String, showError: Bool, textField: () -> some View) -> some View {

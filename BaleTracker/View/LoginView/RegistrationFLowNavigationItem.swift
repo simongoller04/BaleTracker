@@ -8,13 +8,18 @@
 import Foundation
 import SwiftUI
 
-enum RegistrationFLowNavigationItem: Codable, Hashable {
+protocol NavigationItem: Codable, Hashable {
+    associatedtype V: View
+    @ViewBuilder func destination(path: Binding<NavigationPath>) -> V
+    var navigationTitle: String { get }
+}
+
+enum RegistrationFLowNavigationItem: NavigationItem {
     case loginView
     case registrationView
     case successfulRegistrationView
     
-    @ViewBuilder
-    func destination(path: Binding<NavigationPath>) ->  some View {
+    func destination(path: Binding<NavigationPath>) -> some View {
         switch self {
         case .loginView:
             LoginView()

@@ -9,12 +9,14 @@ import SwiftUI
 
 struct ActionButton: View {
     var isLoading = false
-    var text = "Press me"
     var isDisabled = false
-    var onClick: () -> Void
+    var text: String?
+    var image: Image?
     var buttonHeight: CGFloat = 50
+    var buttonWidth: CGFloat = .infinity
     var textColor: Color = .white
     var backgroundColor: Color = .accentColor
+    var onClick: () -> Void
     
     var body: some View {
         Button {
@@ -24,13 +26,24 @@ struct ActionButton: View {
         } label: {
             if isLoading {
                 ProgressView()
-                    .fullWidth()
+                    .frame(maxWidth: buttonWidth)
                     .tint(textColor)
             } else {
-                Text(text)
-                    .bold()
-                    .foregroundStyle(textColor)
-                    .fullWidth()
+                HStack {
+                    if let image = image {
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20)
+                    }
+                    
+                    if let text = text {
+                        Text(text)
+                            .bold()
+                    }
+                }
+                .foregroundStyle(textColor)
+                .frame(maxWidth: buttonWidth)
             }
         }
         .disabled(isDisabled)
@@ -45,12 +58,14 @@ struct ActionButton_Preview: PreviewProvider {
         VStack {
             ActionButton(isLoading: true, text: "Action Button") {}
             ActionButton(isLoading: false, text: "Action Button") {}
+            ActionButton(isLoading: false, image: Image(systemName: "gear")) {}
         }
         .lightPreview()
         
         VStack {
             ActionButton(isLoading: true, text: "Action Button") {}
             ActionButton(isLoading: false, text: "Action Button") {}
+            ActionButton(isLoading: false, image: Image(systemName: "gear")) {}
         }
         .darkPreview()
     }

@@ -28,18 +28,6 @@ extension View {
         return modifier(DarkPreviewModifier(state: state))
     }
 
-//    func appBackground() -> some View {
-//        return modifier(AppBackground())
-//    }
-//
-//    func appBackgroundDark() -> some View {
-//        return modifier(AppBackgroundDark())
-//    }
-//
-//    func appBackgroundLight() -> some View {
-//        return modifier(AppBackgroundLight())
-//    }
-
     func appShadow() -> some View {
         return shadow(color: Color.black.opacity(0.05), radius: Spacing.spacingS, y: 2.0)
     }
@@ -51,6 +39,14 @@ extension View {
     
     func previewAllColorSchemes(title: String = "") -> some View {
         modifier(ColorSchemeModifier(title: title))
+    }
+    
+    func getHeight(height: Binding<CGFloat>) -> some View {
+        modifier(GetHeightModifier(height: height))
+    }
+    
+    func closeSheetHeader(title: String = "") -> some View {
+        modifier(CloseSheetHeaderModifier(title: title))
     }
 }
 
@@ -106,30 +102,44 @@ private struct ColorSchemeModifier: ViewModifier {
     }
 }
 
-//private struct AppBackground: ViewModifier {
-//    @Environment(\.colorScheme) var colorScheme: ColorScheme
-//
-//    func body(content: Content) -> some View {
-//        if colorScheme == .light {
-//            return content
-//                .background(R.color.backgroundLight.color)
-//        } else {
-//            return content
-//                .background(R.color.backgroundDark.color)
-//        }
-//    }
-//}
-//
-//private struct AppBackgroundDark: ViewModifier {
-//    func body(content: Content) -> some View {
-//        return content
-//            .background(R.color.backgroundDark.color)
-//    }
-//}
-//
-//private struct AppBackgroundLight: ViewModifier {
-//    func body(content: Content) -> some View {
-//        return content
-//            .background(R.color.backgroundLight.color)
-//    }
-//}
+private struct CloseSheetHeaderModifier: ViewModifier {
+    @Environment(\.dismiss) private var dismiss
+    var title: String
+    
+    func body(content: Content) -> some View {
+        NavigationView {
+            content
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Text(title)
+                            .font(.headline)
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "xmark.circle")
+                        }
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(.primary)
+                        .font(.system(size: 20))
+                    }
+                }
+        }
+    }
+}
+
+private struct GetHeightModifier: ViewModifier {
+    @Binding var height: CGFloat
+
+    func body(content: Content) -> some View {
+        content.background(
+            GeometryReader { geo -> Color in
+                DispatchQueue.main.async {
+                    height = geo.size.height
+                }
+                return Color.clear
+            }
+        )
+    }
+}

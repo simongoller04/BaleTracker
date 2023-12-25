@@ -19,7 +19,7 @@ struct SelectMembersView: View {
             }
             .fullHeight()
             
-            ActionButton(text: "Add \(viewModel.selectedUsers.count) Members", isDisabled: viewModel.selectedUsers.isEmpty) {
+            ActionButton(isDisabled: viewModel.selectedUsers.isEmpty, text: "Add \(viewModel.selectedUsers.count) Members") {
                 dismiss()
             }
             .padding(Spacing.spacingM)

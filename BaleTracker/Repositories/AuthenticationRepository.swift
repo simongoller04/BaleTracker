@@ -26,7 +26,7 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableOb
     @Published private(set) var loggedInfo: LoginInfo
     
     private init() {
-        loggedInfo = .loggedOut
+        loggedInfo = .loggedIn
     }
 
     func register(user: UserRegisterDTO) async throws -> String {

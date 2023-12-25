@@ -37,3 +37,17 @@ extension CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: 48.210033, longitude: 16.363449)
     }
 }
+
+extension Bale {
+    static func fixture(collected: Bool = false) -> Bale {
+        let crop = Crop.straw
+        let baleType = BaleType.round
+        let createdBy = "created-by-id"
+        var collectedBy: String? = collected ? "id" : nil
+        let creationTime = "2023-11-03T14:54:07.427Z"
+        let longitude = 52.518496
+        let latitude = 13.405169
+
+        return Bale(id: "id", crop: crop, baleType: baleType, createdBy: createdBy, collectedBy: collectedBy, creationTime: creationTime, collectionTime: nil, longitude: longitude, latitude: latitude)
+    }
+}

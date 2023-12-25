@@ -18,7 +18,7 @@ class ContentViewModel: ObservableObject {
 
     func uploadBale() {
         let dateFormatter = DateFormatter.iso8601withFractionalSeconds
-        let newBale = Bale(id: nil, crop: .GRASS, baleType: .SQUARE, createdBy: "hans", collectedBy: "jürgen", creationTime: dateFormatter.string(from: Date()), collectionTime: dateFormatter.string(from: Date()), longitude: 0, latitude: 0)
+        let newBale = Bale(id: nil, crop: .grass, baleType: .square, createdBy: "hans", collectedBy: "jürgen", creationTime: dateFormatter.string(from: Date()), collectionTime: dateFormatter.string(from: Date()), longitude: 0, latitude: 0)
 
         baleRepository.uploadBale(bale: newBale) { result in
             switch result {

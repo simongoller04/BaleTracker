@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import _MapKit_SwiftUI
 
 class MapViewModel: ObservableObject {
-    
+    @Published var mapStyle: MapStyle = .standard
+    @Published var selectedCrop: Crop = .straw
+    @Published var selectedBaleType: BaleType = .round
 }

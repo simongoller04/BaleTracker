@@ -31,7 +31,7 @@ struct RegistrationView: View {
                 }
             }
             
-            ActionButton(text: "Sign up", isDisabled: !viewModel.isFormValid) {
+            ActionButton(isDisabled: !viewModel.isFormValid, text: "Sign up") {
                 viewModel.register()
                 path.append(RegistrationFLowNavigationItem.successfulRegistrationView)
             }

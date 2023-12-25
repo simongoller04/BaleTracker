@@ -13,22 +13,29 @@ struct Bale: Codable {
     var crop: Crop
     var baleType: BaleType
     var createdBy: String
-    var collectedBy: String
+    var collectedBy: String?
     var creationTime: String
-    var collectionTime: String
+    var collectionTime: String?
     var longitude: Double
     var latitude: Double
 }
 
-enum Crop: String, Codable {
-    case STRAW = "STRAW"
-    case GRASS = "GRASS"
-    case HAY = "HAY"
+enum Crop: String, Codable, Hashable, CaseIterable, Identifiable {
+    case straw = "Straw"
+    case grass = "Grass"
+    case hay = "Hay"
+    
+    var id: String { self.rawValue }
+    var name: String { self.rawValue }
+    
 }
 
-enum BaleType: String, Codable {
-    case ROUND
-    case SQUARE
-    case ROUND_WRAPPED
-    case SQUARE_WRAPPED
+enum BaleType: String, Codable, Hashable, CaseIterable, Identifiable {
+    case round = "Round"
+    case square = "Square"
+    case round_wrapped = "Round Wrapped"
+    case square_wrapped = "Square Wrapped"
+    
+    var id: String { self.rawValue }
+    var name: String { self.rawValue }
 }

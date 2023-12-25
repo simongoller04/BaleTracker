@@ -45,3 +45,19 @@
 // MARK: SuccessfulRegistrationView
 "successfullyCreated" = "Your account has been successfully created!";
 "loginToContinue" = "Please sign in to continue";
+
+// MARK: MapTypeSelectionView
+"sattelite" = "Sattelite";
+"driving" = "Driving";
+"standard" = "Standard";
+
+// MARK: MapView
+"chosseMap" = "Choose Map:";
+"addBale" = "Add Bale";
+"baleSettings" = "Bale Settings:";
+
+// MARK: BaleSettingsView
+"crop" = "Crop";
+"baletype" = "Baletype";
+"selectCrop" = "Select Crop";
+"selectBaletype" = "Select Baletype";

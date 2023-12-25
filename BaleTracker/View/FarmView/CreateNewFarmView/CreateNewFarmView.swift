@@ -41,7 +41,7 @@ struct CreateNewFarmView: View {
                 }
                 .fullHeight()
                 
-                ActionButton(text: R.string.localizable.createFarm(), isDisabled: !viewModel.isFormValid) {
+                ActionButton(isDisabled: !viewModel.isFormValid, text: R.string.localizable.createFarm()) {
                     // check if all data is here
                     // api call to create farm
                     dismiss()

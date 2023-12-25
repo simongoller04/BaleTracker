@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		EC0B694F2AF7C126002A18B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC0B69512AF7C126002A18B9 /* Localizable.strings */; };
+		EC1807852B373E5E009453F7 /* BaleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1807842B373E5E009453F7 /* BaleAnnotation.swift */; };
 		EC1F0D3B2AEBED1200D4DBC1 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3A2AEBED1200D4DBC1 /* CombineMoya */; };
 		EC1F0D3D2AEBED1200D4DBC1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3C2AEBED1200D4DBC1 /* Moya */; };
 		EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */; };
 		EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */; };
 		EC2D3CA82AFAD44C00059781 /* CreateNewFarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D3CA72AFAD44C00059781 /* CreateNewFarmView.swift */; };
 		EC2D3CAB2AFAD47300059781 /* CreateNewFarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D3CAA2AFAD47300059781 /* CreateNewFarmViewModel.swift */; };
+		EC320B512B34B54100F50B25 /* LocationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC320B502B34B54100F50B25 /* LocationPermission.swift */; };
+		EC320B542B34BC0600F50B25 /* MapTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC320B532B34BC0600F50B25 /* MapTypeSelectionView.swift */; };
 		EC3DF0062AF7C868006B29E0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0042AF7C868006B29E0 /* ContentViewModel.swift */; };
 		EC3DF0072AF7C868006B29E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0052AF7C868006B29E0 /* ContentView.swift */; };
 		EC3DF00A2AF7C878006B29E0 /* FarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0082AF7C878006B29E0 /* FarmView.swift */; };
 		EC3DF00B2AF7C878006B29E0 /* FarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0092AF7C878006B29E0 /* FarmViewModel.swift */; };
 		EC3DF00E2AF7C885006B29E0 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF00C2AF7C885006B29E0 /* MapViewModel.swift */; };
 		EC3DF00F2AF7C885006B29E0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF00D2AF7C885006B29E0 /* MapView.swift */; };
+		EC4072772B3A0B2A00B31F56 /* BaleSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */; };
 		EC4613DE2AFE8773006D0341 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4613DD2AFE8773006D0341 /* Image+Extension.swift */; };
 		EC4F99352AF7A63900645275 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = EC4F99342AF7A63900645275 /* RswiftLibrary */; };
 		EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */; };
@@ -94,16 +98,20 @@
 /* Begin PBXFileReference section */
 		EC0B69502AF7C126002A18B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC0B69612AF7C507002A18B9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC1807842B373E5E009453F7 /* BaleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleAnnotation.swift; sourceTree = "<group>"; };
 		EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleApi.swift; sourceTree = "<group>"; };
 		EC2D3CA72AFAD44C00059781 /* CreateNewFarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewFarmView.swift; sourceTree = "<group>"; };
 		EC2D3CAA2AFAD47300059781 /* CreateNewFarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewFarmViewModel.swift; sourceTree = "<group>"; };
+		EC320B502B34B54100F50B25 /* LocationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermission.swift; sourceTree = "<group>"; };
+		EC320B532B34BC0600F50B25 /* MapTypeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypeSelectionView.swift; sourceTree = "<group>"; };
 		EC3DF0042AF7C868006B29E0 /* ContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		EC3DF0052AF7C868006B29E0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC3DF0082AF7C878006B29E0 /* FarmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmView.swift; sourceTree = "<group>"; };
 		EC3DF0092AF7C878006B29E0 /* FarmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FarmViewModel.swift; sourceTree = "<group>"; };
 		EC3DF00C2AF7C885006B29E0 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		EC3DF00D2AF7C885006B29E0 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleSettingsView.swift; sourceTree = "<group>"; };
 		EC4613DD2AFE8773006D0341 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationView.swift; sourceTree = "<group>"; };
 		EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationViewModel.swift; sourceTree = "<group>"; };
@@ -243,8 +251,11 @@
 		EC3DF0102AF7C897006B29E0 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				EC4072742B3A0B0800B31F56 /* Sheets */,
 				EC3DF00C2AF7C885006B29E0 /* MapViewModel.swift */,
 				EC3DF00D2AF7C885006B29E0 /* MapView.swift */,
+				EC320B502B34B54100F50B25 /* LocationPermission.swift */,
+				EC1807842B373E5E009453F7 /* BaleAnnotation.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -258,6 +269,15 @@
 				EC3DF0092AF7C878006B29E0 /* FarmViewModel.swift */,
 			);
 			path = FarmView;
+			sourceTree = "<group>";
+		};
+		EC4072742B3A0B0800B31F56 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				EC320B532B34BC0600F50B25 /* MapTypeSelectionView.swift */,
+				EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */,
+			);
+			path = Sheets;
 			sourceTree = "<group>";
 		};
 		EC57C5242AFBF37E004BF48B /* UI */ = {
@@ -620,8 +640,11 @@
 				EC98E0882B2C8FED00E555BF /* RegistrationViewModel.swift in Sources */,
 				ECF266802A560DB000CE33AD /* BaleTracker.xcdatamodeld in Sources */,
 				EC57C5322AFC1D4B004BF48B /* UserApi.swift in Sources */,
+				EC1807852B373E5E009453F7 /* BaleAnnotation.swift in Sources */,
 				EC2D3CA82AFAD44C00059781 /* CreateNewFarmView.swift in Sources */,
 				ECDDFAB42AF9865900211BB0 /* FarmDetailViewModel.swift in Sources */,
+				EC320B512B34B54100F50B25 /* LocationPermission.swift in Sources */,
+				EC320B542B34BC0600F50B25 /* MapTypeSelectionView.swift in Sources */,
 				EC57C52C2AFC08D5004BF48B /* CameraView.swift in Sources */,
 				ECA304DD2B2A3B5400AB8D97 /* LoginViewModel.swift in Sources */,
 				ECAAFEEA2A5EF27300EE8CD3 /* Character+Extension.swift in Sources */,
@@ -631,6 +654,7 @@
 				ECC7EEE72B2E0D2400AADE70 /* Token.swift in Sources */,
 				EC98E0912B2CA3EC00E555BF /* AuthenticationApi.swift in Sources */,
 				ECDDFAB62AF9883D00211BB0 /* Fixtures.swift in Sources */,
+				EC4072772B3A0B2A00B31F56 /* BaleSettingsView.swift in Sources */,
 				EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */,
 				ECAAFEE82A5EF22C00EE8CD3 /* String+Extension.swift in Sources */,
 				EC7EC8822B3207D600569238 /* SuccessfulRegistrationView.swift in Sources */,

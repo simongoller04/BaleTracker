@@ -82,7 +82,7 @@ struct MapView: View {
                 Button {
                     activeSheet = .balesNearYou
                 } label: {
-                    Image(systemName: "circle.circle")
+                    Image(systemName: "checklist")
                         .frame(width: Spacing.spacing2XL, height: Spacing.spacing2XL)
                 }
             }
@@ -109,7 +109,9 @@ struct MapView: View {
                 .closeSheetHeader(title: R.string.localizable.baleSettings())
                 .presentationDetents([.fraction(0.3), .medium])
         case .balesNearYou:
-            EmptyView()
+            BalesNearYouView()
+                .closeSheetHeader(title: "Bales")
+                .presentationDetents([.fraction(0.3), .medium, .large])
         }
     }
 }

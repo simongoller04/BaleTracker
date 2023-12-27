@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EC0B694F2AF7C126002A18B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC0B69512AF7C126002A18B9 /* Localizable.strings */; };
+		EC134AA62B3C6BE100CE43E6 /* BalesNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC134AA52B3C6BE100CE43E6 /* BalesNearYouView.swift */; };
+		EC134AAD2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC134AAC2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift */; };
 		EC1807852B373E5E009453F7 /* BaleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1807842B373E5E009453F7 /* BaleAnnotation.swift */; };
 		EC1F0D3B2AEBED1200D4DBC1 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3A2AEBED1200D4DBC1 /* CombineMoya */; };
 		EC1F0D3D2AEBED1200D4DBC1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3C2AEBED1200D4DBC1 /* Moya */; };
@@ -98,6 +100,8 @@
 /* Begin PBXFileReference section */
 		EC0B69502AF7C126002A18B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC0B69612AF7C507002A18B9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC134AA52B3C6BE100CE43E6 /* BalesNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalesNearYouView.swift; sourceTree = "<group>"; };
+		EC134AAC2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalesNearYouViewModel.swift; sourceTree = "<group>"; };
 		EC1807842B373E5E009453F7 /* BaleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleAnnotation.swift; sourceTree = "<group>"; };
 		EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleApi.swift; sourceTree = "<group>"; };
@@ -204,6 +208,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		EC134AA82B3C6E6200CE43E6 /* BalesNearYouView */ = {
+			isa = PBXGroup;
+			children = (
+				EC134AA52B3C6BE100CE43E6 /* BalesNearYouView.swift */,
+				EC134AAC2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift */,
+			);
+			path = BalesNearYouView;
+			sourceTree = "<group>";
+		};
 		EC1F0D3E2AEBED2E00D4DBC1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +287,7 @@
 		EC4072742B3A0B0800B31F56 /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
+				EC134AA82B3C6E6200CE43E6 /* BalesNearYouView */,
 				EC320B532B34BC0600F50B25 /* MapTypeSelectionView.swift */,
 				EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */,
 			);
@@ -657,6 +671,7 @@
 				EC4072772B3A0B2A00B31F56 /* BaleSettingsView.swift in Sources */,
 				EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */,
 				ECAAFEE82A5EF22C00EE8CD3 /* String+Extension.swift in Sources */,
+				EC134AA62B3C6BE100CE43E6 /* BalesNearYouView.swift in Sources */,
 				EC7EC8822B3207D600569238 /* SuccessfulRegistrationView.swift in Sources */,
 				EC98E08E2B2CA21700E555BF /* UserRegisterDTO.swift in Sources */,
 				ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */,
@@ -692,6 +707,7 @@
 				EC3DF00F2AF7C885006B29E0 /* MapView.swift in Sources */,
 				ECAAFEE32A5EF00200EE8CD3 /* Spacer+Extension.swift in Sources */,
 				EC8767292AFF7DCC00A36AF6 /* ActionButton.swift in Sources */,
+				EC134AAD2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift in Sources */,
 				ECAAFEE62A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift in Sources */,
 				EC3DF00E2AF7C885006B29E0 /* MapViewModel.swift in Sources */,
 				ECA304DA2B2A3B4100AB8D97 /* LoginView.swift in Sources */,

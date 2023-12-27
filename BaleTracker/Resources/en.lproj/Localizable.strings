@@ -61,3 +61,6 @@
 "baletype" = "Baletype";
 "selectCrop" = "Select Crop";
 "selectBaletype" = "Select Baletype";
+
+// MARK: BalesNearYouView
+"collected" = "collected";

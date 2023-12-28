@@ -8,14 +8,13 @@
 import SwiftUI
 import MapKit
 
-enum MapViewSheet: Identifiable {
+enum MapViewSheet: Hashable, Identifiable {
     case mapTypeSelector
     case baleSettings
     case balesNearYou
+    case baleDetails(bale: Bale)
     
-    var id: Int {
-        hashValue
-    }
+    var id: Self { return self }
 }
 
 struct MapView: View {
@@ -33,10 +32,11 @@ struct MapView: View {
         ZStack(alignment: .topTrailing) {
             Map(scope: mapScope) {
                 Annotation("test", coordinate: .fixture()) {
-                    BaleAnnotation(bale: .fixture())
-                }
-                Annotation("test", coordinate: .fixture()) {
-                    BaleAnnotation(bale: .fixture(collected: true))
+                    Button {
+                        activeSheet = .baleDetails(bale: .fixture(collected: true))
+                    } label: {
+                        BaleAnnotation(bale: .fixture())
+                    }
                 }
             }
             .mapStyle(viewModel.mapStyle)
@@ -112,6 +112,10 @@ struct MapView: View {
             BalesNearYouView()
                 .closeSheetHeader(title: "Bales")
                 .presentationDetents([.fraction(0.3), .medium, .large])
+        case .baleDetails(bale: let bale):
+            BaleDetailView(bale: bale)
+                .closeSheetHeader(title: "Details")
+                .presentationDetents([.medium, .large])
         }
     }
 }

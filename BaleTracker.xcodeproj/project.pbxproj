@@ -68,9 +68,11 @@
 		ECC7EEE72B2E0D2400AADE70 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7EEE62B2E0D2400AADE70 /* Token.swift */; };
 		ECC7EEE92B2E0E0A00AADE70 /* AnyPublisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7EEE82B2E0E0A00AADE70 /* AnyPublisher+Extension.swift */; };
 		ECC7EEEB2B2E0EE500AADE70 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7EEEA2B2E0EE500AADE70 /* CustomError.swift */; };
+		ECD9CD862B3CC77C00B5B04E /* BaleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD9CD852B3CC77C00B5B04E /* BaleDetailView.swift */; };
 		ECDDFAB12AF9864300211BB0 /* FarmDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDFAB02AF9864300211BB0 /* FarmDetailView.swift */; };
 		ECDDFAB42AF9865900211BB0 /* FarmDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDFAB32AF9865900211BB0 /* FarmDetailViewModel.swift */; };
 		ECDDFAB62AF9883D00211BB0 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDDFAB52AF9883D00211BB0 /* Fixtures.swift */; };
+		ECE6B6A32B3DB9FA00B42055 /* Formatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE6B6A22B3DB9FA00B42055 /* Formatter+Extension.swift */; };
 		ECF266742A560DAF00CE33AD /* BaleTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */; };
 		ECF266782A560DB000CE33AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF266772A560DB000CE33AD /* Assets.xcassets */; };
 		ECF2667B2A560DB000CE33AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF2667A2A560DB000CE33AD /* Preview Assets.xcassets */; };
@@ -157,9 +159,11 @@
 		ECC7EEE62B2E0D2400AADE70 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		ECC7EEE82B2E0E0A00AADE70 /* AnyPublisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyPublisher+Extension.swift"; sourceTree = "<group>"; };
 		ECC7EEEA2B2E0EE500AADE70 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		ECD9CD852B3CC77C00B5B04E /* BaleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleDetailView.swift; sourceTree = "<group>"; };
 		ECDDFAB02AF9864300211BB0 /* FarmDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDetailView.swift; sourceTree = "<group>"; };
 		ECDDFAB32AF9865900211BB0 /* FarmDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmDetailViewModel.swift; sourceTree = "<group>"; };
 		ECDDFAB52AF9883D00211BB0 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
+		ECE6B6A22B3DB9FA00B42055 /* Formatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Formatter+Extension.swift"; sourceTree = "<group>"; };
 		ECF266702A560DAF00CE33AD /* BaleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF266732A560DAF00CE33AD /* BaleTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleTrackerApp.swift; sourceTree = "<group>"; };
 		ECF266772A560DB000CE33AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 				EC134AA82B3C6E6200CE43E6 /* BalesNearYouView */,
 				EC320B532B34BC0600F50B25 /* MapTypeSelectionView.swift */,
 				EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */,
+				ECD9CD852B3CC77C00B5B04E /* BaleDetailView.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 				ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */,
 				EC4613DD2AFE8773006D0341 /* Image+Extension.swift */,
 				ECC7EEE82B2E0E0A00AADE70 /* AnyPublisher+Extension.swift */,
+				ECE6B6A22B3DB9FA00B42055 /* Formatter+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -651,6 +657,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD9CD862B3CC77C00B5B04E /* BaleDetailView.swift in Sources */,
 				EC98E0882B2C8FED00E555BF /* RegistrationViewModel.swift in Sources */,
 				ECF266802A560DB000CE33AD /* BaleTracker.xcdatamodeld in Sources */,
 				EC57C5322AFC1D4B004BF48B /* UserApi.swift in Sources */,
@@ -666,6 +673,7 @@
 				EC57C5372AFC20AC004BF48B /* UserRepository.swift in Sources */,
 				EC9258AB2B2B6A6A009A5359 /* CustomSocialButton.swift in Sources */,
 				ECC7EEE72B2E0D2400AADE70 /* Token.swift in Sources */,
+				ECE6B6A32B3DB9FA00B42055 /* Formatter+Extension.swift in Sources */,
 				EC98E0912B2CA3EC00E555BF /* AuthenticationApi.swift in Sources */,
 				ECDDFAB62AF9883D00211BB0 /* Fixtures.swift in Sources */,
 				EC4072772B3A0B2A00B31F56 /* BaleSettingsView.swift in Sources */,

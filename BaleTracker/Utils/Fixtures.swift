@@ -43,11 +43,12 @@ extension Bale {
         let crop = Crop.straw
         let baleType = BaleType.round
         let createdBy = "created-by-id"
-        var collectedBy: String? = collected ? "id" : nil
+        let collectedBy: String? = collected ? "collected-by-id" : nil
         let creationTime = "2023-11-03T14:54:07.427Z"
+        let collectionTime: String? = collected ? "2023-11-03T14:54:07.427Z" : nil
         let longitude = 52.518496
         let latitude = 13.405169
 
-        return Bale(id: "id", crop: crop, baleType: baleType, createdBy: createdBy, collectedBy: collectedBy, creationTime: creationTime, collectionTime: nil, longitude: longitude, latitude: latitude)
+        return Bale(id: "id", crop: crop, baleType: baleType, createdBy: createdBy, collectedBy: collectedBy, creationTime: creationTime, collectionTime: collectionTime, longitude: longitude, latitude: latitude)
     }
 }

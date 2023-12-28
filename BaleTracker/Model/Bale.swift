@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Bale: Codable {
+struct Bale: Codable, Hashable {
     var id: String?
     var crop: Crop
     var baleType: BaleType

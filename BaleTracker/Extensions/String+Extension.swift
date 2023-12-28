@@ -58,6 +58,10 @@ extension String: Identifiable {
     func toDate() -> Date? {
         return DateFormatter.yearMonthDayDateFormatter.date(from: self)
     }
+    
+    func formatDate() -> String? {
+        return DateFormatter.monthDayYearDateFormatter.string(for: self)
+    }
 
     func getCountryName() -> String {
         return Locale.current.localizedString(forRegionCode: self) ?? ""

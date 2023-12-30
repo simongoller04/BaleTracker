@@ -55,6 +55,8 @@
 		ECA304DD2B2A3B5400AB8D97 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA304DC2B2A3B5400AB8D97 /* LoginViewModel.swift */; };
 		ECA304E02B2A3C9C00AB8D97 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA304DF2B2A3C9C00AB8D97 /* CustomTextField.swift */; };
 		ECA304E32B2A4C6700AB8D97 /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA304E22B2A4C6700AB8D97 /* CustomSecureTextField.swift */; };
+		ECA982482B401932002E7ED7 /* UserLoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA982472B401932002E7ED7 /* UserLoginDTO.swift */; };
+		ECA9824B2B403063002E7ED7 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9824A2B403063002E7ED7 /* Keychain.swift */; };
 		ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */; };
 		ECAAFEE32A5EF00200EE8CD3 /* Spacer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE22A5EF00200EE8CD3 /* Spacer+Extension.swift */; };
 		ECAAFEE62A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE52A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift */; };
@@ -147,6 +149,8 @@
 		ECA304DC2B2A3B5400AB8D97 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ECA304DF2B2A3C9C00AB8D97 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ECA304E22B2A4C6700AB8D97 /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
+		ECA982472B401932002E7ED7 /* UserLoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDTO.swift; sourceTree = "<group>"; };
+		ECA9824A2B403063002E7ED7 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		ECAAFEE22A5EF00200EE8CD3 /* Spacer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spacer+Extension.swift"; sourceTree = "<group>"; };
 		ECAAFEE52A5EF1B000EE8CD3 /* ErrorHandlingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingViewModifier.swift; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 			children = (
 				EC57C5342AFC1E69004BF48B /* User.swift */,
 				EC98E08D2B2CA21700E555BF /* UserRegisterDTO.swift */,
+				ECA982472B401932002E7ED7 /* UserLoginDTO.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				ECDDFAB52AF9883D00211BB0 /* Fixtures.swift */,
+				ECA9824A2B403063002E7ED7 /* Keychain.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -695,11 +701,13 @@
 				ECA304E32B2A4C6700AB8D97 /* CustomSecureTextField.swift in Sources */,
 				EC98E0822B2C8F8600E555BF /* LogoHeader.swift in Sources */,
 				EC3DF00B2AF7C878006B29E0 /* FarmViewModel.swift in Sources */,
+				ECA9824B2B403063002E7ED7 /* Keychain.swift in Sources */,
 				ECA274B92AF8204200C0B3CC /* FarmApi.swift in Sources */,
 				ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */,
 				EC98E0852B2C8FD600E555BF /* RegistrationView.swift in Sources */,
 				ECC7EEE52B2E0AC700AADE70 /* Repository.swift in Sources */,
 				ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */,
+				ECA982482B401932002E7ED7 /* UserLoginDTO.swift in Sources */,
 				EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */,
 				ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */,
 				EC3DF00A2AF7C878006B29E0 /* FarmView.swift in Sources */,

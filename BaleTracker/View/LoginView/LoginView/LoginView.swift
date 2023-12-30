@@ -18,7 +18,7 @@ struct LoginView: View {
 
                 
                 VStack(spacing: 0) {
-                    CustomTextField(text: $viewModel.email, placeholder: R.string.localizable.email())
+                    CustomTextField(text: $viewModel.username, placeholder: "Username")
                     
                     VStack(spacing: Spacing.spacingXS) {
                         CustomSecureTextField(text: $viewModel.password, placeholder: R.string.localizable.password())
@@ -31,7 +31,7 @@ struct LoginView: View {
                 }
                 
                 ActionButton(text: R.string.localizable.signIn()) {
-                    // TODO: login
+                    viewModel.login()
                 }
                 
                 divider
@@ -42,7 +42,7 @@ struct LoginView: View {
                                    text: R.string.localizable.continueWithApple(),
                                    textColor: Color(uiColor: UIColor.systemBackground),
                                    backgroundColor: Color(uiColor: UIColor.label)) {
-                    // login
+                    // TODO: implement login with apple
                 }
                 
                 CustomSocialButton(isLoading: false,
@@ -50,7 +50,7 @@ struct LoginView: View {
                                    text: R.string.localizable.continueWithGoogle(),
                                    textColor: Color(uiColor: UIColor.systemBackground),
                                    backgroundColor: Color(uiColor: UIColor.label)) {
-                    // login
+                    // TODO: implement login with google
                 }
                 
                 Spacer()
@@ -63,6 +63,7 @@ struct LoginView: View {
             }
             .navigationTitle(RegistrationFLowNavigationItem.loginView.navigationTitle)
             .toolbar(.hidden, for: .navigationBar)
+            .textInputAutocapitalization(.never)
         }
     }
     

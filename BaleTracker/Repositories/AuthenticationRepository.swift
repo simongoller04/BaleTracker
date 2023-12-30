@@ -15,20 +15,60 @@ enum LoginInfo: Equatable {
 
 protocol AuthenticationRepository: Repository {
     func register(user: UserRegisterDTO) async throws -> RegistrationState
-//    func login(email: String, password: String) async throws -> Token
-//    func loginWithApple() async throws
+    func login(loginDTO: UserLoginDTO) async throws
 }
 
 final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableObject {
     static var shared = AuthenticationRepositoryImpl()
     var apiHandler = APIRequestHandler<AuthenticationApi>()
     
-    @Published private(set) var loggedInfo: LoginInfo
-    
     private init() {
-        loggedInfo = .loggedOut
+        internalToken = KeyChain.load(key: .token)
+        setLoggedInfo()
     }
 
+    /// Enum observable indicating the current logged in state of the user
+    @Published private(set) var loggedInfo: LoginInfo?
+
+    private var internalToken: Token? {
+        didSet {
+            DispatchQueue.main.async {
+                self.setLoggedInfo()
+            }
+        }
+    }
+
+    private func setLoggedInfo() {
+        if let _ = internalToken {
+            loggedInfo = .loggedIn
+        } else {
+            loggedInfo = .loggedOut
+        }
+    }
+
+    /// The currently stored access & refresh token
+    private(set) var token: Token? {
+        get {
+            if let token = internalToken {
+                return token
+            } else {
+                let token: Token? = KeyChain.load(key: .token)
+                internalToken = token
+                return token
+            }
+        }
+        set {
+            internalToken = newValue
+            if let token = newValue {
+                KeyChain.save(key: .token, encodable: token)
+            } else {
+                KeyChain.delete(key: .token)
+            }
+        }
+    }
+    
+    // MARK: API calls
+    
     func register(user: UserRegisterDTO) async throws -> RegistrationState {
         let result = try await withCheckedThrowingContinuation { continuation in
             apiHandler.request(target: .register(user: user), completion: { (result: Result<RegistrationState, Error>) in
@@ -38,8 +78,12 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableOb
         return result
     }
     
-//    func login(email: String, password: String) async throws -> Token {
-//        // TODO: login
-//    }
+    func login(loginDTO: UserLoginDTO) async throws {
+        self.token = try await withCheckedThrowingContinuation { continuation in
+            apiHandler.request(target: .login(loginDTO: loginDTO), completion: { (result: Result<Token, Error>) in
+                continuation.resume(with: result)
+            })
+        }
+    }
 }
 

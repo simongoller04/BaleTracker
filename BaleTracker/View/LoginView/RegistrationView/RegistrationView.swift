@@ -41,6 +41,7 @@ struct RegistrationView: View {
         }
         .padding(Spacing.spacingM)
         .navigationBarTitleDisplayMode(.inline)
+        .textInputAutocapitalization(.never)
     }
     
     private func textFieldWithError(errorStates: [RegistrationState], textField: () -> some View) -> some View {

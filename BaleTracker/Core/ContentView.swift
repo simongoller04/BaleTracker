@@ -10,7 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
-    private var authenticationRepository = AuthenticationRepositoryImpl.shared
+    @StateObject private var authenticationRepository = AuthenticationRepositoryImpl.shared
 
     var body: some View {
         switch authenticationRepository.loggedInfo {
@@ -18,6 +18,8 @@ struct ContentView: View {
             LoginView()
         case .loggedIn:
             main
+        default:
+            EmptyView()
         }
     }
     

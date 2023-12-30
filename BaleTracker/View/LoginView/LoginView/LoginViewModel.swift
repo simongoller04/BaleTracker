@@ -8,6 +8,18 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    @Published var email: String = ""
+    @Published var username: String = ""
     @Published var password: String = ""
+    
+    private var authenticationRepository = AuthenticationRepositoryImpl.shared
+
+    func login() {
+        Task {
+            do {
+                try await authenticationRepository.login(loginDTO: UserLoginDTO(username: username, password: password))
+            } catch {
+                print(error)
+            }
+        }
+    }
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RegistrationView: View {
     @StateObject private var viewModel = RegistrationViewModel()
-    @State private var showScreenCover = false
     @Binding var path: NavigationPath
     
     var body: some View {
@@ -17,40 +16,44 @@ struct RegistrationView: View {
             LogoHeader()
             
             VStack(spacing: 0) {
-                textFieldWithError(errorMessage: "This is not a valid email!", showError: !viewModel.isEmailValid) {
+                textFieldWithError(errorStates: [.emailInvalid, .emailIsTaken]) {
                     CustomTextField(text: $viewModel.email, placeholder: "Email")
                 }
-                textFieldWithError(errorMessage: "Username is to short!", showError: !viewModel.isUsernameValid) {
+                textFieldWithError(errorStates: [.usernameIsTaken, .usernameTooShort]) {
                     CustomTextField(text: $viewModel.username, placeholder: "Username")
                 }
-                textFieldWithError(errorMessage: "Password is to short!", showError: !viewModel.isPasswordValid) {
+                textFieldWithError(errorStates: [.passwordTooShort]) {
                     CustomSecureTextField(text: $viewModel.password, placeholder: "Password")
                 }
-                textFieldWithError(errorMessage: "Passwords do not match!", showError: !viewModel.isRepeatPasswordValid) {
+                
+                textFieldWithError(errorStates: [.passwordsDoNotMatch]) {
                     CustomSecureTextField(text: $viewModel.repeatPassword, placeholder: "Repeat Password")
                 }
             }
             
             ActionButton(isDisabled: !viewModel.isFormValid, text: "Sign up") {
-                viewModel.register()
-                path.append(RegistrationFLowNavigationItem.successfulRegistrationView)
+                viewModel.register() {
+                    if viewModel.registrationState == .userCreated {
+                        path.append(RegistrationFLowNavigationItem.successfulRegistrationView)
+                    }
+                }
             }
         }
         .padding(Spacing.spacingM)
         .navigationBarTitleDisplayMode(.inline)
     }
     
-    private func textFieldWithError(errorMessage: String, showError: Bool, textField: () -> some View) -> some View {
+    private func textFieldWithError(errorStates: [RegistrationState], textField: () -> some View) -> some View {
         VStack(spacing: 0) {
             textField()
-            if showError {
+            if errorStates.contains(viewModel.registrationState) {
                 HStack {
                     Image(systemName: "exclamationmark.circle")
                         .resizable()
                         .frame(width: 14, height: 14)
                     
 
-                    Text(errorMessage)
+                    Text(viewModel.registrationState.errorMessage)
                         .font(.footnote)
                 }
                 .fullWidth(.leading)

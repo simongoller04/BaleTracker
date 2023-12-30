@@ -8,18 +8,15 @@
 import Foundation
 import Combine
 
+@MainActor
 class RegistrationViewModel: ObservableObject {
     @Published var email = ""
     @Published var username = ""
     @Published var password = ""
     @Published var repeatPassword = ""
     
-    @Published var isEmailValid = true
-    @Published var isUsernameValid = true
-    @Published var isPasswordValid = true
-    @Published var isRepeatPasswordValid = true
-    
     @Published var isFormValid = false
+    @Published var registrationState: RegistrationState = .none 
     
     private var publishers = Set<AnyCancellable>()
     private var authenticationRepository = AuthenticationRepositoryImpl.shared
@@ -33,56 +30,75 @@ class RegistrationViewModel: ObservableObject {
     
     // MARK: input validation
     
-    var isEmailValidPublisher: AnyPublisher<Bool, Never> {
+    private var isEmailValidPublisher: AnyPublisher<Bool, Never> {
           $email
               .map { email in
                   if !email.isEmpty {
-                      self.isEmailValid = email.isValidEmail
+                      if !email.isValidEmail {
+                          self.registrationState = .emailInvalid
+                      } else {
+                          self.registrationState = .none
+                      }
                       return email.isValidEmail
                   }
-                  return true
+                  return false
               }
               .eraseToAnyPublisher()
       }
     
-    var isUsernameValidPublisher: AnyPublisher<Bool, Never> {
+    private var isUsernameValidPublisher: AnyPublisher<Bool, Never> {
         $username
             .map { name in
                 if !name.isEmpty {
-                    self.isUsernameValid = name.count >= 3
-                    return self.isUsernameValid
+                    if name.count >= 3 {
+                        self.registrationState = .none
+                        return true
+                    } else {
+                        self.registrationState = .usernameTooShort
+                        return false
+                    }
                 }
-                return true
+                return false
             }
             .eraseToAnyPublisher()
     }
     
-    var isPasswordValidPublisher: AnyPublisher<Bool, Never> {
+    private var isPasswordValidPublisher: AnyPublisher<Bool, Never> {
         $password
             .map { password in
                 if !password.isEmpty {
-                    self.isPasswordValid = password.count >= 8
-                    return self.isPasswordValid
+                    if password.count >= 8 {
+                        self.registrationState = .none
+                        return true
+                    } else {
+                        self.registrationState = .passwordTooShort
+                        return false
+                    }
                 }
-                return true
+                return false
             }
             .eraseToAnyPublisher()
     }
     
     
-    var passwordMatchesPublisher: AnyPublisher<Bool, Never> {
+    private var passwordMatchesPublisher: AnyPublisher<Bool, Never> {
         Publishers.CombineLatest($password, $repeatPassword)
             .map { password, repeated in
                 if !password.isEmpty && !repeated.isEmpty {
-                    self.isRepeatPasswordValid = password == repeated
-                    return self.isRepeatPasswordValid
+                    if password == repeated {
+                        self.registrationState = .none
+                        return true
+                    } else {
+                        self.registrationState = .passwordsDoNotMatch
+                        return false
+                    }
                 }
-                return true
+                return false
             }
             .eraseToAnyPublisher()
     }
     
-    var isSignupFormValidPublisher: AnyPublisher<Bool, Never> {
+    private var isSignupFormValidPublisher: AnyPublisher<Bool, Never> {
         Publishers.CombineLatest4(
             isUsernameValidPublisher,
             isEmailValidPublisher,
@@ -94,11 +110,13 @@ class RegistrationViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
     
-    func register() {
+    // MARK: Registration
+    
+    func register(completion: @escaping () -> Void) {
         Task {
             do {
-                let result = try await authenticationRepository.register(user: UserRegisterDTO(email: email, username: username, password: password))
-                print(result)
+                self.registrationState = try await authenticationRepository.register(user: UserRegisterDTO(email: email, username: username, password: password))
+                completion()
             } catch {
                 print(error)
             }

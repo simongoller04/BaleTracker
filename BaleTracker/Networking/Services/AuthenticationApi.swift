@@ -37,7 +37,7 @@ extension AuthenticationApi: BaseTargetType {
     }
     
     var headers: [String : String]? {
-        return authorizationHeader
+        return nil
     }
 }
 

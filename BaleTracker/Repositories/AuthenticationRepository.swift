@@ -14,7 +14,7 @@ enum LoginInfo: Equatable {
 }
 
 protocol AuthenticationRepository: Repository {
-    func register(user: UserRegisterDTO) async throws -> String
+    func register(user: UserRegisterDTO) async throws -> RegistrationState
 //    func login(email: String, password: String) async throws -> Token
 //    func loginWithApple() async throws
 }
@@ -26,12 +26,12 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableOb
     @Published private(set) var loggedInfo: LoginInfo
     
     private init() {
-        loggedInfo = .loggedIn
+        loggedInfo = .loggedOut
     }
 
-    func register(user: UserRegisterDTO) async throws -> String {
+    func register(user: UserRegisterDTO) async throws -> RegistrationState {
         let result = try await withCheckedThrowingContinuation { continuation in
-            apiHandler.request(target: .register(user: user), completion: { (result: Result<String, Error>) in
+            apiHandler.request(target: .register(user: user), completion: { (result: Result<RegistrationState, Error>) in
                 continuation.resume(with: result)
             })
         }

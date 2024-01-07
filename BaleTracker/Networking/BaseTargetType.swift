@@ -20,10 +20,9 @@ extension BaseTargetType {
     }
 
     var authorizationHeader: [String: String]? {
-        return ["Content-Type": "application/json"]
-//        if let accessToken = AuthenticationRepository.shared.token?.accessToken {
-//            return ["Authorization": "Bearer \(accessToken)"]
-//        }
-//        return nil
+        if let accessToken = AuthenticationRepositoryImpl.shared.token?.accessToken {
+            return ["Authorization": "Bearer \(accessToken)"]
+        }
+        return nil
     }
 }

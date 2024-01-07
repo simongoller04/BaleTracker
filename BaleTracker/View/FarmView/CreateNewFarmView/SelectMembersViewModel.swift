@@ -22,7 +22,6 @@ class SelectMembersViewModel: ObservableObject {
     
     init(members: Binding<[User]>) {
         _members = members
-        fetchUsers()
         addSubscribtion()
     }
     
@@ -55,12 +54,4 @@ class SelectMembersViewModel: ObservableObject {
     }
     
     // MARK: - functions
-    
-    func fetchUsers() {
-        Task {
-            try? await users = userRepository.fetchAllUsers()
-            self.users = users
-            filterdUsers = users
-        }
-    }
 }

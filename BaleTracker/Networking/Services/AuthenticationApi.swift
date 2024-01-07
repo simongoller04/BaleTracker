@@ -19,7 +19,7 @@ extension AuthenticationApi: BaseTargetType {
         case .register:
             return "/api/auth/register"
         case .login:
-            return "api/auth/login"
+            return "/api/auth/login"
         }
     }
     

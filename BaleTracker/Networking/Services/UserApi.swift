@@ -9,39 +9,33 @@ import Foundation
 import Moya
 
 enum UserApi {
-    case createUser(user: User)
-    case getAllUser
-//    case deleteUser
+    case getUser
+    case deleteUser
 //    case editUser
 }
 
 extension UserApi: BaseTargetType {
     var path: String {
         switch self {
-        case .createUser, .getAllUser:
-            return "api/user"
+        case .getUser:
+            return "/api/user/me"
+        case .deleteUser:
+            return "/api/user/delete"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .createUser:
-            return .post
-        case .getAllUser:
+        case .getUser:
             return .get
+        case .deleteUser:
+            return .delete
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case .createUser(user: let user):
-            do {
-                let jsonData = try JSONEncoder().encode(user)
-                return .requestData(jsonData)
-            } catch {
-                return .requestPlain
-            }
-        case .getAllUser:
+        case .getUser, .deleteUser:
             return .requestPlain
         }
     }

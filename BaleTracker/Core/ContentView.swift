@@ -35,6 +35,10 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text(R.string.localizable.farms())
                 }
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
         }
     }
 }

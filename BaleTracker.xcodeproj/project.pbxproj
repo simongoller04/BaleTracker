@@ -30,6 +30,7 @@
 		EC4F99352AF7A63900645275 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = EC4F99342AF7A63900645275 /* RswiftLibrary */; };
 		EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */; };
 		EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */; };
+		EC53C46C2B407EBE00FC6684 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53C46B2B407EBE00FC6684 /* LogoutUseCase.swift */; };
 		EC57C5262AFBF3C0004BF48B /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5252AFBF3C0004BF48B /* CircularButton.swift */; };
 		EC57C5292AFBF7FA004BF48B /* SelectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5282AFBF7FA004BF48B /* SelectMembersView.swift */; };
 		EC57C52C2AFC08D5004BF48B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C52B2AFC08D5004BF48B /* CameraView.swift */; };
@@ -66,6 +67,8 @@
 		ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */; };
 		ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */; };
 		ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D432AED6C1F002B4131 /* Bale.swift */; };
+		ECBD220F2B4070370051DFDC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */; };
+		ECBD22122B4070480051DFDC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD22112B4070480051DFDC /* ProfileView.swift */; };
 		ECC7EEE22B2DF35A00AADE70 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */; };
 		ECC7EEE52B2E0AC700AADE70 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7EEE42B2E0AC700AADE70 /* Repository.swift */; };
 		ECC7EEE72B2E0D2400AADE70 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7EEE62B2E0D2400AADE70 /* Token.swift */; };
@@ -124,6 +127,7 @@
 		EC4613DD2AFE8773006D0341 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationView.swift; sourceTree = "<group>"; };
 		EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationViewModel.swift; sourceTree = "<group>"; };
+		EC53C46B2B407EBE00FC6684 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
 		EC57C5252AFBF3C0004BF48B /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		EC57C5282AFBF7FA004BF48B /* SelectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMembersView.swift; sourceTree = "<group>"; };
 		EC57C52B2AFC08D5004BF48B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 		ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleRepository.swift; sourceTree = "<group>"; };
 		ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestHandler.swift; sourceTree = "<group>"; };
 		ECAC8D432AED6C1F002B4131 /* Bale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bale.swift; sourceTree = "<group>"; };
+		ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		ECBD22112B4070480051DFDC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		ECC7EEE42B2E0AC700AADE70 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		ECC7EEE62B2E0D2400AADE70 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 		EC3DF0032AF7C842006B29E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ECBD220D2B4070180051DFDC /* ProfileView */,
 				ECA304D02B2A3AF100AB8D97 /* LoginView */,
 				EC3DF0112AF7C8A4006B29E0 /* FarmView */,
 				EC3DF0102AF7C897006B29E0 /* MapView */,
@@ -422,6 +429,7 @@
 			children = (
 				ECDDFAB52AF9883D00211BB0 /* Fixtures.swift */,
 				ECA9824A2B403063002E7ED7 /* Keychain.swift */,
+				EC53C46B2B407EBE00FC6684 /* LogoutUseCase.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -448,6 +456,15 @@
 				ECC7EEEA2B2E0EE500AADE70 /* CustomError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		ECBD220D2B4070180051DFDC /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */,
+				ECBD22112B4070480051DFDC /* ProfileView.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 		ECDDFAAF2AF9862D00211BB0 /* FarmDetailView */ = {
@@ -673,6 +690,7 @@
 				EC1807852B373E5E009453F7 /* BaleAnnotation.swift in Sources */,
 				EC2D3CA82AFAD44C00059781 /* CreateNewFarmView.swift in Sources */,
 				ECDDFAB42AF9865900211BB0 /* FarmDetailViewModel.swift in Sources */,
+				EC53C46C2B407EBE00FC6684 /* LogoutUseCase.swift in Sources */,
 				EC320B512B34B54100F50B25 /* LocationPermission.swift in Sources */,
 				EC320B542B34BC0600F50B25 /* MapTypeSelectionView.swift in Sources */,
 				EC57C52C2AFC08D5004BF48B /* CameraView.swift in Sources */,
@@ -696,6 +714,7 @@
 				ECA304E02B2A3C9C00AB8D97 /* CustomTextField.swift in Sources */,
 				ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */,
 				EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */,
+				ECBD220F2B4070370051DFDC /* ProfileViewModel.swift in Sources */,
 				EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */,
 				ECA274BE2AF825EC00C0B3CC /* FarmRepository.swift in Sources */,
 				ECA304E32B2A4C6700AB8D97 /* CustomSecureTextField.swift in Sources */,
@@ -705,6 +724,7 @@
 				ECA274B92AF8204200C0B3CC /* FarmApi.swift in Sources */,
 				ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */,
 				EC98E0852B2C8FD600E555BF /* RegistrationView.swift in Sources */,
+				ECBD22122B4070480051DFDC /* ProfileView.swift in Sources */,
 				ECC7EEE52B2E0AC700AADE70 /* Repository.swift in Sources */,
 				ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */,
 				ECA982482B401932002E7ED7 /* UserLoginDTO.swift in Sources */,

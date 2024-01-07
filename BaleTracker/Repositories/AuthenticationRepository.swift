@@ -67,6 +67,10 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableOb
         }
     }
     
+    func clear() {
+        token = nil
+    }
+    
     // MARK: API calls
     
     func register(user: UserRegisterDTO) async throws -> RegistrationState {
@@ -80,10 +84,11 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableOb
     
     func login(loginDTO: UserLoginDTO) async throws {
         self.token = try await withCheckedThrowingContinuation { continuation in
-            apiHandler.request(target: .login(loginDTO: loginDTO), completion: { (result: Result<Token, Error>) in
+            apiHandler.request(target: .login(loginDTO: loginDTO), completion: { (result: Result<Token?, Error>) in
                 continuation.resume(with: result)
             })
         }
+        print(self.token)
     }
 }
 

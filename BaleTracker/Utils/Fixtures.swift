@@ -16,14 +16,14 @@ extension Farm {
 
 extension User {
     static func fixture() -> User {
-        return User(id: "id", email: "test@gmail.com", username: "simon", password: "1234")
+        return User(id: "id", email: "test@gmail.com", username: "simon")
     }
     
     static func fixture(amount: Int) -> [User] {
         var users: [User] = []
 
         for _ in 0..<amount {
-            let user = User(id: "id", email: "test@gmail.com", username: "simon", password: "1234")
+            let user = User(id: "id", email: "test@gmail.com", username: "simon")
             users.append(user)
         }
 

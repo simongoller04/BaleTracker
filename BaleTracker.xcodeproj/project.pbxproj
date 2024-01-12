@@ -42,6 +42,8 @@
 		EC6748BC2B3F66BE006EAD1F /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6748BB2B3F66BE006EAD1F /* RegistrationState.swift */; };
 		EC7EC8822B3207D600569238 /* SuccessfulRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EC8812B3207D600569238 /* SuccessfulRegistrationView.swift */; };
 		EC7EF1082B33584F00F154A5 /* RegistrationFLowNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EF1072B33584F00F154A5 /* RegistrationFLowNavigationItem.swift */; };
+		EC84EF442B51E9BB00B97DEB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC84EF432B51E9BB00B97DEB /* Kingfisher */; };
+		EC84EF462B51EAAD00B97DEB /* KFImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84EF452B51EAAD00B97DEB /* KFImage+Extension.swift */; };
 		EC8767292AFF7DCC00A36AF6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8767282AFF7DCC00A36AF6 /* ActionButton.swift */; };
 		EC9258AB2B2B6A6A009A5359 /* CustomSocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9258AA2B2B6A6A009A5359 /* CustomSocialButton.swift */; };
 		EC98E0822B2C8F8600E555BF /* LogoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC98E0812B2C8F8600E555BF /* LogoHeader.swift */; };
@@ -139,6 +141,7 @@
 		EC6748BB2B3F66BE006EAD1F /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		EC7EC8812B3207D600569238 /* SuccessfulRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulRegistrationView.swift; sourceTree = "<group>"; };
 		EC7EF1072B33584F00F154A5 /* RegistrationFLowNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFLowNavigationItem.swift; sourceTree = "<group>"; };
+		EC84EF452B51EAAD00B97DEB /* KFImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KFImage+Extension.swift"; sourceTree = "<group>"; };
 		EC8767282AFF7DCC00A36AF6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		EC9258AA2B2B6A6A009A5359 /* CustomSocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSocialButton.swift; sourceTree = "<group>"; };
 		EC98E0812B2C8F8600E555BF /* LogoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoHeader.swift; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC84EF442B51E9BB00B97DEB /* Kingfisher in Frameworks */,
 				EC1F0D3B2AEBED1200D4DBC1 /* CombineMoya in Frameworks */,
 				EC1F0D3D2AEBED1200D4DBC1 /* Moya in Frameworks */,
 				EC4F99352AF7A63900645275 /* RswiftLibrary in Frameworks */,
@@ -445,6 +449,7 @@
 				EC4613DD2AFE8773006D0341 /* Image+Extension.swift */,
 				ECC7EEE82B2E0E0A00AADE70 /* AnyPublisher+Extension.swift */,
 				ECE6B6A22B3DB9FA00B42055 /* Formatter+Extension.swift */,
+				EC84EF452B51EAAD00B97DEB /* KFImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 				EC1F0D3A2AEBED1200D4DBC1 /* CombineMoya */,
 				EC1F0D3C2AEBED1200D4DBC1 /* Moya */,
 				EC4F99342AF7A63900645275 /* RswiftLibrary */,
+				EC84EF432B51E9BB00B97DEB /* Kingfisher */,
 			);
 			productName = BaleTracker;
 			productReference = ECF266702A560DAF00CE33AD /* BaleTracker.app */;
@@ -639,6 +645,7 @@
 			packageReferences = (
 				EC1F0D392AEBED1200D4DBC1 /* XCRemoteSwiftPackageReference "Moya" */,
 				EC4F99332AF7A63900645275 /* XCRemoteSwiftPackageReference "R" */,
+				EC84EF422B51E9BB00B97DEB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = ECF266712A560DAF00CE33AD /* Products */;
 			projectDirPath = "";
@@ -698,6 +705,7 @@
 				ECAAFEEA2A5EF27300EE8CD3 /* Character+Extension.swift in Sources */,
 				EC57C5392AFC247C004BF48B /* SelectMembersViewModel.swift in Sources */,
 				EC57C5372AFC20AC004BF48B /* UserRepository.swift in Sources */,
+				EC84EF462B51EAAD00B97DEB /* KFImage+Extension.swift in Sources */,
 				EC9258AB2B2B6A6A009A5359 /* CustomSocialButton.swift in Sources */,
 				ECC7EEE72B2E0D2400AADE70 /* Token.swift in Sources */,
 				ECE6B6A32B3DB9FA00B42055 /* Formatter+Extension.swift in Sources */,
@@ -1117,6 +1125,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		EC84EF422B51E9BB00B97DEB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1138,6 +1154,11 @@
 		EC4F99372AF7A65500645275 /* RswiftGenerateInternalResources */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		EC84EF432B51E9BB00B97DEB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC84EF422B51E9BB00B97DEB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

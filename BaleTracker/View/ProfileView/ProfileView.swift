@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileView: View {
     @StateObject private var viewModel = ProfileViewModel()
@@ -44,10 +45,19 @@ struct ProfileView: View {
     
     private var profileHeader: some View {
         VStack {
-            Image(systemName: "person.circle.fill")
-                .symbolRenderingMode(.hierarchical)
-                .foregroundStyle(.primary)
-                .font(.system(size: 100))
+            KFImage.url(viewModel.user?.imageUrl)
+                .placeholder {
+                    Image(systemName: "person.circle.fill")
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(.primary)
+                        .font(.system(size: 160))
+                }
+                .requestModifier(KFImage.authorizationModifier)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 160, height: 160)
+                .clipShape(Circle())
+            
             if let user = viewModel.user {
                 Text(user.username)
                     .font(.title2)

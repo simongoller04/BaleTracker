@@ -11,6 +11,11 @@ struct User: Codable, Identifiable {
     let id: String
     let email: String
     let username: String
+    
+    var imageUrl: URL? {
+        let urlString = "http://localhost:8080/api/user/media/\(id)/pic"
+        return URL(string: urlString)
+    }
 //    let firstName: String
 //    let lastName: String
 //    let dateOfBirth: String

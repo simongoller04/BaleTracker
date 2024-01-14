@@ -11,19 +11,30 @@ struct User: Codable, Identifiable {
     let id: String
     let email: String
     let username: String
+    let creationTime: String
+    let lastEditingTime: String?
+    let lastLoginTime: String?
     
     var imageUrl: URL? {
         let urlString = "http://localhost:8080/api/user/media/\(id)/pic"
         return URL(string: urlString)
     }
-//    let firstName: String
-//    let lastName: String
-//    let dateOfBirth: String
-//    var profilePicture: Data?
 }
 
 extension User: Equatable {
     static func == (lhs: User, rhs: User) -> Bool {
         return lhs.id == rhs.id
+    }
+    
+    func toString() -> String {
+        return """
+            User ID: \(id)
+            Email: \(email)
+            Username: \(username)
+            Creation Date: \(creationTime)
+            Last Editing Time: \(lastEditingTime ?? "Unknown")
+            Last Login Time: \(lastLoginTime ?? "Unknown")
+            Image URL: \(imageUrl?.absoluteString ?? "Unknown")
+        """
     }
 }

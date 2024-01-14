@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 final class LogoutUseCase {
     func execute() {
@@ -20,6 +21,6 @@ final class LogoutUseCase {
             UserDefaults.standard.removePersistentDomain(forName: bundleID)
         }
 
-//        KingfisherManager.shared.cache.clearCache()
+        KingfisherManager.shared.cache.clearCache()
     }
 }

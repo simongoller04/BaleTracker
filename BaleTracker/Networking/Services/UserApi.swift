@@ -11,6 +11,8 @@ import Moya
 enum UserApi {
     case getUser
     case deleteUser
+    case updateProfilePicture(image: Data)
+    case deleteProfilePicture
 //    case editUser
 }
 
@@ -21,6 +23,8 @@ extension UserApi: BaseTargetType {
             return "/api/user/me"
         case .deleteUser:
             return "/api/user/delete"
+        case .updateProfilePicture, .deleteProfilePicture:
+            return "/api/user/media/pic"
         }
     }
     
@@ -28,15 +32,20 @@ extension UserApi: BaseTargetType {
         switch self {
         case .getUser:
             return .get
-        case .deleteUser:
+        case .deleteUser, .deleteProfilePicture:
             return .delete
+        case .updateProfilePicture:
+            return .post
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case .getUser, .deleteUser:
+        case .getUser, .deleteUser, .deleteProfilePicture:
             return .requestPlain
+        case let .updateProfilePicture(image):
+            let formData = MultipartFormData(provider: .data(image), name: "image", fileName: "image", mimeType: "image/jpeg")
+            return .uploadMultipart([formData])
         }
     }
     

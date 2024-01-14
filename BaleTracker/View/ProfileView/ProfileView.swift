@@ -10,13 +10,27 @@ import Kingfisher
 
 struct ProfileView: View {
     @StateObject private var viewModel = ProfileViewModel()
+    @State private var showImagePicker = false
+    @State private var showConfirmationDialog = false
     
     var body: some View {
         List {
             Section {
-                profileHeader
-                    .fullWidth()
-                    .listRowBackground(EmptyView())
+                VStack {
+                    Button {
+                        showConfirmationDialog = true
+                    } label: {
+                        ZStack {
+                            profilePicture
+                            if viewModel.isUploading {
+                                ProgressView()
+                            }
+                        }
+                    }
+                    profileHeader
+                }
+                .fullWidth()
+                .listRowBackground(EmptyView())
             }
             
             Section {
@@ -41,23 +55,56 @@ struct ProfileView: View {
                 .listRowBackground(EmptyView())
             }
         }
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(image: $viewModel.selectedImage)
+                .ignoresSafeArea()
+        }
+        .confirmationDialog("", isPresented: $showConfirmationDialog) {
+            Button("Select image from gallery") {
+                showImagePicker = true
+            }
+            .tint(Color.accentColor)
+            Button("Delete profile picture", role: .destructive) {
+                viewModel.deleteProfilePicture()
+            }
+            Button("Cancel", role: .cancel) {
+                showConfirmationDialog = false
+            }
+            .tint(Color.accentColor)
+        }
     }
     
-    private var profileHeader: some View {
-        VStack {
-            KFImage.url(viewModel.user?.imageUrl)
-                .placeholder {
-                    Image(systemName: "person.circle.fill")
-                        .symbolRenderingMode(.hierarchical)
-                        .foregroundStyle(.primary)
-                        .font(.system(size: 160))
-                }
-                .requestModifier(KFImage.authorizationModifier)
+    @ViewBuilder
+    private var profilePicture: some View {
+        if let image = viewModel.profilePicture {
+            Image(uiImage: image)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 160, height: 160)
                 .clipShape(Circle())
-            
+        } else {
+            Image(systemName: "person.circle.fill")
+                .symbolRenderingMode(.hierarchical)
+                .foregroundStyle(.primary)
+                .font(.system(size: 160))
+        }
+//        KFImage.url(viewModel.user?.imageUrl)
+//            .forceRefresh()
+//            .placeholder {
+//                Image(systemName: "person.circle.fill")
+//                    .symbolRenderingMode(.hierarchical)
+//                    .foregroundStyle(.primary)
+//                    .font(.system(size: 160))
+//            }
+//            .requestModifier(KFImage.authorizationModifier)
+//            .resizable()
+//            .scaledToFill()
+//            .frame(width: 160, height: 160)
+//            .clipShape(Circle())
+    }
+    
+    private var profileHeader: some View {
+        VStack {
             if let user = viewModel.user {
                 Text(user.username)
                     .font(.title2)

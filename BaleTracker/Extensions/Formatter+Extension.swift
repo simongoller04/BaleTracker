@@ -49,3 +49,13 @@ extension Date {
 extension String {
     var iso8601: Date? { return Formatter.iso8601.date(from: self) }
 }
+
+extension Formatter {
+    /// Date formatter for ISO8601 dates with fractional seconds, e.g. "2022-10-19T14:28:18.185Z"
+    static var iso8601DateFormatterWithFractionalSeconds: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+    
+}

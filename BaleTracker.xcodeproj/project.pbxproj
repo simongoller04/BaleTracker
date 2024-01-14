@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC0B694F2AF7C126002A18B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC0B69512AF7C126002A18B9 /* Localizable.strings */; };
+		EC0EB7DB2B53270600098AFA /* DateDecodingStrategy+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0EB7DA2B53270600098AFA /* DateDecodingStrategy+Extension.swift */; };
 		EC134AA62B3C6BE100CE43E6 /* BalesNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC134AA52B3C6BE100CE43E6 /* BalesNearYouView.swift */; };
 		EC134AAD2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC134AAC2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift */; };
 		EC1807852B373E5E009453F7 /* BaleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1807842B373E5E009453F7 /* BaleAnnotation.swift */; };
@@ -110,6 +111,7 @@
 /* Begin PBXFileReference section */
 		EC0B69502AF7C126002A18B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EC0B69612AF7C507002A18B9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EC0EB7DA2B53270600098AFA /* DateDecodingStrategy+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+Extension.swift"; sourceTree = "<group>"; };
 		EC134AA52B3C6BE100CE43E6 /* BalesNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalesNearYouView.swift; sourceTree = "<group>"; };
 		EC134AAC2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalesNearYouViewModel.swift; sourceTree = "<group>"; };
 		EC1807842B373E5E009453F7 /* BaleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleAnnotation.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 				ECC7EEE82B2E0E0A00AADE70 /* AnyPublisher+Extension.swift */,
 				ECE6B6A22B3DB9FA00B42055 /* Formatter+Extension.swift */,
 				EC84EF452B51EAAD00B97DEB /* KFImage+Extension.swift */,
+				EC0EB7DA2B53270600098AFA /* DateDecodingStrategy+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -466,8 +469,8 @@
 		ECBD220D2B4070180051DFDC /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */,
 				ECBD22112B4070480051DFDC /* ProfileView.swift */,
+				ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				EC98E08E2B2CA21700E555BF /* UserRegisterDTO.swift in Sources */,
 				ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */,
 				EC4613DE2AFE8773006D0341 /* Image+Extension.swift in Sources */,
+				EC0EB7DB2B53270600098AFA /* DateDecodingStrategy+Extension.swift in Sources */,
 				ECA304E02B2A3C9C00AB8D97 /* CustomTextField.swift in Sources */,
 				ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */,
 				EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */,

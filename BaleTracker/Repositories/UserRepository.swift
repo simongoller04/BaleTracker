@@ -8,12 +8,15 @@
 import Foundation
 import Combine
 import Moya
+import UIKit
+import Kingfisher
 
 protocol UserRepository: Repository {
     func fetchUser() async throws -> User
     func deleteUser() async throws -> UserDeletionResponse
     func updateProfilePicture(imageData: Data, completionClosure: @escaping Completion)
     func deleteProfilePicture() async throws
+//    func fetchImage(url: URL?) -> UIImage? 
 }
 
 final class UserRepositoryImpl: UserRepository, ObservableObject {
@@ -96,6 +99,23 @@ final class UserRepositoryImpl: UserRepository, ObservableObject {
             }
         }
     }
+    
+//    func fetchImage(url: URL?) -> UIImage? {
+//        var photo: UIImage?
+//        KingfisherManager.shared.cache.clearCache()
+//        if let url = url {
+//            KingfisherManager.shared.retrieveImage(with: url, options: [.requestModifier(KFImage.authorizationModifier)]) { result in
+//                switch result {
+//                case .success(let image):
+//                    photo = image.image
+//                    "Image fetched sucessfully".log(.info)
+//                case .failure(_):
+//                    "Failed to fetch image".log(.error)
+//                }
+//            }
+//        }
+//        return photo
+//    }
 }
 
 enum UserDeletionResponse: String, Codable {

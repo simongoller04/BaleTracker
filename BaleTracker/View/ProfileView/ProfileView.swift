@@ -14,63 +14,76 @@ struct ProfileView: View {
     @State private var showConfirmationDialog = false
     
     var body: some View {
-        List {
-            Section {
-                VStack {
-                    Button {
-                        showConfirmationDialog = true
-                    } label: {
-                        ZStack {
-                            profilePicture
-                            if viewModel.isUploading {
-                                ProgressView()
+        NavigationView {
+            List {
+                Section {
+                    VStack {
+                        Button {
+                            showConfirmationDialog = true
+                        } label: {
+                            ZStack {
+                                profilePicture
+                                if viewModel.isUploading {
+                                    ProgressView()
+                                }
                             }
                         }
+                        profileHeader
                     }
-                    profileHeader
+                    .fullWidth()
+                    .listRowBackground(EmptyView())
                 }
-                .fullWidth()
-                .listRowBackground(EmptyView())
-            }
-            
-            Section {
-                HStack {
-                    detailCell(title: "Created", value: "350")
-                    Divider()
-                    detailCell(title: "Collected", value: "100")
-                }
-            }
-            
-            Section {
-                VStack {
-                    ActionButton(text: "Logout") {
-                        viewModel.logout()
-                    }
-                    
-                    ActionButton(text: "Delete Account", backgroundColor: .red) {
-                        viewModel.deleteUser()
+                
+                Section {
+                    HStack {
+                        detailCell(title: R.string.localizable.created(), value: "350")
+                        Divider()
+                        detailCell(title: R.string.localizable.collected(), value: "100")
                     }
                 }
-                .listRowInsets(EdgeInsets())
-                .listRowBackground(EmptyView())
+                
+                Section {
+                    NavigationLink {
+                        AccountSettingsView()
+                            .environmentObject(viewModel)
+                    } label: {
+                        Label(R.string.localizable.account(), systemImage: "gear")
+                    }
+                    NavigationLink {
+                        // TODO: implement
+                        EmptyView()
+                    } label: {
+                        Label(R.string.localizable.farms(), systemImage: "house")
+                    }
+                    NavigationLink {
+                        // TODO: implement
+                        EmptyView()
+                    } label: {
+                        Label(R.string.localizable.friends(), systemImage: "person.2")
+                    }
+                    NavigationLink {
+                        // TODO: implement
+                        EmptyView()
+                    } label: {
+                        Label(R.string.localizable.statistics(), systemImage: "chart.line.uptrend.xyaxis")
+                    }
+                }
             }
-        }
-        .sheet(isPresented: $showImagePicker) {
-            ImagePicker(image: $viewModel.selectedImage)
-                .ignoresSafeArea()
-        }
-        .confirmationDialog("", isPresented: $showConfirmationDialog) {
-            Button("Select image from gallery") {
-                showImagePicker = true
+            .sheet(isPresented: $showImagePicker) {
+                ImagePicker(image: $viewModel.selectedImage)
+                    .ignoresSafeArea()
             }
-            .tint(Color.accentColor)
-            Button("Delete profile picture", role: .destructive) {
-                viewModel.deleteProfilePicture()
+            .confirmationDialog("", isPresented: $showConfirmationDialog) {
+                Button(R.string.localizable.selectFromGallery()) {
+                    showImagePicker = true
+                }
+                Button(R.string.localizable.deletePicture(), role: .destructive) {
+                    viewModel.deleteProfilePicture()
+                }
+                Button(R.string.localizable.cancel(), role: .cancel) {
+                    showConfirmationDialog = false
+                }
             }
-            Button("Cancel", role: .cancel) {
-                showConfirmationDialog = false
-            }
-            .tint(Color.accentColor)
         }
     }
     
@@ -80,27 +93,14 @@ struct ProfileView: View {
             Image(uiImage: image)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 160, height: 160)
+                .frame(width: 140, height: 140)
                 .clipShape(Circle())
         } else {
             Image(systemName: "person.circle.fill")
                 .symbolRenderingMode(.hierarchical)
-                .foregroundStyle(.primary)
-                .font(.system(size: 160))
+                .foregroundStyle(.gray)
+                .font(.system(size: 140))
         }
-//        KFImage.url(viewModel.user?.imageUrl)
-//            .forceRefresh()
-//            .placeholder {
-//                Image(systemName: "person.circle.fill")
-//                    .symbolRenderingMode(.hierarchical)
-//                    .foregroundStyle(.primary)
-//                    .font(.system(size: 160))
-//            }
-//            .requestModifier(KFImage.authorizationModifier)
-//            .resizable()
-//            .scaledToFill()
-//            .frame(width: 160, height: 160)
-//            .clipShape(Circle())
     }
     
     private var profileHeader: some View {

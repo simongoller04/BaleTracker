@@ -12,6 +12,7 @@
 		EC134AA62B3C6BE100CE43E6 /* BalesNearYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC134AA52B3C6BE100CE43E6 /* BalesNearYouView.swift */; };
 		EC134AAD2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC134AAC2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift */; };
 		EC1807852B373E5E009453F7 /* BaleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1807842B373E5E009453F7 /* BaleAnnotation.swift */; };
+		EC19B6EB2B547F01001A86B4 /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19B6EA2B547F01001A86B4 /* AccountSettingsView.swift */; };
 		EC1F0D3B2AEBED1200D4DBC1 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3A2AEBED1200D4DBC1 /* CombineMoya */; };
 		EC1F0D3D2AEBED1200D4DBC1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3C2AEBED1200D4DBC1 /* Moya */; };
 		EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */; };
@@ -115,6 +116,7 @@
 		EC134AA52B3C6BE100CE43E6 /* BalesNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalesNearYouView.swift; sourceTree = "<group>"; };
 		EC134AAC2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalesNearYouViewModel.swift; sourceTree = "<group>"; };
 		EC1807842B373E5E009453F7 /* BaleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleAnnotation.swift; sourceTree = "<group>"; };
+		EC19B6EA2B547F01001A86B4 /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
 		EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleApi.swift; sourceTree = "<group>"; };
 		EC2D3CA72AFAD44C00059781 /* CreateNewFarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewFarmView.swift; sourceTree = "<group>"; };
@@ -471,6 +473,7 @@
 			children = (
 				ECBD22112B4070480051DFDC /* ProfileView.swift */,
 				ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */,
+				EC19B6EA2B547F01001A86B4 /* AccountSettingsView.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD9CD862B3CC77C00B5B04E /* BaleDetailView.swift in Sources */,
+				EC19B6EB2B547F01001A86B4 /* AccountSettingsView.swift in Sources */,
 				EC98E0882B2C8FED00E555BF /* RegistrationViewModel.swift in Sources */,
 				ECF266802A560DB000CE33AD /* BaleTracker.xcdatamodeld in Sources */,
 				EC57C5322AFC1D4B004BF48B /* UserApi.swift in Sources */,

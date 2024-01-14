@@ -11,8 +11,8 @@
 "farms" = "Farms";
 
 // MARK: Bale Information
-"created" = "Created by:";
-"collected" = "Collected by:";
+"createdBy" = "Created by:";
+"collectedBy" = "Collected by:";
 
 // MARK: FarmView
 "searchablePlaceholderFarm" = "Search for a farm";
@@ -64,3 +64,12 @@
 
 // MARK: BalesNearYouView
 "collected" = "collected";
+"created" = "created";
+
+// MARK: ProfileView
+"account" = "Account";
+"friends" = "Friends";
+"statistics" = "Statistics";
+"selectFromGallery" = "Select image from gallery";
+"deletePicture" = "Delete profile picture";
+

@@ -22,23 +22,26 @@ struct MapView: View {
     @StateObject private var locationPermission = LocationPermission()
     
     @State private var activeSheet: MapViewSheet?
-    
     @State private var sheetHeight: CGFloat = .infinity
-    @State private var sheetHeightSecond: CGFloat = .infinity
 
-    @Namespace var mapScope
+    @Namespace private var mapScope
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Map(scope: mapScope) {
-                Annotation("test", coordinate: .fixture()) {
-                    Button {
-                        activeSheet = .baleDetails(bale: .fixture(collected: true))
-                    } label: {
-                        BaleAnnotation(bale: .fixture())
+                if let bales = viewModel.bales {
+                    ForEach(bales, id: \.id) { bale in
+                        Annotation("", coordinate: bale.coordinates) {
+                            Button {
+                                activeSheet = .baleDetails(bale: bale)
+                            } label: {
+                                BaleAnnotation(bale: bale)
+                            }
+                        }
                     }
                 }
             }
+            .mapControlVisibility(.hidden)
             .mapStyle(viewModel.mapStyle)
             .ignoresSafeArea()
             
@@ -46,7 +49,7 @@ struct MapView: View {
             
             HStack {
                 ActionButton(text: R.string.localizable.addBale(), image: Image(systemName: "plus")) {
-                    //
+                    viewModel.createBale()
                 }
                 
                 ActionButton(image: Image(systemName: "gear"),
@@ -91,7 +94,7 @@ struct MapView: View {
             .frame(width: Spacing.spacing2XL)
             .padding(Spacing.spacingM)
             
-            MapCompass()
+            MapCompass(scope: mapScope)
         }
     }
     

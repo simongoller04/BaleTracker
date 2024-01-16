@@ -9,45 +9,44 @@ import Foundation
 import Moya
 
 enum BaleApi {
-    // upload a bale to the api
-    case uploadBale(bale: Bale)
-    // fetch a bale for the api with the given id
+    case createBale(bale: BaleCreate)
+    case collectBale(id: String)
     case getBale(id: String)
-    // fetch all the bales form the api
+    // get all bales created by the currently authenticated user
     case getAllBales
 }
 
 extension BaleApi: BaseTargetType {
     var path: String {
         switch self {
-        case .getAllBales, .uploadBale:
-            return "/api/bale"
+        case .createBale:
+            return "/api/bale/create"
+        case .collectBale(id: let id):
+            return "/api/bale/collect/\(id)"
         case .getBale(id: let id):
             return "api/bale/\(id)"
+        case .getAllBales:
+            return "api/bale/getAll"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getAllBales, .getBale:
+        case .getBale, .getAllBales:
             return .get
-        case .uploadBale:
+        case .collectBale:
+            return .put
+        case .createBale:
             return .post
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case .getAllBales, .getBale:
+        case .createBale(bale: let bale):
+            return .requestJSONEncodable(bale)
+        case .collectBale, .getBale, .getAllBales:
             return .requestPlain
-            
-        case .uploadBale(bale: let bale):
-            do {
-                let jsonData = try JSONEncoder().encode(bale)
-                return .requestData(jsonData)
-            } catch {
-                return .requestPlain
-            }
         }
     }
     

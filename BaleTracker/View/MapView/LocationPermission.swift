@@ -8,11 +8,11 @@
 import Foundation
 import CoreLocation
 
-class LocationPermission: NSObject, ObservableObject, CLLocationManagerDelegate {
-    
+class LocationPermission: NSObject, ObservableObject {
     @Published var authorizationStatus : CLAuthorizationStatus = .notDetermined
+    var coordinates : CLLocationCoordinate2D?
+    
     private let locationManager = CLLocationManager()
-    @Published var cordinates : CLLocationCoordinate2D?
     
     override init() {
         super.init()
@@ -36,9 +36,11 @@ class LocationPermission: NSObject, ObservableObject, CLLocationManagerDelegate 
         }
         authorizationStatus = manager.authorizationStatus
     }
-    
+}
+
+extension LocationPermission: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {return}
-        cordinates = location.coordinate
+        coordinates = location.coordinate
     }
 }

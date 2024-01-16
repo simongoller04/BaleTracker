@@ -13,32 +13,61 @@ protocol BaleRepository {
     static var shared: BaleRepositoryImpl { get }
     var apiHandler: APIRequestHandler<BaleApi> { get }
     
-    func fetchBales()
-    func uploadBale(bale: Bale, completion: @escaping (Result<Bale, Error>) -> ())
+    func createBale(bale: BaleCreate) async throws
+    func collectBale(id: String) async throws
+    func getAllBales() async throws -> [Bale]?
 }
 
 class BaleRepositoryImpl: BaleRepository, ObservableObject {
     static var shared = BaleRepositoryImpl()
-    var apiHandler = APIRequestHandler<BaleApi>()
+    internal var apiHandler = APIRequestHandler<BaleApi>()
+    private var moya = MoyaProvider<BaleApi>()
     
     @Published var bales: [Bale]?
     
-//    func fetchBales(completion: @escaping (Result<[Bale], Error>) -> ()) {
-//        apiHandler.request(target: .getAllBales, completion: completion)
-//    }
-    
-    func fetchBales() {
-        apiHandler.request(target: BaleApi.getAllBales, completion: { (result: Result<[Bale], Error>) in
-            switch result {
-            case .success(let receivedBales):
-                self.bales = receivedBales
-            case .failure(let error):
-                print("Failed to fetch bales: \(error)")
-            }
-        })
+    init() {
+        fetchBales()
     }
     
-    func uploadBale(bale: Bale, completion: @escaping (Result<Bale, Error>) -> ()) {
-        apiHandler.request(target: .uploadBale(bale: bale), completion: completion)
+    private func fetchBales(completionBlock: (([Bale]?) -> Void)? = nil) {
+        _Concurrency.Task {
+            do {
+                "Fetching bales...".log()
+                let bales = try await self.getAllBales()
+                self.bales = bales
+                if let bales = bales {
+                    bales.count.description.log()
+                }
+                completionBlock?(bales)
+            } catch {
+                completionBlock?(nil)
+            }
+        }
+    }
+    
+    func createBale(bale: BaleCreate) async throws {
+        let _ = try await withCheckedThrowingContinuation { continuation in
+            moya.request(.createBale(bale: bale)) { result in
+                continuation.resume(with: result)
+                self.fetchBales()
+            }
+        }
+    }
+    
+    func collectBale(id: String) async throws {
+        let _ = try await withCheckedThrowingContinuation { continuation in
+            moya.request(.collectBale(id: id)) { result in
+                continuation.resume(with: result)
+                self.fetchBales()
+            }
+        }
+    }
+    
+    func getAllBales() async throws -> [Bale]? {
+        return try await withCheckedThrowingContinuation { continuation in
+            apiHandler.request(target: .getAllBales, completion: { (result: Result<[Bale]?, Error>) in
+                continuation.resume(with: result)
+            })
+        }
     }
 }

@@ -115,6 +115,7 @@
 		EC0EB7DA2B53270600098AFA /* DateDecodingStrategy+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateDecodingStrategy+Extension.swift"; sourceTree = "<group>"; };
 		EC134AA52B3C6BE100CE43E6 /* BalesNearYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalesNearYouView.swift; sourceTree = "<group>"; };
 		EC134AAC2B3C6E8600CE43E6 /* BalesNearYouViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalesNearYouViewModel.swift; sourceTree = "<group>"; };
+		EC16269A2B55B7DF00CECB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EC1807842B373E5E009453F7 /* BaleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleAnnotation.swift; sourceTree = "<group>"; };
 		EC19B6EA2B547F01001A86B4 /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
 		EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
@@ -510,6 +511,7 @@
 		ECF266722A560DAF00CE33AD /* BaleTracker */ = {
 			isa = PBXGroup;
 			children = (
+				EC16269A2B55B7DF00CECB16 /* Info.plist */,
 				ECF266772A560DB000CE33AD /* Assets.xcassets */,
 				ECF2667E2A560DB000CE33AD /* BaleTracker.xcdatamodeld */,
 				ECAAFED82A5EEE1600EE8CD3 /* Core */,
@@ -946,7 +948,9 @@
 				DEVELOPMENT_TEAM = WNK6N53S3L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(PRODUCT_NAME) uses location";
+				INFOPLIST_FILE = BaleTracker/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "App uses location to track bales";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App uses location to track bales";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BaleTracker photo use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -978,7 +982,9 @@
 				DEVELOPMENT_TEAM = WNK6N53S3L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "$(PRODUCT_NAME) uses location";
+				INFOPLIST_FILE = BaleTracker/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "App uses location to track bales";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App uses location to track bales";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BaleTracker photo use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BaleDetailView: View {
     var bale: Bale
+    @EnvironmentObject private var location: LocationPermission
     
     var body: some View {
         Form {
@@ -17,7 +18,7 @@ struct BaleDetailView: View {
                 Divider()
                 detailCell(title: "Type", value: bale.baleType.name)
                 Divider()
-                detailCell(title: "Distance", value: "300m")
+                detailCell(title: "Distance", value: location.location?.distance(from: bale.location).distanceString() ?? "")
             }
             
             Section {

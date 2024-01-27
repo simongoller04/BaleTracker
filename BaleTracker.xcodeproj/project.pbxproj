@@ -28,6 +28,7 @@
 		EC3DF00E2AF7C885006B29E0 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF00C2AF7C885006B29E0 /* MapViewModel.swift */; };
 		EC3DF00F2AF7C885006B29E0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF00D2AF7C885006B29E0 /* MapView.swift */; };
 		EC4072772B3A0B2A00B31F56 /* BaleSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */; };
+		EC434F882B65084700F33D91 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC434F872B65084700F33D91 /* Double+Extension.swift */; };
 		EC4613DE2AFE8773006D0341 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4613DD2AFE8773006D0341 /* Image+Extension.swift */; };
 		EC4F99352AF7A63900645275 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = EC4F99342AF7A63900645275 /* RswiftLibrary */; };
 		EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */; };
@@ -132,6 +133,7 @@
 		EC3DF00C2AF7C885006B29E0 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		EC3DF00D2AF7C885006B29E0 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleSettingsView.swift; sourceTree = "<group>"; };
+		EC434F872B65084700F33D91 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		EC4613DD2AFE8773006D0341 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationView.swift; sourceTree = "<group>"; };
 		EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationViewModel.swift; sourceTree = "<group>"; };
@@ -430,8 +432,8 @@
 				ECA274BD2AF825EC00C0B3CC /* FarmRepository.swift */,
 				EC57C5362AFC20AC004BF48B /* UserRepository.swift */,
 				ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */,
-				ECC7EEE42B2E0AC700AADE70 /* Repository.swift */,
 				EC80C28E2B64B45A005CA6C2 /* MediaRepository.swift */,
+				ECC7EEE42B2E0AC700AADE70 /* Repository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -459,6 +461,7 @@
 				ECE6B6A22B3DB9FA00B42055 /* Formatter+Extension.swift */,
 				EC84EF452B51EAAD00B97DEB /* KFImage+Extension.swift */,
 				EC0EB7DA2B53270600098AFA /* DateDecodingStrategy+Extension.swift */,
+				EC434F872B65084700F33D91 /* Double+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				EC98E0912B2CA3EC00E555BF /* AuthenticationApi.swift in Sources */,
 				ECDDFAB62AF9883D00211BB0 /* Fixtures.swift in Sources */,
 				EC4072772B3A0B2A00B31F56 /* BaleSettingsView.swift in Sources */,
+				EC434F882B65084700F33D91 /* Double+Extension.swift in Sources */,
 				EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */,
 				ECAAFEE82A5EF22C00EE8CD3 /* String+Extension.swift in Sources */,
 				EC134AA62B3C6BE100CE43E6 /* BalesNearYouView.swift in Sources */,

@@ -11,6 +11,7 @@ import CoreLocation
 class LocationPermission: NSObject, ObservableObject {
     @Published var authorizationStatus : CLAuthorizationStatus = .notDetermined
     var coordinates : CLLocationCoordinate2D?
+    var location: CLLocation?
     
     private let locationManager = CLLocationManager()
     
@@ -42,5 +43,6 @@ extension LocationPermission: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {return}
         coordinates = location.coordinate
+        self.location = location
     }
 }

@@ -46,6 +46,7 @@ struct MapView: View {
             .ignoresSafeArea()
             
             buttonList
+                .padding(Spacing.spacingM)
             
             HStack {
                 ActionButton(text: R.string.localizable.addBale(), image: Image(systemName: "plus")) {
@@ -71,30 +72,33 @@ struct MapView: View {
     }
     
     private var buttonList: some View {
-        VStack {
-            VStack(spacing: 0) {
-                MapUserLocationButton(scope: mapScope)
-                Divider()
-                Button {
-                    activeSheet = .mapTypeSelector
-                } label: {
-                    Image(systemName: "map")
-                        .frame(width: Spacing.spacing2XL, height: Spacing.spacing2XL)
+        HStack(alignment: .top) {
+            MapScaleView(scope: mapScope)
+                .fullWidth(.leading)
+            VStack {
+                VStack(spacing: 0) {
+                    MapUserLocationButton(scope: mapScope)
+                    Divider()
+                    Button {
+                        activeSheet = .mapTypeSelector
+                    } label: {
+                        Image(systemName: "map")
+                            .frame(width: Spacing.spacing2XL, height: Spacing.spacing2XL)
+                    }
+                    Divider()
+                    Button {
+                        activeSheet = .balesNearYou
+                    } label: {
+                        Image(systemName: "checklist")
+                            .frame(width: Spacing.spacing2XL, height: Spacing.spacing2XL)
+                    }
                 }
-                Divider()
-                Button {
-                    activeSheet = .balesNearYou
-                } label: {
-                    Image(systemName: "checklist")
-                        .frame(width: Spacing.spacing2XL, height: Spacing.spacing2XL)
-                }
+                .background(Color(uiColor: .systemBackground))
+                .cornerRadius(10)
+                .frame(width: Spacing.spacing2XL)
+                
+                MapCompass(scope: mapScope)
             }
-            .background(Color(uiColor: .systemBackground))
-            .cornerRadius(10)
-            .frame(width: Spacing.spacing2XL)
-            .padding(Spacing.spacingM)
-            
-            MapCompass(scope: mapScope)
         }
     }
     
@@ -119,6 +123,7 @@ struct MapView: View {
             BaleDetailView(bale: bale)
                 .closeSheetHeader(title: "Details")
                 .presentationDetents([.medium, .large])
+                .environmentObject(locationPermission)
         }
     }
 }

@@ -30,6 +30,9 @@ struct Bale: Codable, Hashable {
     var coordinates: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
+    var location: CLLocation {
+        return CLLocation(latitude: latitude, longitude: longitude)
+    }
 }
 
 enum Crop: String, Codable, Hashable, CaseIterable, Identifiable {

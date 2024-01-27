@@ -69,7 +69,7 @@
 		ECAAFEEA2A5EF27300EE8CD3 /* Character+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE92A5EF27300EE8CD3 /* Character+Extension.swift */; };
 		ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */; };
 		ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */; };
-		ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */; };
+		ECAC8D412AED6654002B4131 /* CustomMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D402AED6654002B4131 /* CustomMoyaProvider.swift */; };
 		ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D432AED6C1F002B4131 /* Bale.swift */; };
 		ECBD220F2B4070370051DFDC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */; };
 		ECBD22122B4070480051DFDC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD22112B4070480051DFDC /* ProfileView.swift */; };
@@ -170,7 +170,7 @@
 		ECAAFEE92A5EF27300EE8CD3 /* Character+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Extension.swift"; sourceTree = "<group>"; };
 		ECAAFEEB2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleRepository.swift; sourceTree = "<group>"; };
-		ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestHandler.swift; sourceTree = "<group>"; };
+		ECAC8D402AED6654002B4131 /* CustomMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMoyaProvider.swift; sourceTree = "<group>"; };
 		ECAC8D432AED6C1F002B4131 /* Bale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bale.swift; sourceTree = "<group>"; };
 		ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		ECBD22112B4070480051DFDC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 			children = (
 				EC1F0D3F2AEBED9400D4DBC1 /* Services */,
 				EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */,
-				ECAC8D402AED6654002B4131 /* ApiRequestHandler.swift */,
+				ECAC8D402AED6654002B4131 /* CustomMoyaProvider.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -744,7 +744,7 @@
 				EC98E0852B2C8FD600E555BF /* RegistrationView.swift in Sources */,
 				ECBD22122B4070480051DFDC /* ProfileView.swift in Sources */,
 				ECC7EEE52B2E0AC700AADE70 /* Repository.swift in Sources */,
-				ECAC8D412AED6654002B4131 /* ApiRequestHandler.swift in Sources */,
+				ECAC8D412AED6654002B4131 /* CustomMoyaProvider.swift in Sources */,
 				ECA982482B401932002E7ED7 /* UserLoginDTO.swift in Sources */,
 				EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */,
 				ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */,

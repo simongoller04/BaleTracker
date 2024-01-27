@@ -14,6 +14,7 @@ import Kingfisher
 class ProfileViewModel: ObservableObject {
     private let logoutUseCase = LogoutUseCase()
     private let userRepository = UserRepositoryImpl.shared
+    private let mediaRepository = MediaRepository()
     
     private var cancellables = Set<AnyCancellable>()
 
@@ -66,19 +67,9 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
-    // TODO: refactor create media repo class
-    func getCurrentProfilePicture() {
-        KingfisherManager.shared.cache.clearCache()
-        if let url = user?.imageUrl {
-            KingfisherManager.shared.retrieveImage(with: url, options: [.requestModifier(KFImage.authorizationModifier)]) { result in
-                switch result {
-                case .success(let image):
-                    self.profilePicture = image.image
-                    "Image fetched sucessfully".log(.info)
-                case .failure(_):
-                    "Failed to fetch image".log(.error)
-                }
-            }
+    private func getCurrentProfilePicture() {
+        mediaRepository.getImageWithUrl(url: user?.imageUrl) { image in
+            self.profilePicture = image
         }
     }
     
@@ -91,7 +82,7 @@ class ProfileViewModel: ObservableObject {
             do {
                 let result = try await userRepository.deleteUser()
                 result.rawValue.log()
-//                logout()
+                logout()
             } catch {
                 error.localizedDescription.log(.error)
             }

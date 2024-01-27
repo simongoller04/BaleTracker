@@ -54,18 +54,21 @@ struct BaleDetailView: View {
         .fullWidth(.leading)
     }
     
+    @ViewBuilder
     private var collectedCell: some View {
-        HStack {
-            Label(R.string.localizable.collectedBy(), systemImage: "checkmark.square.fill")
-            VStack(alignment: .trailing) {
-                if let collectedBy = bale.collectedBy, let collectionTime = bale.collectionTime {
-                    Text(collectedBy)
-                    Text(collectionTime.iso8601?.defaultDateFormat() ?? "")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
+        if let collector = bale.collectedBy {
+            HStack {
+                Label(R.string.localizable.collectedBy(), systemImage: "checkmark.square.fill")
+                VStack(alignment: .trailing) {
+                    Text(collector.username)
+                    if let collectionTime = bale.collectionTime {
+                        Text(collectionTime.iso8601?.defaultDateFormat() ?? "")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
                 }
+                .fullWidth(.trailing)
             }
-            .fullWidth(.trailing)
         }
     }
     
@@ -78,7 +81,7 @@ struct BaleDetailView: View {
                     .foregroundStyle(.yellow)
             }
             VStack(alignment: .trailing) {
-                Text(bale.createdBy)
+                Text(bale.createdBy.username)
                 Text(bale.creationTime.iso8601?.defaultDateFormat() ?? "")
                     .font(.footnote)
                     .foregroundStyle(.secondary)

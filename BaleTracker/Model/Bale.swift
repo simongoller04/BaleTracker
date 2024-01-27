@@ -20,8 +20,8 @@ struct Bale: Codable, Hashable {
     var id: String
     var crop: Crop
     var baleType: BaleType
-    var createdBy: String
-    var collectedBy: String?
+    var createdBy: User
+    var collectedBy: User?
     var creationTime: String
     var collectionTime: String?
     var longitude: Double

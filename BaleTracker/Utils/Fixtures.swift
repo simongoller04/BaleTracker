@@ -42,8 +42,8 @@ extension Bale {
     static func fixture(collected: Bool = false) -> Bale {
         let crop = Crop.straw
         let baleType = BaleType.round
-        let createdBy = "created-by-id"
-        let collectedBy: String? = collected ? "collected-by-id" : nil
+        let createdBy: User = .fixture()
+        let collectedBy: User? = collected ? .fixture() : nil
         let creationTime = "2023-11-03T14:54:07.427Z"
         let collectionTime: String? = collected ? "2023-11-03T14:54:07.427Z" : nil
         let longitude = 52.518496

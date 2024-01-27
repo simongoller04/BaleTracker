@@ -9,19 +9,15 @@ import Foundation
 import Combine
 import Moya
 
-protocol BaleRepository {
-    static var shared: BaleRepositoryImpl { get }
-    var apiHandler: APIRequestHandler<BaleApi> { get }
-    
+protocol BaleRepository: Repository {
     func createBale(bale: BaleCreate) async throws
     func collectBale(id: String) async throws
     func getAllBales() async throws -> [Bale]?
 }
 
-class BaleRepositoryImpl: BaleRepository, ObservableObject {
+final class BaleRepositoryImpl: BaleRepository, ObservableObject {
     static var shared = BaleRepositoryImpl()
-    internal var apiHandler = APIRequestHandler<BaleApi>()
-    private var moya = MoyaProvider<BaleApi>()
+    internal var moya = CustomMoyaProvider<BaleApi>()
     
     @Published var bales: [Bale]?
     
@@ -47,7 +43,7 @@ class BaleRepositoryImpl: BaleRepository, ObservableObject {
     
     func createBale(bale: BaleCreate) async throws {
         let _ = try await withCheckedThrowingContinuation { continuation in
-            moya.request(.createBale(bale: bale)) { result in
+            let _ = moya.request(.createBale(bale: bale)) { result in
                 continuation.resume(with: result)
                 self.fetchBales()
             }
@@ -56,7 +52,7 @@ class BaleRepositoryImpl: BaleRepository, ObservableObject {
     
     func collectBale(id: String) async throws {
         let _ = try await withCheckedThrowingContinuation { continuation in
-            moya.request(.collectBale(id: id)) { result in
+            let _ = moya.request(.collectBale(id: id)) { result in
                 continuation.resume(with: result)
                 self.fetchBales()
             }
@@ -65,9 +61,9 @@ class BaleRepositoryImpl: BaleRepository, ObservableObject {
     
     func getAllBales() async throws -> [Bale]? {
         return try await withCheckedThrowingContinuation { continuation in
-            apiHandler.request(target: .getAllBales, completion: { (result: Result<[Bale]?, Error>) in
+            let _ = moya.requestWithResult(.getAllBales) { (result: Result<[Bale]?, Error>) in
                 continuation.resume(with: result)
-            })
+            }
         }
     }
 }

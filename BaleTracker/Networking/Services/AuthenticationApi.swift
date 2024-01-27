@@ -11,6 +11,7 @@ import Moya
 enum AuthenticationApi {
     case register(user: UserRegisterDTO)
     case login(loginDTO: UserLoginDTO)
+    case refresh(token: RefreshToken)
 }
 
 extension AuthenticationApi: BaseTargetType {
@@ -20,12 +21,14 @@ extension AuthenticationApi: BaseTargetType {
             return "/api/auth/register"
         case .login:
             return "/api/auth/login"
+        case .refresh:
+            return "/api/auth/refreshToken"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .register, .login:
+        case .register, .login, .refresh:
             return .post
         }
     }
@@ -36,6 +39,8 @@ extension AuthenticationApi: BaseTargetType {
             return .requestJSONEncodable(user)
         case let .login(loginDTO):
             return .requestJSONEncodable(loginDTO)
+        case let .refresh(token):
+            return .requestJSONEncodable(token)
         }
     }
     

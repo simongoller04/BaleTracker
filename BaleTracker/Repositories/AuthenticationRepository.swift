@@ -7,6 +7,7 @@
 
 import Foundation
 import Moya
+import Combine
 
 enum LoginInfo: Equatable {
     case loggedOut
@@ -16,12 +17,14 @@ enum LoginInfo: Equatable {
 protocol AuthenticationRepository: Repository {
     func register(user: UserRegisterDTO) async throws -> RegistrationState
     func login(loginDTO: UserLoginDTO) async throws
+    func refresh(completion: @escaping (Error?) -> Void)
 }
 
 final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableObject {
     static var shared = AuthenticationRepositoryImpl()
-    var apiHandler = APIRequestHandler<AuthenticationApi>()
-    
+    internal var moya = CustomMoyaProvider<AuthenticationApi>()
+    private var cancellable: Set<AnyCancellable> = []
+
     private init() {
         internalToken = KeyChain.load(key: .token)
         setLoggedInfo()
@@ -75,7 +78,7 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableOb
     
     func register(user: UserRegisterDTO) async throws -> RegistrationState {
         let result = try await withCheckedThrowingContinuation { continuation in
-            apiHandler.request(target: .register(user: user), completion: { (result: Result<RegistrationState, Error>) in
+            let _ = moya.requestWithResult(.register(user: user), completion: { (result: Result<RegistrationState, Error>) in
                 continuation.resume(with: result)
             })
         }
@@ -84,11 +87,33 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableOb
     
     func login(loginDTO: UserLoginDTO) async throws {
         self.token = try await withCheckedThrowingContinuation { continuation in
-            apiHandler.request(target: .login(loginDTO: loginDTO), completion: { (result: Result<Token?, Error>) in
+            let _ = moya.requestWithResult(.login(loginDTO: loginDTO), completion: { (result: Result<Token?, Error>) in
                 continuation.resume(with: result)
             })
         }
-        print(self.token)
+    }
+
+    func refresh(completion: @escaping (Error?) -> Void) {
+        if let token = self.token?.refreshToken, !token.isEmpty  {
+            
+            let _ = moya.requestWithResult(.refresh(token: RefreshToken(refreshToken: token))) { (result: Result<Token, Error>) in
+                result.publisher
+                    .sink { compleded in
+                        switch compleded {
+                        case .finished:
+                            completion(nil)
+                        case let .failure(error):
+                            "Failed to refresh access token using refresh token".log(.error)
+                            completion(error)
+                            error.localizedDescription.log(.error)
+                            LogoutUseCase().execute()
+                        }
+                    } receiveValue: { newToken in
+                        self.token = newToken
+                        "Successfully refreshed access token using refresh token".log()
+                    }.store(in: &self.cancellable)
+            }
+        }
     }
 }
 

@@ -11,5 +11,5 @@ import Moya
 protocol Repository {
     associatedtype T: TargetType
     static var shared: Self { get }
-    var apiHandler: APIRequestHandler<T> { get }
+    var moya: CustomMoyaProvider<T> { get }
 }

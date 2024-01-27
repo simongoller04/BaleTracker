@@ -56,7 +56,6 @@ class ProfileViewModel: ObservableObject {
             switch result {
             case .success:
                 userRepository.fetchUser()
-                getCurrentProfilePicture()
                 self.selectedImage = nil
                 isUploading = false
                 "Image uploaded sucessfully".log(.info)
@@ -67,6 +66,7 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
+    // TODO: refactor create media repo class
     func getCurrentProfilePicture() {
         KingfisherManager.shared.cache.clearCache()
         if let url = user?.imageUrl {

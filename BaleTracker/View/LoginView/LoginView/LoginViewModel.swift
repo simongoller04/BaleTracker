@@ -18,7 +18,7 @@ class LoginViewModel: ObservableObject {
             do {
                 try await authenticationRepository.login(loginDTO: UserLoginDTO(username: username, password: password))
             } catch {
-                print(error)
+                error.localizedDescription.log(.error)
             }
         }
     }

@@ -3,4 +3,147 @@
    uuid = "1E6F7508-5BE4-4AD7-A6C1-A9318367D6B6"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "564B6CA9-5D38-4CF0-8C2E-5BBAAB812D2F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaleTracker/Repositories/AuthenticationRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "login(loginDTO:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2C55762-19D5-4D9C-A766-EE5B24F10767"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaleTracker/View/LoginView/LoginView/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "login()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F2C55762-19D5-4D9C-A766-EE5B24F10767 - 593c7e55356a3e0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.LoginViewModel.login() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/LoginView/LoginView/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "F2C55762-19D5-4D9C-A766-EE5B24F10767 - c11c1ce8aad7e263"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.LoginViewModel.login() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/LoginView/LoginView/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "F2C55762-19D5-4D9C-A766-EE5B24F10767 - 9f360ed698b37bf5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.LoginViewModel.login() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/LoginView/LoginView/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "F2C55762-19D5-4D9C-A766-EE5B24F10767 - b23307172a27c5f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.LoginViewModel.login() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/LoginView/LoginView/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "F2C55762-19D5-4D9C-A766-EE5B24F10767 - b23307172a27c5f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.LoginViewModel.login() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/LoginView/LoginView/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9396F3AA-C174-4BA6-9B12-0D340038731B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaleTracker/Networking/ApiRequestHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "requestWithCodable(_:callbackQueue:progress:shouldRetry:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "688A0034-14CB-4EE0-AFD0-B1185801EC0E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaleTracker/Networking/ApiRequestHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "requestWithCodable(_:callbackQueue:progress:shouldRetry:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

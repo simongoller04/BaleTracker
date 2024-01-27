@@ -14,11 +14,11 @@ struct BaleDetailView: View {
     var body: some View {
         Form {
             HStack {
-                detailCell(title: "Crop", value: bale.crop.name)
+                detailCell(title: R.string.localizable.crop(), value: bale.crop.name)
                 Divider()
-                detailCell(title: "Type", value: bale.baleType.name)
+                detailCell(title: R.string.localizable.type(), value: bale.baleType.name)
                 Divider()
-                detailCell(title: "Distance", value: location.location?.distance(from: bale.location).distanceString() ?? "")
+                detailCell(title: R.string.localizable.distance(), value: location.location?.distance(from: bale.location).distanceString() ?? "")
             }
             
             Section {
@@ -30,14 +30,14 @@ struct BaleDetailView: View {
                 Button {
                     //
                 } label: {
-                    Label("Delete", systemImage: "trash.square.fill")
+                    Label(R.string.localizable.delete(), systemImage: "trash.square.fill")
                         .foregroundStyle(.red)
                 }
                 
                 Button {
                     //
                 } label: {
-                    Label("Collect", systemImage: "checkmark.square.fill")
+                    Label(R.string.localizable.collect(), systemImage: "checkmark.square.fill")
                 }
             }
         }
@@ -56,7 +56,7 @@ struct BaleDetailView: View {
     
     private var collectedCell: some View {
         HStack {
-            Label("Collected", systemImage: "checkmark.square.fill")
+            Label(R.string.localizable.collectedBy(), systemImage: "checkmark.square.fill")
             VStack(alignment: .trailing) {
                 if let collectedBy = bale.collectedBy, let collectionTime = bale.collectionTime {
                     Text(collectedBy)
@@ -72,7 +72,7 @@ struct BaleDetailView: View {
     private var createdCell: some View {
         HStack {
             Label {
-                Text("Created")
+                Text(R.string.localizable.createdBy())
             } icon: {
                 Image(systemName: "plus.square.fill")
                     .foregroundStyle(.yellow)
@@ -90,10 +90,12 @@ struct BaleDetailView: View {
 
 #Preview("Dark") {
     BaleDetailView(bale: .fixture(collected: true))
+        .environmentObject(LocationPermission())
         .preferredColorScheme(.dark)
 }
 
 #Preview("Light") {
     BaleDetailView(bale: .fixture(collected: true))
+        .environmentObject(LocationPermission())
         .preferredColorScheme(.light)
 }

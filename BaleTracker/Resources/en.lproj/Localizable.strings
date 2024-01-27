@@ -73,3 +73,10 @@
 "selectFromGallery" = "Select image from gallery";
 "deletePicture" = "Delete profile picture";
 
+// MARK: BaleDetailView
+"type" = "Type";
+"distance" = "Distance";
+"delete" = "Delete";
+"collect" = "Collect";
+
+

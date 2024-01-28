@@ -30,6 +30,8 @@
 		EC4072772B3A0B2A00B31F56 /* BaleSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */; };
 		EC434F882B65084700F33D91 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC434F872B65084700F33D91 /* Double+Extension.swift */; };
 		EC4613DE2AFE8773006D0341 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4613DD2AFE8773006D0341 /* Image+Extension.swift */; };
+		EC4930C52B6586B8002ACDF5 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4930C42B6586B8002ACDF5 /* LoginState.swift */; };
+		EC4930C92B658B23002ACDF5 /* TextFieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4930C82B658B23002ACDF5 /* TextFieldWithError.swift */; };
 		EC4F99352AF7A63900645275 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = EC4F99342AF7A63900645275 /* RswiftLibrary */; };
 		EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */; };
 		EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */; };
@@ -73,6 +75,7 @@
 		ECAC8D3E2AED4598002B4131 /* BaleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */; };
 		ECAC8D412AED6654002B4131 /* CustomMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D402AED6654002B4131 /* CustomMoyaProvider.swift */; };
 		ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D432AED6C1F002B4131 /* Bale.swift */; };
+		ECB0F12C2B66D77A0045AA48 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB0F12B2B66D77A0045AA48 /* ErrorResponse.swift */; };
 		ECBD220F2B4070370051DFDC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */; };
 		ECBD22122B4070480051DFDC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD22112B4070480051DFDC /* ProfileView.swift */; };
 		ECC7EEE22B2DF35A00AADE70 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */; };
@@ -135,6 +138,8 @@
 		EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleSettingsView.swift; sourceTree = "<group>"; };
 		EC434F872B65084700F33D91 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		EC4613DD2AFE8773006D0341 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		EC4930C42B6586B8002ACDF5 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		EC4930C82B658B23002ACDF5 /* TextFieldWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithError.swift; sourceTree = "<group>"; };
 		EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationView.swift; sourceTree = "<group>"; };
 		EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationViewModel.swift; sourceTree = "<group>"; };
 		EC53C46B2B407EBE00FC6684 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
@@ -176,6 +181,7 @@
 		ECAC8D3D2AED4598002B4131 /* BaleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleRepository.swift; sourceTree = "<group>"; };
 		ECAC8D402AED6654002B4131 /* CustomMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMoyaProvider.swift; sourceTree = "<group>"; };
 		ECAC8D432AED6C1F002B4131 /* Bale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bale.swift; sourceTree = "<group>"; };
+		ECB0F12B2B66D77A0045AA48 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		ECBD22112B4070480051DFDC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
@@ -325,6 +331,17 @@
 			path = Sheets;
 			sourceTree = "<group>";
 		};
+		EC4930C72B6586BE002ACDF5 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EC4930C42B6586B8002ACDF5 /* LoginState.swift */,
+				EC6748BB2B3F66BE006EAD1F /* RegistrationState.swift */,
+				ECC7EEE62B2E0D2400AADE70 /* Token.swift */,
+				ECB0F12B2B66D77A0045AA48 /* ErrorResponse.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		EC57C5242AFBF37E004BF48B /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +416,7 @@
 			children = (
 				ECA304E22B2A4C6700AB8D97 /* CustomSecureTextField.swift */,
 				ECA304DF2B2A3C9C00AB8D97 /* CustomTextField.swift */,
+				EC4930C82B658B23002ACDF5 /* TextFieldWithError.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -416,11 +434,10 @@
 		ECAAFED92A5EEE1F00EE8CD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC4930C72B6586BE002ACDF5 /* Authentication */,
 				EC98E08A2B2CA20500E555BF /* User */,
 				ECAC8D432AED6C1F002B4131 /* Bale.swift */,
 				ECA274BB2AF8207D00C0B3CC /* Farm.swift */,
-				ECC7EEE62B2E0D2400AADE70 /* Token.swift */,
-				EC6748BB2B3F66BE006EAD1F /* RegistrationState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -741,6 +758,7 @@
 				ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */,
 				EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */,
 				ECBD220F2B4070370051DFDC /* ProfileViewModel.swift in Sources */,
+				EC4930C52B6586B8002ACDF5 /* LoginState.swift in Sources */,
 				EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */,
 				ECA274BE2AF825EC00C0B3CC /* FarmRepository.swift in Sources */,
 				ECA304E32B2A4C6700AB8D97 /* CustomSecureTextField.swift in Sources */,
@@ -754,7 +772,9 @@
 				ECC7EEE52B2E0AC700AADE70 /* Repository.swift in Sources */,
 				ECAC8D412AED6654002B4131 /* CustomMoyaProvider.swift in Sources */,
 				ECA982482B401932002E7ED7 /* UserLoginDTO.swift in Sources */,
+				ECB0F12C2B66D77A0045AA48 /* ErrorResponse.swift in Sources */,
 				EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */,
+				EC4930C92B658B23002ACDF5 /* TextFieldWithError.swift in Sources */,
 				ECAAFEEC2A5EF2BA00EE8CD3 /* DateFormatter+Extension.swift in Sources */,
 				EC3DF00A2AF7C878006B29E0 /* FarmView.swift in Sources */,
 				ECC7EEE22B2DF35A00AADE70 /* AuthenticationRepository.swift in Sources */,

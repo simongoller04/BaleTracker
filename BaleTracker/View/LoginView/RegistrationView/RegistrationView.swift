@@ -16,17 +16,16 @@ struct RegistrationView: View {
             LogoHeader()
             
             VStack(spacing: 0) {
-                textFieldWithError(errorStates: [.emailInvalid, .emailIsTaken]) {
+                TextFieldWithError(currentState: $viewModel.registrationState, errorStates: [.emailInvalid, .emailIsTaken]) {
                     CustomTextField(text: $viewModel.email, placeholder: "Email")
                 }
-                textFieldWithError(errorStates: [.usernameIsTaken, .usernameTooShort]) {
+                TextFieldWithError(currentState: $viewModel.registrationState, errorStates: [.usernameIsTaken, .usernameTooShort]) {
                     CustomTextField(text: $viewModel.username, placeholder: "Username")
                 }
-                textFieldWithError(errorStates: [.passwordTooShort]) {
+                TextFieldWithError(currentState: $viewModel.registrationState, errorStates: [.passwordTooShort]) {
                     CustomSecureTextField(text: $viewModel.password, placeholder: "Password")
                 }
-                
-                textFieldWithError(errorStates: [.passwordsDoNotMatch]) {
+                TextFieldWithError(currentState: $viewModel.registrationState, errorStates: [.passwordsDoNotMatch]) {
                     CustomSecureTextField(text: $viewModel.repeatPassword, placeholder: "Repeat Password")
                 }
             }
@@ -42,25 +41,6 @@ struct RegistrationView: View {
         .padding(Spacing.spacingM)
         .navigationBarTitleDisplayMode(.inline)
         .textInputAutocapitalization(.never)
-    }
-    
-    private func textFieldWithError(errorStates: [RegistrationState], textField: () -> some View) -> some View {
-        VStack(spacing: 0) {
-            textField()
-            if errorStates.contains(viewModel.registrationState) {
-                HStack {
-                    Image(systemName: "exclamationmark.circle")
-                        .resizable()
-                        .frame(width: 14, height: 14)
-                    
-
-                    Text(viewModel.registrationState.errorMessage)
-                        .font(.footnote)
-                }
-                .fullWidth(.leading)
-                .foregroundStyle(.red)
-            }
-        }
     }
 }
 

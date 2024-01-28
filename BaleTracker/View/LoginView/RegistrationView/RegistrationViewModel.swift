@@ -16,7 +16,7 @@ class RegistrationViewModel: ObservableObject {
     @Published var repeatPassword = ""
     
     @Published var isFormValid = false
-    @Published var registrationState: RegistrationState = .none 
+    @Published var registrationState: ErrorResponse = .none 
     
     private var publishers = Set<AnyCancellable>()
     private var authenticationRepository = AuthenticationRepositoryImpl.shared
@@ -115,10 +115,10 @@ class RegistrationViewModel: ObservableObject {
     func register(completion: @escaping () -> Void) {
         Task {
             do {
-                self.registrationState = try await authenticationRepository.register(user: UserRegisterDTO(email: email, username: username, password: password))
+               registrationState = try await authenticationRepository.register(user: UserRegisterDTO(email: email, username: username, password: password))
                 completion()
             } catch {
-                print(error)
+                registrationState = error as! ErrorResponse
             }
         }
     }

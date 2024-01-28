@@ -30,8 +30,8 @@
             filePath = "BaleTracker/View/LoginView/LoginView/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "login()"
             landmarkType = "7">
             <Locations>

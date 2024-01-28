@@ -15,22 +15,29 @@ struct LoginView: View {
         NavigationStack(path: $path) {
             VStack(spacing: 24) {
                 LogoHeader()
-
                 
                 VStack(spacing: 0) {
-                    CustomTextField(text: $viewModel.username, placeholder: "Username")
+                    TextFieldWithError(currentState: $viewModel.loginState, errorStates: [.invalidUsername]) {
+                        CustomTextField(text: $viewModel.username, placeholder: "Username")
+                    }
                     
                     VStack(spacing: Spacing.spacingXS) {
                         CustomSecureTextField(text: $viewModel.password, placeholder: R.string.localizable.password())
-                        Button(R.string.localizable.forgotPassword()) {
-                            // TODO: resset password
+
+                        HStack {
+                            TextFieldWithError(currentState: $viewModel.loginState, errorStates: [.invalidPassword]) {
+                                EmptyView()
+                            }
+                            Spacer()
+                            Button(R.string.localizable.forgotPassword()) {
+                                // TODO: resset password
+                            }
+                            .font(.footnote)
                         }
-                        .font(.footnote)
-                        .fullWidth(.trailing)
                     }
                 }
                 
-                ActionButton(text: R.string.localizable.signIn()) {
+                ActionButton(isLoading: viewModel.isLoginIn, text: R.string.localizable.signIn()) {
                     viewModel.login()
                 }
                 

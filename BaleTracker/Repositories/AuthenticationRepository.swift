@@ -15,7 +15,7 @@ enum LoginInfo: Equatable {
 }
 
 protocol AuthenticationRepository: Repository {
-    func register(user: UserRegisterDTO) async throws -> RegistrationState
+    func register(user: UserRegisterDTO) async throws -> ErrorResponse
     func login(loginDTO: UserLoginDTO) async throws
     func refresh(completion: @escaping (Error?) -> Void)
 }
@@ -76,9 +76,9 @@ final class AuthenticationRepositoryImpl: AuthenticationRepository, ObservableOb
     
     // MARK: API calls
     
-    func register(user: UserRegisterDTO) async throws -> RegistrationState {
+    func register(user: UserRegisterDTO) async throws -> ErrorResponse {
         let result = try await withCheckedThrowingContinuation { continuation in
-            let _ = moya.requestWithResult(.register(user: user), completion: { (result: Result<RegistrationState, Error>) in
+            let _ = moya.requestWithResult(.register(user: user), completion: { (result: Result<ErrorResponse, Error>) in
                 continuation.resume(with: result)
             })
         }

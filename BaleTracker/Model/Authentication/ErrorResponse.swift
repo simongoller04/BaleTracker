@@ -1,13 +1,18 @@
 //
-//  RegistrationState.swift
+//  ErrorResponse.swift
 //  BaleTracker
 //
-//  Created by Simon Goller on 29.12.23.
+//  Created by Simon Goller on 28.01.24.
 //
 
 import Foundation
 
-enum RegistrationState: String, Codable {
+enum ErrorResponse: String, Error, Codable, Equatable {
+    // MARK: Login Errors
+    case invalidPassword = "INVALID_PASSWORD"
+    case invalidUsername = "INVALID_USERNAME"
+    
+    // MARK: Registration
     case usernameIsTaken = "USERNAME_TAKEN"
     case emailIsTaken = "EMAIL_TAKEN"
     case userCreated = "USER_CREATED"
@@ -15,16 +20,19 @@ enum RegistrationState: String, Codable {
     case usernameTooShort
     case passwordTooShort
     case passwordsDoNotMatch
+    
     case none
     
     var errorMessage: String {
         switch self {
+        case .invalidPassword:
+            return "The password is not correct!"
+        case .invalidUsername:
+            return "This user does not exist"
         case .usernameIsTaken:
             return "This username is already taken!"
         case .emailIsTaken:
             return "Email already exists"
-        case .userCreated, .none:
-            return ""
         case .emailInvalid:
             return "This is not a valid email!"
         case .usernameTooShort:
@@ -33,6 +41,8 @@ enum RegistrationState: String, Codable {
             return "Password is to short!"
         case .passwordsDoNotMatch:
             return "Passwords do not match!"
+        case .userCreated, .none:
+            return ""
         }
     }
 }

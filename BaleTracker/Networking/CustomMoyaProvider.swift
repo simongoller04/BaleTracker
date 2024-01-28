@@ -62,9 +62,17 @@ class CustomMoyaProvider<T>: MoyaProvider<T> where T: TargetType {
                             self?.request(target, callbackQueue: callbackQueue, progress: progress, shouldRetry: false, completion: completion)
                         }
                     }
-                } else {
+                } else if let _ = try? response.filter(statusCode: 200) {
                     completion(.success(response))
+                } else {
+                    do {
+                        let error = try JSONDecoder().decode(ErrorResponse.self, from: response.data)
+                        completion(.failure(MoyaError.underlying(error, nil)))
+                    } catch {
+                        completion(.failure(MoyaError.underlying(error, nil)))
+                    }
                 }
+                
             case let .failure(error):
                 completion(.failure(error))
             }
@@ -89,33 +97,20 @@ class CustomMoyaProvider<T>: MoyaProvider<T> where T: TargetType {
                             self?.requestWithCodable(target, callbackQueue: callbackQueue, progress: progress, shouldRetry: false, completion: completion)
                         }
                     }
-                } else {
+                } else if let _ = try? response.filter(statusCode: 200) {
                     do {
                         let results = try JSONDecoder().decode(C.self, from: response.data)
                         completion(.success(results))
                     } catch {
                         completion(.failure(error))
                     }
-                }
-            case let .failure(error):
-                completion(.failure(error))
-            }
-        }
-    }
-}
-
-class APIRequestHandler<API: TargetType> {
-    let provider =  MoyaProvider<API>()
-    
-    func request<T: Codable>(target: API, completion: @escaping (Result<T, Error>) -> ()) {
-        provider.request(target) { result in
-            switch result {
-            case let .success(response):
-                do {
-                    let results = try JSONDecoder().decode(T.self, from: response.data)
-                    completion(.success(results))
-                } catch {
-                    completion(.failure(error))
+                } else {
+                    do {
+                        let error = try JSONDecoder().decode(ErrorResponse.self, from: response.data)
+                        completion(.failure(error))
+                    } catch {
+                        completion(.failure(error))
+                    }
                 }
             case let .failure(error):
                 completion(.failure(error))

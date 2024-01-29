@@ -60,7 +60,7 @@ struct BaleDetailView: View {
             HStack {
                 Label(R.string.localizable.collectedBy(), systemImage: "checkmark.square.fill")
                 VStack(alignment: .trailing) {
-                    Text(collector.username)
+                    Text(collector)
                     if let collectionTime = bale.collectionTime {
                         Text(collectionTime.iso8601?.defaultDateFormat() ?? "")
                             .font(.footnote)
@@ -81,7 +81,7 @@ struct BaleDetailView: View {
                     .foregroundStyle(.yellow)
             }
             VStack(alignment: .trailing) {
-                Text(bale.createdBy.username)
+                Text(bale.createdBy)
                 Text(bale.creationTime.iso8601?.defaultDateFormat() ?? "")
                     .font(.footnote)
                     .foregroundStyle(.secondary)

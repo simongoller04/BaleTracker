@@ -14,18 +14,20 @@ struct BaleCreate: Codable {
     var baleType: BaleType
     var longitude: Double
     var latitude: Double
+    var farm: String?
 }
 
 struct Bale: Codable, Hashable {
     var id: String
     var crop: Crop
     var baleType: BaleType
-    var createdBy: User
-    var collectedBy: User?
+    var createdBy: String
     var creationTime: String
+    var collectedBy: String?
     var collectionTime: String?
     var longitude: Double
     var latitude: Double
+    var farm: String?
     
     var coordinates: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

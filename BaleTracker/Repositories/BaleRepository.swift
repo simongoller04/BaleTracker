@@ -13,6 +13,9 @@ protocol BaleRepository: Repository {
     func createBale(bale: BaleCreate) async throws
     func collectBale(id: String) async throws
     func getAllBales() async throws -> [Bale]?
+    func getAllCreatedBales() async throws  -> [Bale]?
+    func getAllCollectedBales() async throws  -> [Bale]?
+    func getAllFromFarm(farmId: String) async throws  -> [Bale]?
 }
 
 final class BaleRepositoryImpl: BaleRepository, ObservableObject {
@@ -41,6 +44,8 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
         }
     }
     
+    // MARK: edit bales
+    
     func createBale(bale: BaleCreate) async throws {
         let _ = try await withCheckedThrowingContinuation { continuation in
             let _ = moya.request(.createBale(bale: bale)) { result in
@@ -59,6 +64,8 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
         }
     }
     
+    // MARK: get bales
+    
     func getAllBales() async throws -> [Bale]? {
         return try await withCheckedThrowingContinuation { continuation in
             let _ = moya.requestWithResult(.getAllBales) { (result: Result<[Bale]?, Error>) in
@@ -66,4 +73,29 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
             }
         }
     }
+    
+    func getAllCreatedBales() async throws  -> [Bale]? {
+        return try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.requestWithResult(.getCreated) { (result: Result<[Bale]?, Error>) in
+                continuation.resume(with: result)
+            }
+        }
+    }
+    
+    func getAllCollectedBales() async throws  -> [Bale]? {
+        return try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.requestWithResult(.getCreated) { (result: Result<[Bale]?, Error>) in
+                continuation.resume(with: result)
+            }
+        }
+    }
+    
+    func getAllFromFarm(farmId: String) async throws  -> [Bale]? {
+        return try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.requestWithResult(.getAllFromFarm(farmId: farmId)) { (result: Result<[Bale]?, Error>) in
+                continuation.resume(with: result)
+            }
+        }
+    }
+    
 }

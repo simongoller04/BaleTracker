@@ -31,7 +31,7 @@ struct MapView: View {
             Map(scope: mapScope) {
                 if let bales = viewModel.bales {
                     ForEach(bales, id: \.id) { bale in
-                        Annotation("", coordinate: bale.coordinates) {
+                        Annotation("", coordinate: bale.locationCoordinate) {
                             Button {
                                 activeSheet = .baleDetails(bale: bale)
                             } label: {

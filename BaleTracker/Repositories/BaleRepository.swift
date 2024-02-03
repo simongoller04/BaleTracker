@@ -84,7 +84,7 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
     
     func getAllCollectedBales() async throws  -> [Bale]? {
         return try await withCheckedThrowingContinuation { continuation in
-            let _ = moya.requestWithResult(.getCreated) { (result: Result<[Bale]?, Error>) in
+            let _ = moya.requestWithResult(.getCollected) { (result: Result<[Bale]?, Error>) in
                 continuation.resume(with: result)
             }
         }

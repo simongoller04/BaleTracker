@@ -36,9 +36,9 @@ struct ProfileView: View {
                 
                 Section {
                     HStack {
-                        detailCell(title: R.string.localizable.created(), value: "350")
+                        detailCell(title: R.string.localizable.created(), value: viewModel.createdBales?.count.description ?? "")
                         Divider()
-                        detailCell(title: R.string.localizable.collected(), value: "100")
+                        detailCell(title: R.string.localizable.collected(), value: viewModel.collectedBales?.count.description ?? "")
                     }
                 }
                 
@@ -83,6 +83,10 @@ struct ProfileView: View {
                 Button(R.string.localizable.cancel(), role: .cancel) {
                     showConfirmationDialog = false
                 }
+            }
+            .onAppear {
+                viewModel.getCreatedBales()
+                viewModel.getCollectedBales()
             }
         }
     }

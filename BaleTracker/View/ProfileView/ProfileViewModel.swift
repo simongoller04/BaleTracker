@@ -15,6 +15,7 @@ class ProfileViewModel: ObservableObject {
     private let logoutUseCase = LogoutUseCase()
     private let userRepository = UserRepositoryImpl.shared
     private let mediaRepository = MediaRepository()
+    private let baleRepository = BaleRepositoryImpl.shared
     
     private var cancellables = Set<AnyCancellable>()
 
@@ -23,6 +24,9 @@ class ProfileViewModel: ObservableObject {
     @Published var profilePicture: UIImage? = nil
     @Published var uploadProgress = 0.0
     @Published var isUploading = false
+    
+    @Published var createdBales: [Bale]?
+    @Published var collectedBales: [Bale]?
     
     init() {
         observeUser()
@@ -38,6 +42,8 @@ class ProfileViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
+    // MARK: image
     
     private func observeSelectedImage() {
         $selectedImage
@@ -73,6 +79,19 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
+    func deleteProfilePicture() {
+        _Concurrency.Task {
+            do {
+                try await userRepository.deleteProfilePicture()
+                self.profilePicture = nil
+            } catch {
+                error.localizedDescription.log(.error)
+            }
+        }
+    }
+    
+    // MARK: account
+    
     func logout() {
         logoutUseCase.execute()
     }
@@ -89,11 +108,22 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
-    func deleteProfilePicture() {
-        _Concurrency.Task {
+    // MARK: bales
+    
+    func getCreatedBales() {
+        Task {
             do {
-                try await userRepository.deleteProfilePicture()
-                self.profilePicture = nil
+                self.createdBales = try await baleRepository.getAllCreatedBales()
+            } catch {
+                error.localizedDescription.log(.error)
+            }
+        }
+    }
+    
+    func getCollectedBales() {
+        Task {
+            do {
+                self.collectedBales = try await baleRepository.getAllCollectedBales()
             } catch {
                 error.localizedDescription.log(.error)
             }

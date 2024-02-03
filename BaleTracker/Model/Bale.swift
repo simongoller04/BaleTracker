@@ -12,9 +12,13 @@ import MapKit
 struct BaleCreate: Codable {
     var crop: Crop
     var baleType: BaleType
+    var coordinate: Coordinate
+    var farm: String?
+}
+
+struct Coordinate: Codable, Equatable, Hashable {
     var longitude: Double
     var latitude: Double
-    var farm: String?
 }
 
 struct Bale: Codable, Hashable {
@@ -25,15 +29,14 @@ struct Bale: Codable, Hashable {
     var creationTime: String
     var collectedBy: String?
     var collectionTime: String?
-    var longitude: Double
-    var latitude: Double
+    var coordinate: Coordinate
     var farm: String?
     
-    var coordinates: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    var locationCoordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
     var location: CLLocation {
-        return CLLocation(latitude: latitude, longitude: longitude)
+        return CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
 }
 

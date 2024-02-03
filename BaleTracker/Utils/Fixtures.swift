@@ -42,13 +42,13 @@ extension Bale {
     static func fixture(collected: Bool = false) -> Bale {
         let crop = Crop.straw
         let baleType = BaleType.round
-        let createdBy: User = .fixture()
-        let collectedBy: User? = collected ? .fixture() : nil
+        let createdBy = "creation_user"
+        let collectedBy: String? = collected ? "collection_user" : nil
         let creationTime = "2023-11-03T14:54:07.427Z"
         let collectionTime: String? = collected ? "2023-11-03T14:54:07.427Z" : nil
-        let longitude = 52.518496
-        let latitude = 13.405169
+        let coordinate = Coordinate(longitude: 52.518496, latitude: 13.405169)
+        let farm = "farm1"
 
-        return Bale(id: "id", crop: crop, baleType: baleType, createdBy: createdBy, collectedBy: collectedBy, creationTime: creationTime, collectionTime: collectionTime, longitude: longitude, latitude: latitude)
+        return Bale(id: "id", crop: crop, baleType: baleType, createdBy: createdBy, creationTime: creationTime, collectedBy: collectedBy, collectionTime: collectionTime, coordinate: coordinate, farm: farm)
     }
 }

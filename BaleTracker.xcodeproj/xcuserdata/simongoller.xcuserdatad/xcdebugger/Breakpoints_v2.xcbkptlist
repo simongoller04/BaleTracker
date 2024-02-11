@@ -7,99 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "564B6CA9-5D38-4CF0-8C2E-5BBAAB812D2F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BaleTracker/Repositories/AuthenticationRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "login(loginDTO:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "564B6CA9-5D38-4CF0-8C2E-5BBAAB812D2F - 43d48734a06508a2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for BaleTracker.AuthenticationRepositoryImpl.login(loginDTO: BaleTracker.UserLoginDTO) async throws -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/Repositories/AuthenticationRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "264">
-               </Location>
-               <Location
-                  uuid = "564B6CA9-5D38-4CF0-8C2E-5BBAAB812D2F - 1b559b55b239d7c3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for BaleTracker.AuthenticationRepositoryImpl.login(loginDTO: BaleTracker.UserLoginDTO) async throws -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/Repositories/AuthenticationRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "564B6CA9-5D38-4CF0-8C2E-5BBAAB812D2F - 8b067fac978a04a4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for BaleTracker.AuthenticationRepositoryImpl.login(loginDTO: BaleTracker.UserLoginDTO) async throws -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/Repositories/AuthenticationRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "564B6CA9-5D38-4CF0-8C2E-5BBAAB812D2F - 6f28abd06edf86a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for BaleTracker.AuthenticationRepositoryImpl.login(loginDTO: BaleTracker.UserLoginDTO) async throws -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/Repositories/AuthenticationRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "564B6CA9-5D38-4CF0-8C2E-5BBAAB812D2F - 184951f99eaeedae"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.CheckedContinuation&lt;Swift.Optional&lt;BaleTracker.Token&gt;, Swift.Error&gt;) -&gt; () in BaleTracker.AuthenticationRepositoryImpl.login(loginDTO: BaleTracker.UserLoginDTO) async throws -&gt; ()"
-                  moduleName = "BaleTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/Repositories/AuthenticationRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "244">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F2C55762-19D5-4D9C-A766-EE5B24F10767"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -296,6 +203,178 @@
             endingLineNumber = "30"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A33C1383-1B9B-4124-8680-48AC6AE078AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "requestQuery()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A33C1383-1B9B-4124-8680-48AC6AE078AA - 70de6beae72722c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.BalesNearYouViewModel.requestQuery() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "A33C1383-1B9B-4124-8680-48AC6AE078AA - 5c0626c958083770"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.BalesNearYouViewModel.requestQuery() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "A33C1383-1B9B-4124-8680-48AC6AE078AA - 8267ea5b86216e82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.BalesNearYouViewModel.requestQuery() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "A33C1383-1B9B-4124-8680-48AC6AE078AA - 3abbaa80d6a188a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in BaleTracker.BalesNearYouViewModel.requestQuery() -&gt; ()"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EAF124FB-7830-48DC-9B9B-70D7F4404608"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "header(title:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EAF124FB-7830-48DC-9B9B-70D7F4404608 - a0ae355c1a521dbe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.fullWidth(SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in BaleTracker.BalesNearYouView.header(title: Swift.String) -&gt; some"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "EAF124FB-7830-48DC-9B9B-70D7F4404608 - a9ca98133e53116"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BaleTracker.Bale) -&gt; Swift.Bool in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.fullWidth(SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in BaleTracker.BalesNearYouView.header(title: Swift.String) -&gt; some"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "EAF124FB-7830-48DC-9B9B-70D7F4404608 - a0ae355c1a521d9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.fullWidth(SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in BaleTracker.BalesNearYouView.header(title: Swift.String) -&gt; some"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "464">
+               </Location>
+               <Location
+                  uuid = "EAF124FB-7830-48DC-9B9B-70D7F4404608 - a9ca98133e53137"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BaleTracker.Bale) -&gt; Swift.Bool in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.fullWidth(SwiftUI.Alignment) -&gt; some&gt;&gt;.0)&gt; in BaleTracker.BalesNearYouView.header(title: Swift.String) -&gt; some"
+                  moduleName = "BaleTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simongoller/Documents/Xcode_projects/BaleTracker/BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78EBF05F-509F-47F0-92DE-C5CA9F10E1B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaleTracker/View/MapView/Sheets/BalesNearYouView/BalesNearYouView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "header(title:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

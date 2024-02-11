@@ -59,7 +59,9 @@ class CustomMoyaProvider<T>: MoyaProvider<T> where T: TargetType {
                                 completion(.failure(MoyaError.underlying(error, nil)))
                             }
                         } else {
-                            self?.request(target, callbackQueue: callbackQueue, progress: progress, shouldRetry: false, completion: completion)
+                            if shouldRetry {
+                                self?.request(target, callbackQueue: callbackQueue, progress: progress, shouldRetry: false, completion: completion)
+                            }
                         }
                     }
                 } else if let _ = try? response.filter(statusCode: 200) {
@@ -94,7 +96,9 @@ class CustomMoyaProvider<T>: MoyaProvider<T> where T: TargetType {
                                 completion(.failure(MoyaError.underlying(error, nil)))
                             }
                         } else {
-                            self?.requestWithCodable(target, callbackQueue: callbackQueue, progress: progress, shouldRetry: false, completion: completion)
+                            if shouldRetry {
+                                self?.requestWithCodable(target, callbackQueue: callbackQueue, progress: progress, shouldRetry: false, completion: completion)
+                            }
                         }
                     }
                 } else if let _ = try? response.filter(statusCode: 200) {

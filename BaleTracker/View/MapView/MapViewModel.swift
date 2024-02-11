@@ -40,9 +40,8 @@ class MapViewModel: ObservableObject {
                 coordinates.latitude.description.log(.info)
                 coordinates.longitude.description.log(.info)
                 try await baleRepository.createBale(bale: BaleCreate(crop: selectedCrop,
-                                                           baleType: selectedBaleType,
-                                                           longitude: coordinates.longitude.magnitude,
-                                                           latitude: coordinates.latitude.magnitude))
+                                                                     baleType: selectedBaleType,
+                                                                     coordinate: Coordinate(latitude: coordinates.latitude.magnitude, longitude: coordinates.longitude.magnitude)))
             } catch {
                 error.localizedDescription.log(.error)
             }

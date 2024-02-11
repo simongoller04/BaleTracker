@@ -19,6 +19,7 @@ enum BaleApi {
     case getAllFromFarm(farmId: String)
     // get all bales created or collected by the currently authenticated user
     case getAllBales
+    case query(query: BaleQuery)
 }
 
 extension BaleApi: BaseTargetType {
@@ -29,13 +30,15 @@ extension BaleApi: BaseTargetType {
         case .collectBale(id: let id):
             return "/api/bale/collect/\(id)"
         case .getAllBales:
-            return "api/bale/get/all"
+            return "/api/bale/get/all"
         case .getCreated:
-            return "api/bale/get/created"
+            return "/api/bale/get/created"
         case .getCollected:
-            return "api/bale/get/collected"
+            return "/api/bale/get/collected"
         case .getAllFromFarm(farmId: let farmId):
-            return "api/bale/get/all/farm/\(farmId)"
+            return "/api/bale/get/all/farm/\(farmId)"
+        case .query:
+            return "/api/bale/query"
         }
     }
     
@@ -45,7 +48,7 @@ extension BaleApi: BaseTargetType {
             return .get
         case .collectBale:
             return .put
-        case .createBale:
+        case .createBale, .query:
             return .post
         }
     }
@@ -56,6 +59,8 @@ extension BaleApi: BaseTargetType {
             return .requestJSONEncodable(bale)
         case .collectBale, .getAllBales, .getAllFromFarm, .getCollected, .getCreated:
             return .requestPlain
+        case .query(query: let query):
+            return .requestJSONEncodable(query)
         }
     }
     

@@ -16,6 +16,7 @@ protocol BaleRepository: Repository {
     func getAllCreatedBales() async throws  -> [Bale]?
     func getAllCollectedBales() async throws  -> [Bale]?
     func getAllFromFarm(farmId: String) async throws  -> [Bale]?
+    func queryBales(query: BaleQuery) async throws -> [Bale]?
 }
 
 final class BaleRepositoryImpl: BaleRepository, ObservableObject {
@@ -42,6 +43,10 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
                 completionBlock?(nil)
             }
         }
+    }
+    
+    private func queryBales() {
+        
     }
     
     // MARK: edit bales
@@ -98,4 +103,11 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
         }
     }
     
+    func queryBales(query: BaleQuery) async throws -> [Bale]? {
+        return try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.requestWithResult(.query(query: query)) { (result: Result<[Bale]?, Error>) in
+                continuation.resume(with: result)
+            }
+        }
+    }
 }

@@ -119,6 +119,7 @@ struct MapView: View {
             BalesNearYouView()
                 .closeSheetHeader(title: "Bales")
                 .presentationDetents([.fraction(0.3), .medium, .large])
+                .environmentObject(locationPermission)
         case .baleDetails(bale: let bale):
             BaleDetailView(bale: bale)
                 .closeSheetHeader(title: "Details")

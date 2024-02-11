@@ -17,11 +17,11 @@ struct BaleCreate: Codable {
 }
 
 struct Coordinate: Codable, Equatable, Hashable {
-    var longitude: Double
     var latitude: Double
+    var longitude: Double
 }
 
-struct Bale: Codable, Hashable {
+struct Bale: Codable, Hashable, Identifiable {
     var id: String
     var crop: Crop
     var baleType: BaleType

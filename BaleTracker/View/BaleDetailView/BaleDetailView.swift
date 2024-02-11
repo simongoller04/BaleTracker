@@ -9,21 +9,19 @@ import SwiftUI
 
 struct BaleDetailView: View {
     @EnvironmentObject private var location: LocationPermission
-    @StateObject private var viewModel = BaleDetailViewModel()
+    @StateObject var viewModel: BaleDetailViewModel
     @Environment(\.dismiss) private var dismiss
     
     @State private var showDeletionAlert = false
     
-    var bale: Bale
-    
     var body: some View {
         Form {
             HStack {
-                detailCell(title: R.string.localizable.crop(), value: bale.crop.name)
+                detailCell(title: R.string.localizable.crop(), value: viewModel.bale.crop.name)
                 Divider()
-                detailCell(title: R.string.localizable.type(), value: bale.baleType.name)
+                detailCell(title: R.string.localizable.type(), value: viewModel.bale.baleType.name)
                 Divider()
-                detailCell(title: R.string.localizable.distance(), value: location.location?.distance(from: bale.location).distanceString() ?? "")
+                detailCell(title: R.string.localizable.distance(), value: location.location?.distance(from: viewModel.bale.location).distanceString() ?? "")
             }
             
             Section {
@@ -39,7 +37,7 @@ struct BaleDetailView: View {
                         .foregroundStyle(.red)
                 }
                 Button {
-                    viewModel.collectBale(id: bale.id)
+                    viewModel.collectBale(id: viewModel.bale.id)
                     dismiss()
                 } label: {
                     Label(R.string.localizable.collect(), systemImage: "checkmark.square.fill")
@@ -48,7 +46,7 @@ struct BaleDetailView: View {
         }
         .alert(R.string.localizable.deleteBale_title(), isPresented: $showDeletionAlert) {
             Button(R.string.localizable.delete(), role: .destructive) {
-                viewModel.deleteBale(id: bale.id)
+                viewModel.deleteBale(id: viewModel.bale.id)
                 dismiss()
             }
             Button(R.string.localizable.cancel(), role: .cancel) {
@@ -72,12 +70,12 @@ struct BaleDetailView: View {
     
     @ViewBuilder
     private var collectedCell: some View {
-        if let collector = bale.collectedBy {
+        if let collector = viewModel.collector {
             HStack {
                 Label(R.string.localizable.collectedBy(), systemImage: "checkmark.square.fill")
                 VStack(alignment: .trailing) {
-                    Text(collector)
-                    if let collectionTime = bale.collectionTime {
+                    Text(collector.username)
+                    if let collectionTime = viewModel.bale.collectionTime {
                         Text(collectionTime.iso8601?.defaultDateFormat() ?? "")
                             .font(.footnote)
                             .foregroundStyle(.secondary)
@@ -97,8 +95,10 @@ struct BaleDetailView: View {
                     .foregroundStyle(.yellow)
             }
             VStack(alignment: .trailing) {
-                Text(bale.createdBy)
-                Text(bale.creationTime.iso8601?.defaultDateFormat() ?? "")
+                if let creator = viewModel.creator {
+                    Text(creator.username)
+                }
+                Text(viewModel.bale.creationTime.iso8601?.defaultDateFormat() ?? "")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
@@ -108,13 +108,13 @@ struct BaleDetailView: View {
 }
 
 #Preview("Dark") {
-    BaleDetailView(bale: .fixture(collected: true))
+    BaleDetailView(viewModel: BaleDetailViewModel(bale: .fixture(collected: true)))
         .environmentObject(LocationPermission())
         .preferredColorScheme(.dark)
 }
 
 #Preview("Light") {
-    BaleDetailView(bale: .fixture(collected: true))
+    BaleDetailView(viewModel: BaleDetailViewModel(bale: .fixture(collected: true)))
         .environmentObject(LocationPermission())
         .preferredColorScheme(.light)
 }

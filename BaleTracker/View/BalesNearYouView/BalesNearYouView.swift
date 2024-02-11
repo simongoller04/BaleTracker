@@ -51,7 +51,7 @@ struct BalesNearYouView: View {
             }
         }
         .sheet(item: $selectedBale) { bale in
-            BaleDetailView(bale: bale)
+            BaleDetailView(viewModel: BaleDetailViewModel(bale: bale))
                 .closeSheetHeader(title: R.string.localizable.details())
                 .presentationDetents([.medium, .large])
                 .environmentObject(locationPermission)

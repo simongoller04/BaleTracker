@@ -121,7 +121,7 @@ struct MapView: View {
                 .presentationDetents([.fraction(0.3), .medium, .large])
                 .environmentObject(locationPermission)
         case .baleDetails(bale: let bale):
-            BaleDetailView(bale: bale)
+            BaleDetailView(viewModel: BaleDetailViewModel(bale: bale))
                 .closeSheetHeader(title: "Details")
                 .presentationDetents([.medium, .large])
                 .environmentObject(locationPermission)

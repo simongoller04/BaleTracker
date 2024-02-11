@@ -82,6 +82,8 @@
 		ECAC8D442AED6C1F002B4131 /* Bale.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAC8D432AED6C1F002B4131 /* Bale.swift */; };
 		ECB0F12C2B66D77A0045AA48 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB0F12B2B66D77A0045AA48 /* ErrorResponse.swift */; };
 		ECBC76B92B78CBCE00FDD3D1 /* BaleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC76B82B78CBCE00FDD3D1 /* BaleDetailViewModel.swift */; };
+		ECBC76BB2B7937B700FDD3D1 /* PublicUserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC76BA2B7937B700FDD3D1 /* PublicUserApi.swift */; };
+		ECBC76BE2B79389500FDD3D1 /* PublicUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC76BD2B79389500FDD3D1 /* PublicUserRepository.swift */; };
 		ECBD220F2B4070370051DFDC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */; };
 		ECBD22122B4070480051DFDC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD22112B4070480051DFDC /* ProfileView.swift */; };
 		ECC7EEE22B2DF35A00AADE70 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */; };
@@ -194,6 +196,8 @@
 		ECAC8D432AED6C1F002B4131 /* Bale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bale.swift; sourceTree = "<group>"; };
 		ECB0F12B2B66D77A0045AA48 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		ECBC76B82B78CBCE00FDD3D1 /* BaleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleDetailViewModel.swift; sourceTree = "<group>"; };
+		ECBC76BA2B7937B700FDD3D1 /* PublicUserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicUserApi.swift; sourceTree = "<group>"; };
+		ECBC76BD2B79389500FDD3D1 /* PublicUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicUserRepository.swift; sourceTree = "<group>"; };
 		ECBD220E2B4070370051DFDC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		ECBD22112B4070480051DFDC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 				ECA274B82AF8204200C0B3CC /* FarmApi.swift */,
 				EC57C5312AFC1D4B004BF48B /* UserApi.swift */,
 				EC98E0902B2CA3EC00E555BF /* AuthenticationApi.swift */,
+				ECBC76BA2B7937B700FDD3D1 /* PublicUserApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				EC57C5362AFC20AC004BF48B /* UserRepository.swift */,
 				ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */,
 				EC80C28E2B64B45A005CA6C2 /* MediaRepository.swift */,
+				ECBC76BD2B79389500FDD3D1 /* PublicUserRepository.swift */,
 				ECC7EEE42B2E0AC700AADE70 /* Repository.swift */,
 			);
 			path = Repositories;
@@ -781,6 +787,7 @@
 				EC57C5372AFC20AC004BF48B /* UserRepository.swift in Sources */,
 				EC2AB1B62B6E7A07005C8C71 /* FilterItem.swift in Sources */,
 				EC84EF462B51EAAD00B97DEB /* KFImage+Extension.swift in Sources */,
+				ECBC76BB2B7937B700FDD3D1 /* PublicUserApi.swift in Sources */,
 				EC9258AB2B2B6A6A009A5359 /* CustomSocialButton.swift in Sources */,
 				ECC7EEE72B2E0D2400AADE70 /* Token.swift in Sources */,
 				ECE6B6A32B3DB9FA00B42055 /* Formatter+Extension.swift in Sources */,
@@ -795,6 +802,7 @@
 				EC7EC8822B3207D600569238 /* SuccessfulRegistrationView.swift in Sources */,
 				EC98E08E2B2CA21700E555BF /* UserRegisterDTO.swift in Sources */,
 				EC80C28F2B64B45A005CA6C2 /* MediaRepository.swift in Sources */,
+				ECBC76BE2B79389500FDD3D1 /* PublicUserRepository.swift in Sources */,
 				ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */,
 				EC4613DE2AFE8773006D0341 /* Image+Extension.swift in Sources */,
 				EC0EB7DB2B53270600098AFA /* DateDecodingStrategy+Extension.swift in Sources */,

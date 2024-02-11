@@ -13,7 +13,6 @@ enum UserApi {
     case deleteUser
     case updateProfilePicture(image: Data)
     case deleteProfilePicture
-//    case editUser
 }
 
 extension UserApi: BaseTargetType {

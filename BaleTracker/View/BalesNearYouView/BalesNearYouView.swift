@@ -10,7 +10,11 @@ import SwiftUI
 struct BalesNearYouView: View {
     @EnvironmentObject private var locationPermission: LocationPermission
     @StateObject private var viewModel = BalesNearYouViewModel()
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var selectedBale: Bale?
+    @State private var baleToDelete: Bale?
+    @State private var showDeletionAlert = false
     
     var body: some View {
         VStack(spacing: 8) {
@@ -28,39 +32,48 @@ struct BalesNearYouView: View {
                             }
                             .foregroundStyle(Color(uiColor: .label))
                             .swipeActions {
-                                Button("Collect") {
+                                Button(R.string.localizable.collect()) {
                                     viewModel.collectBale(id: bale.id)
                                 }
                                 .tint(.accentColor)
-                                
-                                Button("Delete") {
-                                    // TODO: Delete Bale
-                                    print("Deleted!")
+                                Button(R.string.localizable.delete()) {
+                                    baleToDelete = bale
+                                    showDeletionAlert = true
                                 }
                                 .tint(.red)
                             }
                         }
                     }
                 } header: {
-                    header(title: "All Bales:")
+                    header(title: R.string.localizable.allBales())
                         .textCase(nil)
                 }
             }
         }
         .sheet(item: $selectedBale) { bale in
             BaleDetailView(bale: bale)
-                .closeSheetHeader(title: "Details")
+                .closeSheetHeader(title: R.string.localizable.details())
                 .presentationDetents([.medium, .large])
                 .environmentObject(locationPermission)
+        }
+        .alert(R.string.localizable.deleteBale_title(), isPresented: $showDeletionAlert, presenting: baleToDelete) { bale in
+            Button(R.string.localizable.delete(), role: .destructive) {
+                viewModel.deleteBale(id: bale.id)
+            }
+            Button(R.string.localizable.cancel(), role: .cancel) {
+                showDeletionAlert = false
+            }
+        } message: { _ in
+            Text(R.string.localizable.deleteBale_message())
         }
     }
     
     private func filterHeader() -> some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStackLayout(spacing: 8) {
-                FilterItem(selection: $viewModel.selectedCrop, selectables: CropFilter.allCases)
-                FilterItem(selection: $viewModel.selectedBaleType, selectables: BaleTypeFilter.allCases)
-                FilterItem(selection: $viewModel.selectedTimeSpan, selectables: TimeFilter.allCases)
+                FilterItem(selection: $viewModel.baleRepository.selectedCrop, selectables: CropFilter.allCases)
+                FilterItem(selection: $viewModel.baleRepository.selectedBaleType, selectables: BaleTypeFilter.allCases)
+                FilterItem(selection: $viewModel.baleRepository.selectedTimeSpan, selectables: TimeFilter.allCases)
             }
             .contentShape(Rectangle())
             .padding(.horizontal, Spacing.spacingM)
@@ -73,8 +86,8 @@ struct BalesNearYouView: View {
                 .font(.headline)
             VStack(spacing: 0) {
                 let collected = viewModel.bales?.filter({ $0.collectedBy != nil }).count.description
-                let allBales = viewModel.bales?.count.description
-                Text("\(collected ?? "") of \(allBales ?? "")")
+                let all = viewModel.bales?.count.description
+                Text("\(collected ?? "") \(R.string.localizable.of()) \(all ?? "")")
                     .font(.headline)
                 Text(R.string.localizable.collected())
                     .font(.footnote)
@@ -86,7 +99,7 @@ struct BalesNearYouView: View {
     private func baleListItem(bale: Bale, index: Int) -> some View {
         VStack {
             HStack {
-                Text("Bale \(index):")
+                Text("\(R.string.localizable.bale()) \(index):")
                 if bale.collectedBy != nil {
                     Image(systemName: "checkmark.circle")
                         .foregroundStyle(Color.accentColor)

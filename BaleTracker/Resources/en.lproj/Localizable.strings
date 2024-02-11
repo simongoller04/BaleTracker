@@ -63,8 +63,11 @@
 "selectBaletype" = "Select Baletype";
 
 // MARK: BalesNearYouView
+"bale" = "Bale";
 "collected" = "collected";
 "created" = "created";
+"of" = "of";
+"allBales" = "All Bales:";
 
 // MARK: ProfileView
 "account" = "Account";
@@ -74,9 +77,12 @@
 "deletePicture" = "Delete profile picture";
 
 // MARK: BaleDetailView
+"details" = "Details";
 "type" = "Type";
 "distance" = "Distance";
 "delete" = "Delete";
 "collect" = "Collect";
+"deleteBale_title" = "Delete Bale";
+"deleteBale_message" = "Deleting a bale cannot be undone!";
 
 

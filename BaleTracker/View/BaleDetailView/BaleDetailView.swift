@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct BaleDetailView: View {
-    var bale: Bale
     @EnvironmentObject private var location: LocationPermission
+    @StateObject private var viewModel = BaleDetailViewModel()
+    @Environment(\.dismiss) private var dismiss
+    
+    @State private var showDeletionAlert = false
+    
+    var bale: Bale
     
     var body: some View {
         Form {
@@ -28,18 +33,29 @@ struct BaleDetailView: View {
             
             Section {
                 Button {
-                    //
+                    showDeletionAlert = true
                 } label: {
                     Label(R.string.localizable.delete(), systemImage: "trash.square.fill")
                         .foregroundStyle(.red)
                 }
-                
                 Button {
-                    //
+                    viewModel.collectBale(id: bale.id)
+                    dismiss()
                 } label: {
                     Label(R.string.localizable.collect(), systemImage: "checkmark.square.fill")
                 }
             }
+        }
+        .alert(R.string.localizable.deleteBale_title(), isPresented: $showDeletionAlert) {
+            Button(R.string.localizable.delete(), role: .destructive) {
+                viewModel.deleteBale(id: bale.id)
+                dismiss()
+            }
+            Button(R.string.localizable.cancel(), role: .cancel) {
+                showDeletionAlert = false
+            }
+        } message: {
+            Text(R.string.localizable.deleteBale_message())
         }
     }
     

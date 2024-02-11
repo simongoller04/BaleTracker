@@ -11,6 +11,7 @@ import Moya
 enum BaleApi {
     case createBale(bale: BaleCreate)
     case collectBale(id: String)
+    case deleteBale(id: String)
     // get all bales created by the currently authenticated user
     case getCreated
     // get all bales collected by the currently authenticated user
@@ -29,6 +30,8 @@ extension BaleApi: BaseTargetType {
             return "/api/bale/create"
         case .collectBale(id: let id):
             return "/api/bale/collect/\(id)"
+        case .deleteBale(id: let id):
+            return "/api/bale/delete/\(id)"
         case .getAllBales:
             return "/api/bale/get/all"
         case .getCreated:
@@ -50,6 +53,8 @@ extension BaleApi: BaseTargetType {
             return .put
         case .createBale, .query:
             return .post
+        case .deleteBale:
+            return .delete
         }
     }
     
@@ -57,7 +62,7 @@ extension BaleApi: BaseTargetType {
         switch self {
         case .createBale(bale: let bale):
             return .requestJSONEncodable(bale)
-        case .collectBale, .getAllBales, .getAllFromFarm, .getCollected, .getCreated:
+        case .collectBale, .getAllBales, .getAllFromFarm, .getCollected, .getCreated, .deleteBale:
             return .requestPlain
         case .query(query: let query):
             return .requestJSONEncodable(query)

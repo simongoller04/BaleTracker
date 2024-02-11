@@ -37,8 +37,6 @@ class MapViewModel: ObservableObject {
         Task {
             do {
                 guard let coordinates = locationPermission.coordinates else { return }
-                coordinates.latitude.description.log(.info)
-                coordinates.longitude.description.log(.info)
                 try await baleRepository.createBale(bale: BaleCreate(crop: selectedCrop,
                                                                      baleType: selectedBaleType,
                                                                      coordinate: Coordinate(latitude: coordinates.latitude.magnitude, longitude: coordinates.longitude.magnitude)))

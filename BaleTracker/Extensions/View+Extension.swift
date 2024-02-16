@@ -48,6 +48,10 @@ extension View {
     func closeSheetHeader(title: String = "") -> some View {
         modifier(CloseSheetHeaderModifier(title: title))
     }
+    
+    func baleDeletionAlert(showAlert: Binding<Bool>, presenting: Bale?, onClick: @escaping (String) -> ()) -> some View {
+        modifier(BaleDeletionAlert(showAlert: showAlert, presenting: presenting, onClick: onClick))
+    }
 }
 
 private struct FullWidthModifier: ViewModifier {
@@ -141,5 +145,28 @@ private struct GetHeightModifier: ViewModifier {
                 return Color.clear
             }
         )
+    }
+}
+
+struct BaleDeletionAlert: ViewModifier {
+    @Binding var showAlert: Bool
+    var presenting: Bale?
+    var onClick: (String) -> Void
+    
+    @Environment(\.dismiss) private var dismiss
+    
+    func body(content: Content) -> some View {
+        content
+            .alert(R.string.localizable.deleteBale_title(), isPresented: $showAlert, presenting: presenting) { bale in
+                Button(R.string.localizable.delete(), role: .destructive) {
+                    onClick(bale.id)
+                    dismiss()
+                }
+                Button(R.string.localizable.cancel(), role: .cancel) {
+                    showAlert = false
+                }
+            } message: { _ in
+                Text(R.string.localizable.deleteBale_message())
+            }
     }
 }

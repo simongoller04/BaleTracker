@@ -23,6 +23,10 @@ struct MapView: View {
     
     @State private var activeSheet: MapViewSheet?
     @State private var sheetHeight: CGFloat = .infinity
+    @State private var selectedBale: Bale?
+    @State private var showDeletionAlert = false
+    
+    @Environment(\.dismiss) private var dismiss
 
     @Namespace private var mapScope
     
@@ -36,6 +40,21 @@ struct MapView: View {
                                 activeSheet = .baleDetails(bale: bale)
                             } label: {
                                 BaleAnnotation(bale: bale)
+                                    .contentShape(ContentShapeKinds.contextMenuPreview, Circle())
+                                    .contextMenu {
+                                        Button {
+                                            viewModel.collectBale(id: bale.id)
+                                        } label: {
+                                            Label("Collect", systemImage: "checkmark.circle")
+                                        }
+                                        
+                                        Button(role: .destructive) {
+                                            selectedBale = bale
+                                            showDeletionAlert = true
+                                        } label: {
+                                            Label("Delete", systemImage: "trash.circle")
+                                        }
+                                    }
                             }
                         }
                     }
@@ -68,6 +87,9 @@ struct MapView: View {
         }
         .sheet(item: $activeSheet) { sheet in
             sheetBuilder(sheet: sheet)
+        }
+        .baleDeletionAlert(showAlert: $showDeletionAlert, presenting: selectedBale) { id in
+            viewModel.deleteBale(id: id)
         }
     }
     

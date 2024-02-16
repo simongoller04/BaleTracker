@@ -46,20 +46,20 @@ class MapViewModel: ObservableObject {
         }
     }
     
-    func collectBale(id: String) {
+    func deleteBale(id: String) {
         Task {
             do {
-                try await baleRepository.collectBale(id: id)
+                try await baleRepository.deleteBale(id: id)
             } catch {
                 error.localizedDescription.log(.error)
             }
         }
     }
     
-    func getBales() {
+    func collectBale(id: String) {
         Task {
             do {
-                self.bales = try await baleRepository.getAllBales()
+                try await baleRepository.collectBale(id: id)
             } catch {
                 error.localizedDescription.log(.error)
             }

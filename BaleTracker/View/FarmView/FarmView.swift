@@ -11,7 +11,6 @@ struct FarmView: View {
     @StateObject private var viewModel = FarmViewModel()
     
     @State private var showAddFarm = false
-    @State private var showProfile = false
     
     var body: some View {
         NavigationStack {
@@ -27,25 +26,9 @@ struct FarmView: View {
                             Image(systemName: "plus")
                         }
                     }
-                    
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button {
-                            showProfile = true
-                        } label: {
-                            Image(systemName: "person.circle")
-                            // TODO: replace with profile picture of user
-                        }
-
-                    }
-                }
-                .refreshable {
-                    viewModel.fetchFarms()
                 }
                 .sheet(isPresented: $showAddFarm) {
                     CreateNewFarmView()
-                }
-                .sheet(isPresented: $showProfile) {
-                    profile()
                 }
         }
     }
@@ -63,27 +46,23 @@ struct FarmView: View {
     
     private func listItem(farm: Farm) -> some View {
         HStack(spacing: 16) {
-            Image(systemName: "person.circle")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 32)
+            Image(systemName: "person.2.circle")
+                .symbolRenderingMode(.hierarchical)
+                .foregroundStyle(.primary)
+                .font(.system(size: 36))
             
             VStack(alignment: .leading) {
                 Text(farm.name)
                     .bold()
                 if farm.members.count > 1 {
                     Text("\(farm.members.count) \(R.string.localizable.members())")
+                        .foregroundStyle(.secondary)
                 } else {
                     Text("\(farm.members.count) \(R.string.localizable.member())")
+                        .foregroundStyle(.secondary)
+
                 }
             }
-        }
-    }
-    
-    private func profile() -> some View {
-        VStack {
-            // TODO: implement add profile screen
-            Text("todo")
         }
     }
 }

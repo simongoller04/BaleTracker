@@ -56,15 +56,8 @@ struct BalesNearYouView: View {
                 .presentationDetents([.medium, .large])
                 .environmentObject(locationPermission)
         }
-        .alert(R.string.localizable.deleteBale_title(), isPresented: $showDeletionAlert, presenting: baleToDelete) { bale in
-            Button(R.string.localizable.delete(), role: .destructive) {
-                viewModel.deleteBale(id: bale.id)
-            }
-            Button(R.string.localizable.cancel(), role: .cancel) {
-                showDeletionAlert = false
-            }
-        } message: { _ in
-            Text(R.string.localizable.deleteBale_message())
+        .baleDeletionAlert(showAlert: $showDeletionAlert, presenting: baleToDelete) { id in
+            viewModel.deleteBale(id: id)
         }
     }
     

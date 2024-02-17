@@ -10,7 +10,7 @@ import MapKit
 
 extension Farm {
     static func fixture() -> Farm {
-        return Farm(id: "id", name: "Farm 1", owner: "owner-id", creationTime: "2023-11-03T14:54:07.427Z", members: ["id-1", "id-2", "id-3"])
+        return Farm(id: "id", name: "Farm 1", description: "description", coordinate: Coordinate(latitude: 0.0, longitude: 0.0), createdBy: "owner-id", creationTime: "2023-11-03T14:54:07.427Z", members: ["id-1", "id-2", "id-3"])
     }
 }
 
@@ -23,8 +23,7 @@ extension User {
         var users: [User] = []
 
         for _ in 0..<amount {
-            let user = User(id: "id", email: "test@gmail.com", username: "simon", creationTime: "2023-11-03T14:54:07.427Z", lastEditingTime: nil, lastLoginTime: nil)
-            users.append(user)
+            users.append(.fixture())
         }
 
         return users

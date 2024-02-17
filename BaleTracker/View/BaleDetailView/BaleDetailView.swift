@@ -44,17 +44,20 @@ struct BaleDetailView: View {
                 }
             }
         }
-        .alert(R.string.localizable.deleteBale_title(), isPresented: $showDeletionAlert) {
-            Button(R.string.localizable.delete(), role: .destructive) {
-                viewModel.deleteBale(id: viewModel.bale.id)
-                dismiss()
-            }
-            Button(R.string.localizable.cancel(), role: .cancel) {
-                showDeletionAlert = false
-            }
-        } message: {
-            Text(R.string.localizable.deleteBale_message())
+        .baleDeletionAlert(showAlert: $showDeletionAlert, presenting: viewModel.bale) { id in
+            viewModel.deleteBale(id: id)
         }
+//        .alert(R.string.localizable.deleteBale_title(), isPresented: $showDeletionAlert) {
+//            Button(R.string.localizable.delete(), role: .destructive) {
+//                viewModel.deleteBale(id: viewModel.bale.id)
+//                dismiss()
+//            }
+//            Button(R.string.localizable.cancel(), role: .cancel) {
+//                showDeletionAlert = false
+//            }
+//        } message: {
+//            Text(R.string.localizable.deleteBale_message())
+//        }
     }
     
     private func detailCell(title: String, value: String) -> some View {

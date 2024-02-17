@@ -9,18 +9,19 @@ import Foundation
 import Moya
 
 enum FarmApi {
-    case createFarm(farm: Farm)
-    case getAllFarms
-    case getFarm(id: String)
+    // create a new farm
+    case createFarm(farm: FarmCreate)
+    // get all farms that the current user is a member of
+    case getFarms
 }
 
 extension FarmApi: BaseTargetType {
     var path: String {
         switch self {
-        case .createFarm, .getAllFarms:
-            return "/api/farm"
-        case .getFarm(id: let id):
-            return "api/farm/\(id)"
+        case .createFarm:
+            return "/api/farm/create"
+        case .getFarms:
+            return "api/farm"
         }
     }
     
@@ -28,7 +29,7 @@ extension FarmApi: BaseTargetType {
         switch self {
         case .createFarm:
             return .post
-        case .getAllFarms, .getFarm:
+        case .getFarms:
             return .get
         }
     }
@@ -36,13 +37,8 @@ extension FarmApi: BaseTargetType {
     var task: Moya.Task {
         switch self {
         case .createFarm(farm: let farm):
-            do {
-                let jsonData = try JSONEncoder().encode(farm)
-                return .requestData(jsonData)
-            } catch {
-                return .requestPlain
-            }
-        case .getAllFarms, .getFarm:
+            return .requestJSONEncodable(farm)
+        case .getFarms:
             return .requestPlain
         }
     }

@@ -16,11 +16,6 @@ struct BaleCreate: Codable {
     var farm: String?
 }
 
-struct Coordinate: Codable, Equatable, Hashable {
-    var latitude: Double
-    var longitude: Double
-}
-
 struct Bale: Codable, Hashable, Identifiable {
     var id: String
     var crop: Crop

@@ -18,7 +18,6 @@ class FarmViewModel: ObservableObject {
     private let farmRepository = FarmRepositoryImpl.shared
     
     init() {
-        fetchFarms()
         addSubscribtion()
     }
     
@@ -50,15 +49,6 @@ class FarmViewModel: ObservableObject {
                     $0.name.localizedCaseInsensitiveContains(searchableText)
                 }
             }
-        }
-    }
-    
-    // MARK: - functions
-    
-    func fetchFarms() {
-        Task {
-            try? await farms = farmRepository.fetchFarms()
-            filteredFarms = farms
         }
     }
 }

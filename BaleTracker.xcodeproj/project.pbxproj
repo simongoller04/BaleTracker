@@ -62,6 +62,7 @@
 		EC98E0882B2C8FED00E555BF /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC98E0872B2C8FED00E555BF /* RegistrationViewModel.swift */; };
 		EC98E08E2B2CA21700E555BF /* UserRegisterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC98E08D2B2CA21700E555BF /* UserRegisterDTO.swift */; };
 		EC98E0912B2CA3EC00E555BF /* AuthenticationApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC98E0902B2CA3EC00E555BF /* AuthenticationApi.swift */; };
+		EC9FB29E2B7A7071009CC56F /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9FB29D2B7A7071009CC56F /* Coordinate.swift */; };
 		ECA274B92AF8204200C0B3CC /* FarmApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA274B82AF8204200C0B3CC /* FarmApi.swift */; };
 		ECA274BC2AF8207D00C0B3CC /* Farm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA274BB2AF8207D00C0B3CC /* Farm.swift */; };
 		ECA274BE2AF825EC00C0B3CC /* FarmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA274BD2AF825EC00C0B3CC /* FarmRepository.swift */; };
@@ -176,6 +177,7 @@
 		EC98E0872B2C8FED00E555BF /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		EC98E08D2B2CA21700E555BF /* UserRegisterDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterDTO.swift; sourceTree = "<group>"; };
 		EC98E0902B2CA3EC00E555BF /* AuthenticationApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationApi.swift; sourceTree = "<group>"; };
+		EC9FB29D2B7A7071009CC56F /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		ECA274B82AF8204200C0B3CC /* FarmApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmApi.swift; sourceTree = "<group>"; };
 		ECA274BB2AF8207D00C0B3CC /* Farm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Farm.swift; sourceTree = "<group>"; };
 		ECA274BD2AF825EC00C0B3CC /* FarmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmRepository.swift; sourceTree = "<group>"; };
@@ -416,6 +418,14 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		EC9FB29C2B7A6EBE009CC56F /* Farm */ = {
+			isa = PBXGroup;
+			children = (
+				ECA274BB2AF8207D00C0B3CC /* Farm.swift */,
+			);
+			path = Farm;
+			sourceTree = "<group>";
+		};
 		ECA304D02B2A3AF100AB8D97 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,12 +478,13 @@
 		ECAAFED92A5EEE1F00EE8CD3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC9FB29C2B7A6EBE009CC56F /* Farm */,
 				EC2AB1B22B6E6CEF005C8C71 /* Filter */,
 				EC2AB1AE2B6E6C50005C8C71 /* Query */,
 				EC4930C72B6586BE002ACDF5 /* Authentication */,
 				EC98E08A2B2CA20500E555BF /* User */,
 				ECAC8D432AED6C1F002B4131 /* Bale.swift */,
-				ECA274BB2AF8207D00C0B3CC /* Farm.swift */,
+				EC9FB29D2B7A7071009CC56F /* Coordinate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -771,6 +782,7 @@
 			files = (
 				ECD9CD862B3CC77C00B5B04E /* BaleDetailView.swift in Sources */,
 				EC19B6EB2B547F01001A86B4 /* AccountSettingsView.swift in Sources */,
+				EC9FB29E2B7A7071009CC56F /* Coordinate.swift in Sources */,
 				EC98E0882B2C8FED00E555BF /* RegistrationViewModel.swift in Sources */,
 				ECF266802A560DB000CE33AD /* BaleTracker.xcdatamodeld in Sources */,
 				EC57C5322AFC1D4B004BF48B /* UserApi.swift in Sources */,

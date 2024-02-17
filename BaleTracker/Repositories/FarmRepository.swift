@@ -9,42 +9,47 @@ import Foundation
 import Combine
 
 protocol FarmRepository: Repository {
-    func fetchFarms() async throws -> [Farm]
-    func uploadFarm(farm: Farm) async throws -> Farm
-    func getFarm(id: String) async throws -> Farm
+    func createFarm(farm: FarmCreate) async throws
+    func getFarms() async throws -> [Farm]
 }
 
-final class FarmRepositoryImpl: FarmRepository, ObservableObject {    
+final class FarmRepositoryImpl: FarmRepository, ObservableObject {
     static var shared = FarmRepositoryImpl()
     internal var moya = CustomMoyaProvider<FarmApi>()
     
     @Published var farms: [Farm]?
     
-    @discardableResult func fetchFarms() async throws -> [Farm] {
-        let farms = try await withCheckedThrowingContinuation { continuation in
-            let _ = moya.requestWithResult(.getAllFarms) { (result: Result<[Farm], Error>) in
+    private init() {
+        fetchFarms()
+    }
+    
+    private func fetchFarms(completionBlock: (([Farm]?) -> Void)? = nil) {
+        _Concurrency.Task {
+            do {
+                "Fetching farms...".log()
+                let farms = try await self.getFarms()
+                self.farms = farms
+                completionBlock?(farms)
+            } catch {
+                completionBlock?(nil)
+            }
+        }
+    }
+    
+    func createFarm(farm: FarmCreate) async throws {
+        let _ = try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.request(.createFarm(farm: farm)) { result in
+                continuation.resume(with: result)
+                self.fetchFarms()
+            }
+        }
+    }
+    
+    func getFarms() async throws -> [Farm] {
+        return try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.requestWithResult(.getFarms) { (result: Result<[Farm], Error>) in
                 continuation.resume(with: result)
             }
         }
-        self.farms = farms
-        return farms
-    }
-    
-    func uploadFarm(farm: Farm) async throws -> Farm {
-        let farm = try await withCheckedThrowingContinuation { continuation in
-            let _ = moya.requestWithResult(.createFarm(farm: farm), completion: { (result: Result<Farm, Error>) in
-                continuation.resume(with: result)
-            })
-        }
-        return farm
-    }
-    
-    @discardableResult func getFarm(id: String) async throws -> Farm {
-        let farm = try await withCheckedThrowingContinuation { continuation in
-            let _ = moya.requestWithResult(.getFarm(id: id), completion: { (result: Result<Farm, Error>) in
-                continuation.resume(with: result)
-            })
-        }
-        return farm
     }
 }

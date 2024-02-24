@@ -9,16 +9,18 @@ import SwiftUI
 import MapKit
 
 struct SelectFarmLocationView: View {
-    @StateObject var viewModel: SelectFarmLocationViewModel
+    @EnvironmentObject var viewModel: CreateNewFarmViewModel
     @Environment(\.dismiss) private var dismiss
+        
+    private var span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
     
-    @Namespace private var mapScope
-
     var body: some View {
         ZStack {
-            Map(position: $viewModel.cameraPosition)
+            Map(initialPosition: .automatic)
                 .onMapCameraChange { context in
-                    viewModel.position = .camera(context.camera)
+                    var region = context.region
+                    region.span = span
+                    viewModel.region = region
                 }
                 .overlay {
                     Image(systemName: "mappin")
@@ -28,31 +30,38 @@ struct SelectFarmLocationView: View {
                         .foregroundStyle(Color.red)
                         .padding(.bottom, 25) // bottom of the pin is the center of the screen
                 }
-                .ignoresSafeArea()
+            
+            Button {
+                dismiss()
+                viewModel.region = nil
+            } label: {
+                Image(systemName: "xmark.circle.fill")
+            }
+            .symbolRenderingMode(.hierarchical)
+            .foregroundStyle(.primary)
+            .font(.system(size: 30))
+            .fullHeight(.top)
+            .fullWidth(.leading)
+            .padding(Spacing.spacingM)
             
             ActionButton(text: "Select Farm Location") {
                 dismiss()
             }
             .fullHeight(.bottom)
             .padding(.horizontal, Spacing.spacingM)
-            
-            VStack {
-                MapUserLocationButton()
-                MapCompass(scope: mapScope)
-            }
-            .fullHeight(.topTrailing)
-            .padding(.trailing, Spacing.spacingS)
         }
-//        .mapScope(mapScope)
     }
 }
 
-//struct SelectFarmLocationView_Preview: PreviewProvider {
-//    static var previews: some View {
-//        SelectFarmLocationView(viewModel: .init(location: .constant(CLLocationCoordinate2D.fixture())))
-//            .lightPreview()
-//        
-//        SelectFarmLocationView(viewModel: .init(location: .constant(CLLocationCoordinate2D.fixture())))
-//            .darkPreview()
-//    }
-//}
+#Preview("Dark") {
+    SelectFarmLocationView()
+        .environmentObject(CreateNewFarmViewModel())
+        .preferredColorScheme(.dark)
+}
+
+#Preview("Light") {
+    SelectFarmLocationView()
+        .environmentObject(CreateNewFarmViewModel())
+        .preferredColorScheme(.light)
+}
+

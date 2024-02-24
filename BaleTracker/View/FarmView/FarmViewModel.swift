@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class FarmViewModel: ObservableObject {
+@MainActor class FarmViewModel: ObservableObject {
     @Published var searchableText: String = ""
     @Published var filteredFarms: [Farm]?
     

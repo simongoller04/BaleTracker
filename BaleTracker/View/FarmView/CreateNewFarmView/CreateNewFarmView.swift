@@ -31,19 +31,22 @@ struct CreateNewFarmView: View {
                             .multilineTextAlignment(.leading)
                     }
                     
-                    Section("\(R.string.localizable.members()): \(viewModel.members.count)") {
-                        addMembersSection
+                    Section("\(R.string.localizable.members()): \(viewModel.members?.count ?? 0)") {
+//                        addMembersSection
+                        // TODO: fetch all friends
                     }
                     .listRowInsets(EdgeInsets())
                     
                     addHomeAddress
                         .listRowInsets(EdgeInsets())
+                    
+                    homeCoordinates
+
                 }
                 .fullHeight()
                 
-                ActionButton(isDisabled: !viewModel.isFormValid, text: R.string.localizable.createFarm()) {
-                    // check if all data is here
-                    // api call to create farm
+                ActionButton(isLoading: viewModel.isUploading, isDisabled: !viewModel.isFormValid, text: R.string.localizable.createFarm()) {
+                    viewModel.createFarm()
                     dismiss()
                 }
                 .padding([.horizontal], Spacing.spacingM)
@@ -62,7 +65,8 @@ struct CreateNewFarmView: View {
                 }
             }
             .fullScreenCover(isPresented: $showLocationSelector) {
-                SelectFarmLocationView(viewModel: .init(position: $viewModel.cameraPosition))
+                SelectFarmLocationView()
+                    .environmentObject(viewModel)
             }
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(image: $viewModel.selectedImage)
@@ -89,16 +93,43 @@ struct CreateNewFarmView: View {
         Button {
             showLocationSelector = true
         } label: {
-            if let cameraPosition = viewModel.cameraPosition {
-                Map(initialPosition: cameraPosition)
+            if let region = viewModel.region {
+                VStack {
+                    Map(position: .constant(.region(region))) {
+                        Annotation("Home", coordinate: region.center) {
+                            Image(systemName: "house.circle.fill")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height: 50)
+                        }
+                    }
                     .allowsHitTesting(false)
                     .frame(width: .infinity, height: 200)
+                }
             } else {
-                HStack(alignment: .center) {
-                    Spacer()
-                    Image(systemName: "mappin.and.ellipse")
-                    Text("Add home address")
-                    Spacer()
+                Label("Add home address", systemImage: "mappin.and.ellipse")
+                    .fullWidth(.center)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private var homeCoordinates: some View {
+        if let region = viewModel.region {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Coordinates".uppercased())
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                    Text(region.center.toString())
+                }
+                .fullWidth(.leading)
+                
+                Button(role: .destructive) {
+                    viewModel.region = nil
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .imageScale(.medium)
                 }
             }
         }
@@ -128,25 +159,25 @@ struct CreateNewFarmView: View {
         }
     }
     
-    private var addMembersSection: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(spacing: 2) {
-                CircularButton(imageSystemName: "plus") {
-                    showMemberSelector = true
-                }
-                .padding(.trailing, Spacing.spacingS)
-                
-                ForEach($viewModel.members, id: \.id) { user in
-                    Button {
-                        viewModel.members.removeAll(where: { $0.id == user.id})
-                    } label: {
-                        member(user: user.wrappedValue)
-                    }
-                }
-            }
-            .padding(20)
-        }
-    }
+//    private var addMembersSection: some View {
+//        ScrollView(.horizontal, showsIndicators: false) {
+//            LazyHStack(spacing: 2) {
+//                CircularButton(imageSystemName: "plus") {
+//                    showMemberSelector = true
+//                }
+//                .padding(.trailing, Spacing.spacingS)
+//                
+//                ForEach($viewModel.members, id: \.id) { user in
+//                    Button {
+//                        viewModel.members.removeAll(where: { $0.id == user.id})
+//                    } label: {
+//                        member(user: user.wrappedValue)
+//                    }
+//                }
+//            }
+//            .padding(20)
+//        }
+//    }
 }
 
 struct CreateNewFarmView_Preview: PreviewProvider {

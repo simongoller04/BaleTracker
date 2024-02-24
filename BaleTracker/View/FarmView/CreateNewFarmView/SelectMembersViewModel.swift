@@ -13,14 +13,14 @@ class SelectMembersViewModel: ObservableObject {
     @Published var searchableText = ""
     @Published var filterdUsers: [User]?
     @Published var selectedUsers: [User] = []
-    @Binding var members: [User]
+    @Binding var members: [User]?
     
     private var users: [User]?
     
     private var subscriptions = Set<AnyCancellable>()
     private let userRepository = UserRepositoryImpl.shared
     
-    init(members: Binding<[User]>) {
+    init(members: Binding<[User]?>) {
         _members = members
         addSubscribtion()
     }

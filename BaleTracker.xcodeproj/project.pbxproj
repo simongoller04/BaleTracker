@@ -38,7 +38,6 @@
 		EC4930C92B658B23002ACDF5 /* TextFieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4930C82B658B23002ACDF5 /* TextFieldWithError.swift */; };
 		EC4F99352AF7A63900645275 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = EC4F99342AF7A63900645275 /* RswiftLibrary */; };
 		EC512EF92B00E6A000F6658E /* SelectFarmLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */; };
-		EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */; };
 		EC53C46C2B407EBE00FC6684 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53C46B2B407EBE00FC6684 /* LogoutUseCase.swift */; };
 		EC57C5262AFBF3C0004BF48B /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5252AFBF3C0004BF48B /* CircularButton.swift */; };
 		EC57C5292AFBF7FA004BF48B /* SelectMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5282AFBF7FA004BF48B /* SelectMembersView.swift */; };
@@ -70,6 +69,7 @@
 		ECA304DD2B2A3B5400AB8D97 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA304DC2B2A3B5400AB8D97 /* LoginViewModel.swift */; };
 		ECA304E02B2A3C9C00AB8D97 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA304DF2B2A3C9C00AB8D97 /* CustomTextField.swift */; };
 		ECA304E32B2A4C6700AB8D97 /* CustomSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA304E22B2A4C6700AB8D97 /* CustomSecureTextField.swift */; };
+		ECA417DB2B89C49E00A0C459 /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA417DA2B89C49E00A0C459 /* CLLocationCoordinate2D+Extension.swift */; };
 		ECA982482B401932002E7ED7 /* UserLoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA982472B401932002E7ED7 /* UserLoginDTO.swift */; };
 		ECA9824B2B403063002E7ED7 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA9824A2B403063002E7ED7 /* Keychain.swift */; };
 		ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */; };
@@ -154,7 +154,6 @@
 		EC4930C42B6586B8002ACDF5 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		EC4930C82B658B23002ACDF5 /* TextFieldWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithError.swift; sourceTree = "<group>"; };
 		EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationView.swift; sourceTree = "<group>"; };
-		EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFarmLocationViewModel.swift; sourceTree = "<group>"; };
 		EC53C46B2B407EBE00FC6684 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
 		EC57C5252AFBF3C0004BF48B /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 		EC57C5282AFBF7FA004BF48B /* SelectMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMembersView.swift; sourceTree = "<group>"; };
@@ -185,6 +184,7 @@
 		ECA304DC2B2A3B5400AB8D97 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ECA304DF2B2A3C9C00AB8D97 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ECA304E22B2A4C6700AB8D97 /* CustomSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureTextField.swift; sourceTree = "<group>"; };
+		ECA417DA2B89C49E00A0C459 /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
 		ECA982472B401932002E7ED7 /* UserLoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDTO.swift; sourceTree = "<group>"; };
 		ECA9824A2B403063002E7ED7 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -316,7 +316,6 @@
 				EC57C5282AFBF7FA004BF48B /* SelectMembersView.swift */,
 				EC57C5382AFC247C004BF48B /* SelectMembersViewModel.swift */,
 				EC512EF82B00E6A000F6658E /* SelectFarmLocationView.swift */,
-				EC512EFB2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift */,
 			);
 			path = CreateNewFarmView;
 			sourceTree = "<group>";
@@ -529,6 +528,7 @@
 				EC0EB7DA2B53270600098AFA /* DateDecodingStrategy+Extension.swift */,
 				EC434F872B65084700F33D91 /* Double+Extension.swift */,
 				EC435D622B7750B8003A477D /* Date+Extension.swift */,
+				ECA417DA2B89C49E00A0C459 /* CLLocationCoordinate2D+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -827,6 +827,7 @@
 				ECA274BE2AF825EC00C0B3CC /* FarmRepository.swift in Sources */,
 				ECA304E32B2A4C6700AB8D97 /* CustomSecureTextField.swift in Sources */,
 				EC98E0822B2C8F8600E555BF /* LogoHeader.swift in Sources */,
+				ECA417DB2B89C49E00A0C459 /* CLLocationCoordinate2D+Extension.swift in Sources */,
 				EC3DF00B2AF7C878006B29E0 /* FarmViewModel.swift in Sources */,
 				ECA9824B2B403063002E7ED7 /* Keychain.swift in Sources */,
 				ECA274B92AF8204200C0B3CC /* FarmApi.swift in Sources */,
@@ -837,7 +838,6 @@
 				ECAC8D412AED6654002B4131 /* CustomMoyaProvider.swift in Sources */,
 				ECA982482B401932002E7ED7 /* UserLoginDTO.swift in Sources */,
 				ECB0F12C2B66D77A0045AA48 /* ErrorResponse.swift in Sources */,
-				EC512EFC2B00E6BA00F6658E /* SelectFarmLocationViewModel.swift in Sources */,
 				EC2AB1B42B6E6D14005C8C71 /* BaleFilter.swift in Sources */,
 				EC4930C92B658B23002ACDF5 /* TextFieldWithError.swift in Sources */,
 				EC2AB1B02B6E6C5F005C8C71 /* BaleQuery.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct FarmView: View {
     @StateObject private var viewModel = FarmViewModel()
@@ -46,21 +47,31 @@ struct FarmView: View {
     
     private func listItem(farm: Farm) -> some View {
         HStack(spacing: 16) {
-            Image(systemName: "person.2.circle")
-                .symbolRenderingMode(.hierarchical)
-                .foregroundStyle(.primary)
-                .font(.system(size: 36))
+            KFImage(farm.imageUrl)
+                .requestModifier(KFImage.authorizationModifier)
+                .placeholder {
+                    Image(systemName: "person.2.circle")
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(.primary)
+                        .font(.system(size: 36))
+                }
+                .resizable()
+                .scaledToFill()
+                .frame(width: 36, height: 36)
+                .clipShape(Circle())
             
             VStack(alignment: .leading) {
                 Text(farm.name)
                     .bold()
-                if farm.members.count > 1 {
-                    Text("\(farm.members.count) \(R.string.localizable.members())")
-                        .foregroundStyle(.secondary)
-                } else {
-                    Text("\(farm.members.count) \(R.string.localizable.member())")
-                        .foregroundStyle(.secondary)
+                if let count = farm.members?.count {
+                    if count > 1 {
+                        Text("\(count) \(R.string.localizable.members())")
+                            .foregroundStyle(.secondary)
+                    } else {
+                        Text("\(count) \(R.string.localizable.member())")
+                            .foregroundStyle(.secondary)
 
+                    }
                 }
             }
         }

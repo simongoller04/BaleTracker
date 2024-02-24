@@ -7,10 +7,13 @@
 
 import Foundation
 import Combine
+import Moya
 
 protocol FarmRepository: Repository {
-    func createFarm(farm: FarmCreate) async throws
-    func getFarms() async throws -> [Farm]
+    func createFarm(farm: FarmCreate) async throws -> Farm
+    func getFarms() async throws -> [Farm]?
+    func updateFarmPicture(id: String, imageData: Data, completionClosure: @escaping Completion)
+    func deleteFarmPicture(id: String) async throws
 }
 
 final class FarmRepositoryImpl: FarmRepository, ObservableObject {
@@ -23,7 +26,7 @@ final class FarmRepositoryImpl: FarmRepository, ObservableObject {
         fetchFarms()
     }
     
-    private func fetchFarms(completionBlock: (([Farm]?) -> Void)? = nil) {
+    func fetchFarms(completionBlock: (([Farm]?) -> Void)? = nil) {
         _Concurrency.Task {
             do {
                 "Fetching farms...".log()
@@ -36,18 +39,30 @@ final class FarmRepositoryImpl: FarmRepository, ObservableObject {
         }
     }
     
-    func createFarm(farm: FarmCreate) async throws {
-        let _ = try await withCheckedThrowingContinuation { continuation in
-            let _ = moya.request(.createFarm(farm: farm)) { result in
+    func createFarm(farm: FarmCreate) async throws -> Farm {
+        return try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.requestWithResult(.createFarm(farm: farm)) { (result: Result<Farm, Error>) in
                 continuation.resume(with: result)
                 self.fetchFarms()
             }
         }
     }
     
-    func getFarms() async throws -> [Farm] {
+    func getFarms() async throws -> [Farm]? {
         return try await withCheckedThrowingContinuation { continuation in
-            let _ = moya.requestWithResult(.getFarms) { (result: Result<[Farm], Error>) in
+            let _ = moya.requestWithResult(.getFarms) { (result: Result<[Farm]?, Error>) in
+                continuation.resume(with: result)
+            }
+        }
+    }
+    
+    func updateFarmPicture(id: String, imageData: Data, completionClosure: @escaping Moya.Completion) {
+        let _ = moya.request(.updateFarmPicture(id: id, image: imageData), callbackQueue: DispatchQueue.main, completion: completionClosure)
+    }
+    
+    func deleteFarmPicture(id: String) async throws {
+        let _ = try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.request(.deleteFarmPicture(id: id)) { result in
                 continuation.resume(with: result)
             }
         }

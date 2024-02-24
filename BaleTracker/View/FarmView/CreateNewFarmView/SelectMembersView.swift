@@ -102,6 +102,7 @@ struct SelectMembersView_Preview: PreviewProvider {
         SelectMembersView(viewModel: .init(members: .constant(User.fixture(amount: 4))))
             .lightPreview()
         
-        SelectMembersView(viewModel: .init(members: .constant(User.fixture(amount: 4))))            .darkPreview()
+        SelectMembersView(viewModel: .init(members: .constant(User.fixture(amount: 4))))            
+            .darkPreview()
     }
 }

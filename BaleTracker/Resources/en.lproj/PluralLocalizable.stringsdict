@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>x_members</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@members@</string>
+		<key>members</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%d Member</string>
+			<key>other</key>
+			<string>%d Members</string>
+		</dict>
+	</dict>
+
+	<key>x_farms</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@farms@</string>
+		<key>farms</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%d Farm</string>
+			<key>other</key>
+			<string>%d Farms</string>
+		</dict>
+	</dict>
+
+	<key>x_bales</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@bales@</string>
+		<key>bales</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>one</key>
+			<string>%d Bale</string>
+			<key>other</key>
+			<string>%d Bales</string>
+		</dict>
+	</dict>
+
+	<key>x_friends</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@friends@</string>
+        <key>friends</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>d</string>
+            <key>one</key>
+            <string>%d Friend</string>
+            <key>other</key>
+            <string>%d Friends</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

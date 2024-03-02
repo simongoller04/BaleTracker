@@ -9,6 +9,7 @@
 // MARK: TabBar
 "map" = "Map";
 "farms" = "Farms";
+"farm" = "Farm";
 
 // MARK: Bale Information
 "createdBy" = "Created by:";
@@ -84,5 +85,19 @@
 "collect" = "Collect";
 "deleteBale_title" = "Delete Bale";
 "deleteBale_message" = "Deleting a bale cannot be undone!";
+"owner" = "Owner";
+"you" = "You";
+"description" = "Description";
+
+// MARK: Crop
+"crop_straw" = "Straw";
+"crop_grass" = "Grass";
+"crop_hay" = "Hay";
+
+// MARK: BaleType
+"baleType_round" = "Round";
+"baleType_square" = "Square";
+"baleType_round_wrapped" = "Round (wrapped)";
+"baleType_square_wrapped" = "Square (wrapped)";
 
 

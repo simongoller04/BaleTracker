@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   BaleTracker
 
@@ -8,30 +8,31 @@
 
 // MARK: TabBar
 "map" = "Karte";
-"farms" = "Bauernhöfe";
+"farms" = "Höfe";
+"farm" = "Hof";
 
 // MARK: Bale Information
-"created" = "Erstellt von:";
-"collected" = "Gesammelt von:";
+"createdBy" = "Erstellt von:";
+"collectedBy" = "Gesammelt von:";
 
 // MARK: FarmView
-"searchablePlaceholderFarm" = "Suchen Sie nach einem Bauernhof";
+"searchablePlaceholderFarm" = "Nach einem Hof suchen";
 "member" = "Mitglied";
 "members" = "Mitglieder";
 
 // MARK: CreateNewFarmView
-"namePlaceholder" = "Name des Bauernhofs";
+"namePlaceholder" = "Name des Hofs";
 "description" = "Beschreibung (optional)";
-"newFarm" = "Neuer Bauernhof";
+"newFarm" = "Neuer Hof";
 "create" = "Erstellen";
 "cancel" = "Abbrechen";
-"createFarm" = "Bauernhof erstellen";
+"createFarm" = "Hof erstellen";
 
 // MARK: SelectMembersView
 "search" = "Suchen";
 "selectMembers" = "Mitglieder auswählen";
 
-// MARK: LoginView
+//MARK: LoginView
 "email" = "E-Mail";
 "password" = "Passwort";
 "forgotPassword" = "Passwort vergessen?";
@@ -39,10 +40,62 @@
 "signIn" = "Anmelden";
 "continueWithApple" = "Mit Apple fortfahren";
 "continueWithGoogle" = "Mit Google fortfahren";
-"noAccount" = "Sie haben noch kein Konto?";
+"noAccount" = "Noch kein Konto?";
 "or" = "ODER";
 
 // MARK: SuccessfulRegistrationView
 "successfullyCreated" = "Ihr Konto wurde erfolgreich erstellt!";
 "loginToContinue" = "Bitte melden Sie sich an, um fortzufahren";
 
+// MARK: MapTypeSelectionView
+"sattelite" = "Satellit";
+"driving" = "Fahren";
+"standard" = "Standard";
+
+// MARK: MapView
+"chosseMap" = "Karte auswählen:";
+"addBale" = "Ballen hinzufügen";
+"baleSettings" = "Ballen Einstellungen:";
+
+// MARK: BaleSettingsView
+"crop" = "Frucht";
+"baletype" = "Ballentyp";
+"selectCrop" = "Frucht auswählen";
+"selectBaletype" = "Ballentyp auswählen";
+
+// MARK: BalesNearYouView
+"bale" = "Ballen";
+"collected" = "gesammelt";
+"created" = "erstellt";
+"of" = "von";
+"allBales" = "Alle Ballen:";
+
+// MARK: ProfileView
+"account" = "Konto";
+"friends" = "Freunde";
+"statistics" = "Statistiken";
+"selectFromGallery" = "Bild aus der Galerie auswählen";
+"deletePicture" = "Profilbild löschen";
+
+// MARK: BaleDetailView
+"details" = "Details";
+"type" = "Typ";
+"distance" = "Entfernung";
+"delete" = "Löschen";
+"collect" = "Sammeln";
+"deleteBale_title" = "Ballen löschen";
+"deleteBale_message" = "Das Löschen eines Ballens kann nicht rückgängig gemacht werden!";
+"owner" = "Besitzer";
+"you" = "Du";
+"description" = "Beschreibung";
+
+// MARK: Crop 
+"crop_straw" = "Stroh";
+"crop_grass" = "Gras";
+"crop_hay" = "Heu";
+
+// MARK: BaleType 
+"baleType_round" = "Rundballen";
+"baleType_square" = "Quaderballen";
+"baleType_round_wrapped" = "Rundballen (eingewickelt)";
+"baleType_square_wrapped" = "Quaderballen (eingewickelt)";

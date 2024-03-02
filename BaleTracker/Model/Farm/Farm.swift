@@ -21,14 +21,14 @@ struct Farm: Codable, Identifiable, Hashable {
     let coordinate: Coordinate?
     let createdBy: String
     let creationTime: String
-    let members: [String]?
+    let members: [String]
     
     var imageUrl: URL? {
         let urlString = "http://localhost:8080/api/farm/media/\(id)/pic"
         return URL(string: urlString)
     }
     
-    init(id: String, name: String, description: String?, coordinate: Coordinate?, createdBy: String, creationTime: String, members: [String]?) {
+    init(id: String, name: String, description: String?, coordinate: Coordinate?, createdBy: String, creationTime: String, members: [String]) {
         self.id = id
         self.name = name
         self.description = description

@@ -20,6 +20,11 @@
 "member" = "Mitglied";
 "members" = "Mitglieder";
 
+// MARK: FramDetailView
+"owner" = "Besitzer";
+"you" = "Du";
+"description" = "Beschreibung";
+
 // MARK: CreateNewFarmView
 "namePlaceholder" = "Name des Hofs";
 "description" = "Beschreibung (optional)";
@@ -27,6 +32,7 @@
 "create" = "Erstellen";
 "cancel" = "Abbrechen";
 "createFarm" = "Hof erstellen";
+"addLocation" = "Standort hinzufügen";
 
 // MARK: SelectMembersView
 "search" = "Suchen";
@@ -85,9 +91,6 @@
 "collect" = "Sammeln";
 "deleteBale_title" = "Ballen löschen";
 "deleteBale_message" = "Das Löschen eines Ballens kann nicht rückgängig gemacht werden!";
-"owner" = "Besitzer";
-"you" = "Du";
-"description" = "Beschreibung";
 
 // MARK: Crop 
 "crop_straw" = "Stroh";

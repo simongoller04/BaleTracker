@@ -25,8 +25,10 @@ extension PublicUserApi: BaseTargetType {
     
     var method: Moya.Method {
         switch self {
-        case .getUser, .getUsers:
+        case .getUser:
             return .get
+        case .getUsers:
+            return .post
         }
     }
     

@@ -20,6 +20,11 @@
 "member" = "Member";
 "members" = "Members";
 
+// MARK: FramDetailView
+"owner" = "Owner";
+"you" = "You";
+"description" = "Description";
+
 // MARK: CreateNewFarmView
 "namePlaceholder" = "Name of the farm";
 "description" = "Description (optional)";
@@ -27,6 +32,7 @@
 "create" = "Create";
 "cancel" = "Cancel";
 "createFarm" = "Create Farm";
+"addLocation" = "Add location";
 
 // MARK: SelectMembersView
 "search" = "Search";
@@ -85,9 +91,6 @@
 "collect" = "Collect";
 "deleteBale_title" = "Delete Bale";
 "deleteBale_message" = "Deleting a bale cannot be undone!";
-"owner" = "Owner";
-"you" = "You";
-"description" = "Description";
 
 // MARK: Crop
 "crop_straw" = "Straw";

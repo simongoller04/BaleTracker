@@ -10,6 +10,7 @@ import Combine
 
 protocol PublicUserRepository: Repository {
     func getUser(id: String) async throws -> User
+    func getUsers(ids: [String]) async throws -> [User]
 }
 
 final class PublicUserRepositoryImpl: PublicUserRepository {
@@ -22,6 +23,14 @@ final class PublicUserRepositoryImpl: PublicUserRepository {
     func getUser(id: String) async throws -> User {
         return try await withCheckedThrowingContinuation { continuation in
             let _ = moya.requestWithResult(.getUser(id: id)) { (result: Result<User, Error>) in
+                continuation.resume(with: result)
+            }
+        }
+    }
+    
+    func getUsers(ids: [String]) async throws -> [User] {
+        return try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.requestWithResult(.getUsers(ids: ids)) { (result: Result<[User], Error>) in
                 continuation.resume(with: result)
             }
         }

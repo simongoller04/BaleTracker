@@ -39,7 +39,11 @@ struct FarmView: View {
         if let farms = viewModel.filteredFarms {
             List {
                 ForEach(farms, id: \.id) { farm in
-                    listItem(farm: farm)
+                    NavigationLink {
+                        FarmDetailView(viewModel: .init(farm: farm))
+                    } label: {
+                        listItem(farm: farm)
+                    }
                 }
             }
         }
@@ -63,16 +67,8 @@ struct FarmView: View {
             VStack(alignment: .leading) {
                 Text(farm.name)
                     .bold()
-                if let count = farm.members?.count {
-                    if count > 1 {
-                        Text("\(count) \(R.string.localizable.members())")
-                            .foregroundStyle(.secondary)
-                    } else {
-                        Text("\(count) \(R.string.localizable.member())")
-                            .foregroundStyle(.secondary)
-
-                    }
-                }
+                Text("\(R.string.pluralLocalizable.x_members(members: farm.members.count))")
+                        .foregroundStyle(.secondary)
             }
         }
     }

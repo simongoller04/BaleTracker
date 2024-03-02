@@ -39,9 +39,6 @@ struct CreateNewFarmView: View {
                     
                     addHomeAddress
                         .listRowInsets(EdgeInsets())
-                    
-                    homeCoordinates
-
                 }
                 .fullHeight()
                 
@@ -75,62 +72,22 @@ struct CreateNewFarmView: View {
         }
     }
     
-    private var selectImageButton: some View {
-        Button {
-            showImagePicker = true
-        } label: {
-            Image(systemName: "camera")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 20)
-                .padding(Spacing.spacingM)
-                .background(Color.gray.opacity(0.2))
-                .clipShape(Circle())
-        }
-    }
-    
     private var addHomeAddress: some View {
         Button {
             showLocationSelector = true
         } label: {
             if let region = viewModel.region {
-                VStack {
-                    Map(position: .constant(.region(region))) {
-                        Annotation("Home", coordinate: region.center) {
-                            Image(systemName: "house.circle.fill")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 50, height: 50)
-                        }
+                LocationCell(region: region) {
+                    Button(role: .destructive) {
+                        viewModel.region = nil
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .imageScale(.medium)
                     }
-                    .allowsHitTesting(false)
-                    .frame(width: .infinity, height: 200)
                 }
             } else {
-                Label("Add home address", systemImage: "mappin.and.ellipse")
+                Label(R.string.localizable.addLocation(), systemImage: "mappin.and.ellipse")
                     .fullWidth(.center)
-            }
-        }
-    }
-    
-    @ViewBuilder
-    private var homeCoordinates: some View {
-        if let region = viewModel.region {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Coordinates".uppercased())
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                    Text(region.center.toString())
-                }
-                .fullWidth(.leading)
-                
-                Button(role: .destructive) {
-                    viewModel.region = nil
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .imageScale(.medium)
-                }
             }
         }
     }

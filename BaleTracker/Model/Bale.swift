@@ -44,11 +44,11 @@ enum Crop: String, Codable, Hashable, CaseIterable, Identifiable {
     var name: String {
         switch self {
         case .straw:
-            return "Straw"
+            return R.string.localizable.crop_straw()
         case .grass:
-            return "Grass"
+            return R.string.localizable.crop_grass()
         case .hay:
-            return "Hay"
+            return R.string.localizable.crop_hay()
         }
     }
 }
@@ -63,13 +63,13 @@ enum BaleType: String, Codable, Hashable, CaseIterable, Identifiable {
     var name: String {
         switch self {
         case .round:
-            return "Round"
+            return R.string.localizable.baleType_round()
         case .square:
-            return "Square"
+            return R.string.localizable.baleType_square()
         case .round_wrapped:
-            return "Round Wrapped"
+            return R.string.localizable.baleType_round_wrapped()
         case .square_wrapped:
-            return "Square Wrapped"
+            return R.string.localizable.baleType_square_wrapped()
         }
     }
 }

@@ -16,6 +16,8 @@ enum FarmApi {
     // update the current profile picture of the farm
     case updateFarmPicture(id: String, image: Data)
     case deleteFarmPicture(id: String)
+    // update values of the farm
+    case updateFarm(id: String, farm: FarmUpdate)
 }
 
 extension FarmApi: BaseTargetType {
@@ -27,12 +29,14 @@ extension FarmApi: BaseTargetType {
             return "/api/farm"
         case .updateFarmPicture(id: let id, image: _), .deleteFarmPicture(id: let id):
             return "/api/farm/media/\(id)/pic"
+        case .updateFarm(id: let id, farm: _):
+            return "/api/farm/\(id)/update"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .createFarm, .updateFarmPicture:
+        case .createFarm, .updateFarmPicture, .updateFarm:
             return .post
         case .getFarms:
             return .get
@@ -50,6 +54,8 @@ extension FarmApi: BaseTargetType {
         case let .updateFarmPicture(id: _, image: image):
             let formData = MultipartFormData(provider: .data(image), name: "image", fileName: "image", mimeType: "image/jpeg")
             return .uploadMultipart([formData])
+        case .updateFarm(id: _, farm: let farm):
+            return .requestJSONEncodable(farm)
         }
     }
     

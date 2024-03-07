@@ -11,6 +11,7 @@ import Moya
 
 protocol FarmRepository: Repository {
     func createFarm(farm: FarmCreate) async throws -> Farm
+    func updateFarm(id: String, farm: FarmUpdate) async throws -> Farm
     func getFarms() async throws -> [Farm]?
     func updateFarmPicture(id: String, imageData: Data, completionClosure: @escaping Completion)
     func deleteFarmPicture(id: String) async throws
@@ -42,6 +43,15 @@ final class FarmRepositoryImpl: FarmRepository, ObservableObject {
     func createFarm(farm: FarmCreate) async throws -> Farm {
         return try await withCheckedThrowingContinuation { continuation in
             let _ = moya.requestWithResult(.createFarm(farm: farm)) { (result: Result<Farm, Error>) in
+                continuation.resume(with: result)
+                self.fetchFarms()
+            }
+        }
+    }
+    
+    func updateFarm(id: String, farm: FarmUpdate) async throws -> Farm {
+        return try await withCheckedThrowingContinuation { continuation in
+            let _ = moya.requestWithResult(.updateFarm(id: id, farm: farm)) { (result: Result<Farm, Error>) in
                 continuation.resume(with: result)
                 self.fetchFarms()
             }

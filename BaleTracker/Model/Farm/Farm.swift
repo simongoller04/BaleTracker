@@ -14,6 +14,13 @@ struct FarmCreate: Codable {
     let members: [String]?
 }
 
+struct FarmUpdate: Codable {
+    let name: String
+    let description: String?
+    let coordinate: Coordinate?
+    let members: [String]
+}
+
 struct Farm: Codable, Identifiable, Hashable {
     let id: String
     let name: String

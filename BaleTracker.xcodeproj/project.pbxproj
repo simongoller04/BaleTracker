@@ -49,6 +49,7 @@
 		EC57C5372AFC20AC004BF48B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5362AFC20AC004BF48B /* UserRepository.swift */; };
 		EC57C5392AFC247C004BF48B /* SelectMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC57C5382AFC247C004BF48B /* SelectMembersViewModel.swift */; };
 		EC6748BC2B3F66BE006EAD1F /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6748BB2B3F66BE006EAD1F /* RegistrationState.swift */; };
+		EC74042A2B9A479900C3CB40 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7404292B9A479900C3CB40 /* Color+Extension.swift */; };
 		EC7EC8822B3207D600569238 /* SuccessfulRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EC8812B3207D600569238 /* SuccessfulRegistrationView.swift */; };
 		EC7EF1082B33584F00F154A5 /* RegistrationFLowNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EF1072B33584F00F154A5 /* RegistrationFLowNavigationItem.swift */; };
 		EC80C28F2B64B45A005CA6C2 /* MediaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80C28E2B64B45A005CA6C2 /* MediaRepository.swift */; };
@@ -167,6 +168,7 @@
 		EC57C5362AFC20AC004BF48B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		EC57C5382AFC247C004BF48B /* SelectMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMembersViewModel.swift; sourceTree = "<group>"; };
 		EC6748BB2B3F66BE006EAD1F /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
+		EC7404292B9A479900C3CB40 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		EC7EC8812B3207D600569238 /* SuccessfulRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulRegistrationView.swift; sourceTree = "<group>"; };
 		EC7EF1072B33584F00F154A5 /* RegistrationFLowNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFLowNavigationItem.swift; sourceTree = "<group>"; };
 		EC80C28E2B64B45A005CA6C2 /* MediaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRepository.swift; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 		ECAAFEDF2A5EEF8300EE8CD3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EC7404292B9A479900C3CB40 /* Color+Extension.swift */,
 				ECAAFEE02A5EEFAC00EE8CD3 /* View+Extension.swift */,
 				ECAAFEE22A5EF00200EE8CD3 /* Spacer+Extension.swift */,
 				ECAAFEE72A5EF22C00EE8CD3 /* String+Extension.swift */,
@@ -790,6 +793,7 @@
 			files = (
 				ECD9CD862B3CC77C00B5B04E /* BaleDetailView.swift in Sources */,
 				EC19B6EB2B547F01001A86B4 /* AccountSettingsView.swift in Sources */,
+				EC74042A2B9A479900C3CB40 /* Color+Extension.swift in Sources */,
 				EC9FB29E2B7A7071009CC56F /* Coordinate.swift in Sources */,
 				EC98E0882B2C8FED00E555BF /* RegistrationViewModel.swift in Sources */,
 				ECF266802A560DB000CE33AD /* BaleTracker.xcdatamodeld in Sources */,

@@ -24,6 +24,8 @@
 "owner" = "Owner";
 "you" = "You";
 "description" = "Description";
+"done" = "Done";
+"edit" = "Edit";
 
 // MARK: CreateNewFarmView
 "namePlaceholder" = "Name of the farm";
@@ -39,6 +41,7 @@
 "selectMembers" = "Select Members";
 
 //MARK: LoginView
+"username" = "Username";
 "email" = "Email";
 "password" = "Password";
 "forgotPassword" = "Forgot Password?";
@@ -102,5 +105,8 @@
 "baleType_square" = "Square";
 "baleType_round_wrapped" = "Round (wrapped)";
 "baleType_square_wrapped" = "Square (wrapped)";
+
+// MARK: LocationCell
+"coordinates" = "Coordinates";
 
 

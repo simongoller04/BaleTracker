@@ -31,11 +31,11 @@ struct CreateNewFarmView: View {
                             .multilineTextAlignment(.leading)
                     }
                     
-                    Section("\(R.string.localizable.members()): \(viewModel.members?.count ?? 0)") {
+//                    Section("\(R.string.localizable.members()): \(viewModel.members?.count ?? 0)") {
 //                        addMembersSection
-                        // TODO: fetch all friends
-                    }
-                    .listRowInsets(EdgeInsets())
+//                         // TODO: fetch all friends
+//                    }
+//                    .listRowInsets(EdgeInsets())
                     
                     addHomeAddress
                         .listRowInsets(EdgeInsets())
@@ -48,6 +48,7 @@ struct CreateNewFarmView: View {
                 }
                 .padding([.horizontal], Spacing.spacingM)
             }
+            .background(Color.listBackground)
             .navigationTitle(R.string.localizable.newFarm())
             .navigationBarTitleDisplayMode(.inline)
             .interactiveDismissDisabled()
@@ -62,7 +63,7 @@ struct CreateNewFarmView: View {
                 }
             }
             .fullScreenCover(isPresented: $showLocationSelector) {
-                SelectFarmLocationView()
+                SelectFarmLocationView<CreateNewFarmViewModel>()
                     .environmentObject(viewModel)
             }
             .sheet(isPresented: $showImagePicker) {

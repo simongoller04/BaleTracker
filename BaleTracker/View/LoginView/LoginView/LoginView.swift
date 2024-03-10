@@ -18,7 +18,7 @@ struct LoginView: View {
                 
                 VStack(spacing: 0) {
                     TextFieldWithError(currentState: $viewModel.loginState, errorStates: [.invalidUsername]) {
-                        CustomTextField(text: $viewModel.username, placeholder: "Username")
+                        CustomTextField(text: $viewModel.username, placeholder: R.string.localizable.username())
                     }
                     
                     VStack(spacing: Spacing.spacingXS) {

@@ -9,13 +9,13 @@ import Foundation
 import MapKit
 
 extension Farm {
-    static func fixture(_with longDescription: Bool = false) -> Farm {
+    static func fixture(_with longDescription: Bool = false, hasCoordinate: Bool = true) -> Farm {
         if longDescription {
             return Farm(id: "id", name: "Farm 1",
                         description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibu",
-                        coordinate: Coordinate(latitude: 0.0, longitude: 0.0), createdBy: "owner-id", creationTime: "2023-11-03T14:54:07.427Z", members: ["id-1", "id-2", "id-3"])
+                        coordinate: hasCoordinate ? Coordinate(latitude: 0.0, longitude: 0.0) : nil, createdBy: "owner-id", creationTime: "2023-11-03T14:54:07.427Z", members: ["id-1", "id-2", "id-3"], imageKey: nil)
         } else {
-            return Farm(id: "id", name: "Farm 1", description: "description", coordinate: Coordinate(latitude: 0.0, longitude: 0.0), createdBy: "owner-id", creationTime: "2023-11-03T14:54:07.427Z", members: ["id-1", "id-2", "id-3"])
+            return Farm(id: "id", name: "Farm 1", description: "description", coordinate: hasCoordinate ? Coordinate(latitude: 0.0, longitude: 0.0) : nil, createdBy: "owner-id", creationTime: "2023-11-03T14:54:07.427Z", members: ["id-1", "id-2", "id-3"], imageKey: nil)
         }
     }
 }

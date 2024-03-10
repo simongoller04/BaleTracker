@@ -10,33 +10,55 @@ import SwiftUI
 struct CustomTextField: View {
     @Binding var text: String
     var placeholder: String
+    var font: Font = .body
+    var isMultilineText: Bool = false
+    var backgroundColor: Color = Color(uiColor: .systemBackground)
+    var textalignment: TextAlignment = .leading
     
     @FocusState private var isFocused: Bool
     
     var body: some View {
         ZStack {
-            TextField(placeholder, text: $text)
-                .focused($isFocused)
-                .padding(20)
+            if isMultilineText {
+                ZStack(alignment: .topLeading) {
+                    TextEditor(text: $text)
+                        .font(font)
+                        .multilineTextAlignment(textalignment)
+                        .focused($isFocused)
+                        .padding(16)
+                    if text.isEmpty {
+                        Text(placeholder)
+                            .font(font)
+                            .foregroundStyle(Color(uiColor: .darkGray))
+                            .padding(24)
+                    }
+                }
+            } else {
+                TextField(placeholder, text: $text)
+                    .font(font)
+                    .multilineTextAlignment(textalignment)
+                    .focused($isFocused)
+                    .padding(20)
+            }
             
             border
         }
-        .frame(height: 65)
+        .frame(height: isMultilineText ? 165 : 65)
     }
     
     private var border: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 14)
                 .stroke(isFocused ? Color.accentColor : Color.secondary, lineWidth: 1)
-                .frame(height: 50)
+                .frame(height: isMultilineText ? 150 : 50)
             
             if isFocused {
                 Text(placeholder)
                     .foregroundStyle(Color.accentColor)
                     .padding(.horizontal, Spacing.spacingXS)
-                    .background(Color(uiColor: UIColor.systemBackground))
+                    .background(backgroundColor)
                     .padding(.leading, Spacing.spacingM)
-                    .padding(.bottom, 50)
+                    .padding(.bottom, isMultilineText ? 150 : 50)
                     .fullWidth(.leading)
             }
         }
@@ -47,6 +69,8 @@ struct CustomTextField: View {
     VStack(spacing: 0) {
         CustomTextField(text: .constant(""), placeholder: "Username")
         CustomTextField(text: .constant(""), placeholder: "Email")
+        CustomTextField(text: .constant(""), placeholder: "Email", font: .largeTitle, textalignment: .center)
+        CustomTextField(text: .constant(""), placeholder: "Email", isMultilineText: true)
     }
     .darkPreview()
 }

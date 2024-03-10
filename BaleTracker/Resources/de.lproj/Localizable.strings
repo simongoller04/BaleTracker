@@ -24,6 +24,8 @@
 "owner" = "Besitzer";
 "you" = "Du";
 "description" = "Beschreibung";
+"done" = "Fertig";
+"edit" = "Bearbeiten";
 
 // MARK: CreateNewFarmView
 "namePlaceholder" = "Name des Hofs";
@@ -39,6 +41,7 @@
 "selectMembers" = "Mitglieder auswählen";
 
 //MARK: LoginView
+"username" = "Benutzername";
 "email" = "E-Mail";
 "password" = "Passwort";
 "forgotPassword" = "Passwort vergessen?";
@@ -102,3 +105,6 @@
 "baleType_square" = "Quaderballen";
 "baleType_round_wrapped" = "Rundballen (eingewickelt)";
 "baleType_square_wrapped" = "Quaderballen (eingewickelt)";
+
+// MARK: LocationCell
+"coordinates" = "Koordinaten";

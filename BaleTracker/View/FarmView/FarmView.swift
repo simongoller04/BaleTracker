@@ -49,7 +49,9 @@ struct FarmView: View {
         }
     }
     
+    @ViewBuilder
     private func listItem(farm: Farm) -> some View {
+//        var id = UUID()
         HStack(spacing: 16) {
             KFImage(farm.imageUrl)
                 .requestModifier(KFImage.authorizationModifier)
@@ -60,6 +62,7 @@ struct FarmView: View {
                         .font(.system(size: 36))
                 }
                 .resizable()
+//                .id(id)
                 .scaledToFill()
                 .frame(width: 36, height: 36)
                 .clipShape(Circle())

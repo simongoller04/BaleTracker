@@ -30,7 +30,7 @@ struct LocationCell<Content: View>: View {
     
     private var map: some View {
         Map(position: .constant(.region(region))) {
-            Annotation("Home", coordinate: region.center) {
+            Annotation(R.string.localizable.farm(), coordinate: region.center) {
                 Image(systemName: "house.circle.fill")
                     .resizable()
                     .scaledToFill()
@@ -45,7 +45,7 @@ struct LocationCell<Content: View>: View {
     private var coordinates: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Coordinates".uppercased())
+                Text(R.string.localizable.coordinates().uppercased())
                     .font(.footnote)
                     .foregroundStyle(Color(uiColor: .secondaryLabel))
                 Text(region.center.toString())

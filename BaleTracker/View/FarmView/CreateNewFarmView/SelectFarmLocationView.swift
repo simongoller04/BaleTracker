@@ -8,8 +8,12 @@
 import SwiftUI
 import MapKit
 
-struct SelectFarmLocationView: View {
-    @EnvironmentObject var viewModel: CreateNewFarmViewModel
+@MainActor protocol SelectFarmLocationViewModel: ObservableObject {
+    var region: MKCoordinateRegion? { get set }
+}
+
+struct SelectFarmLocationView<VM: SelectFarmLocationViewModel>: View {
+    @EnvironmentObject var viewModel: VM
     @Environment(\.dismiss) private var dismiss
         
     private var span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
@@ -54,13 +58,13 @@ struct SelectFarmLocationView: View {
 }
 
 #Preview("Dark") {
-    SelectFarmLocationView()
+    SelectFarmLocationView<CreateNewFarmViewModel>()
         .environmentObject(CreateNewFarmViewModel())
         .preferredColorScheme(.dark)
 }
 
 #Preview("Light") {
-    SelectFarmLocationView()
+    SelectFarmLocationView<CreateNewFarmViewModel>()
         .environmentObject(CreateNewFarmViewModel())
         .preferredColorScheme(.light)
 }

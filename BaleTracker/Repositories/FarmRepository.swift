@@ -74,6 +74,7 @@ final class FarmRepositoryImpl: FarmRepository, ObservableObject {
         let _ = try await withCheckedThrowingContinuation { continuation in
             let _ = moya.request(.deleteFarmPicture(id: id)) { result in
                 continuation.resume(with: result)
+                self.fetchFarms()
             }
         }
     }

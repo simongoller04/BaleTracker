@@ -11,7 +11,7 @@ import Combine
 import _MapKit_SwiftUI
 import CoreLocation
 
-@MainActor class CreateNewFarmViewModel: ObservableObject {
+class CreateNewFarmViewModel: SelectFarmLocationViewModel {
     @Published var name: String = ""
     @Published var description: String = ""
     @Published var selectedImage: UIImage?

@@ -84,26 +84,32 @@ struct ProfileView: View {
                     showConfirmationDialog = false
                 }
             }
-            .onAppear {
-                viewModel.getCreatedBales()
-                viewModel.getCollectedBales()
-            }
         }
     }
     
     @ViewBuilder
     private var profilePicture: some View {
-        if let image = viewModel.profilePicture {
+        if let image = viewModel.selectedImage {
             Image(uiImage: image)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 140, height: 140)
                 .clipShape(Circle())
         } else {
-            Image(systemName: "person.circle.fill")
-                .symbolRenderingMode(.hierarchical)
-                .foregroundStyle(.gray)
-                .font(.system(size: 140))
+            KFImage(viewModel.user?.imageUrl)
+                .requestModifier(KFImage.authorizationModifier)
+                .placeholder {
+                    Image(systemName: "person.2.circle.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(.gray)
+                        .frame(width: 140, height: 140)
+                }
+                .resizable()
+                .scaledToFill()
+                .frame(width: 140, height: 140)
+                .clipShape(Circle())
         }
     }
     

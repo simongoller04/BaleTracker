@@ -22,7 +22,7 @@ extension Farm {
 
 extension User {
     static func fixture() -> User {
-        return User(id: "id", email: "test@gmail.com", username: "simon", creationTime: "2023-11-03T14:54:07.427Z", lastEditingTime: nil, lastLoginTime: nil)
+        return User(id: "id", email: "test@gmail.com", username: "simon", creationTime: "2023-11-03T14:54:07.427Z", lastEditingTime: nil, lastLoginTime: nil, imageKey: nil)
     }
     
     static func fixture(amount: Int) -> [User] {

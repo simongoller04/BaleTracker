@@ -14,9 +14,11 @@ struct User: Codable, Identifiable, Hashable {
     let creationTime: String
     let lastEditingTime: String?
     let lastLoginTime: String?
+    let imageKey: String?
     
     var imageUrl: URL? {
-        let urlString = "http://localhost:8080/api/user/media/\(id)/pic"
+        guard let imageKey = imageKey else { return nil }
+        let urlString = "http://localhost:8080/api/user/media/\(imageKey)/pic"
         return URL(string: urlString)
     }
 }

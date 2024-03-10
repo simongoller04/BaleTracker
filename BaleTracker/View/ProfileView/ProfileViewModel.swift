@@ -20,8 +20,7 @@ class ProfileViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     @Published var user: User?
-    @Published var selectedImage: UIImage? = nil
-    @Published var profilePicture: UIImage? = nil
+    @Published var selectedImage: UIImage?
     @Published var uploadProgress = 0.0
     @Published var isUploading = false
     
@@ -31,6 +30,8 @@ class ProfileViewModel: ObservableObject {
     init() {
         observeUser()
         observeSelectedImage()
+        getCreatedBales()
+        getCollectedBales()
     }
     
     private func observeUser() {
@@ -38,7 +39,6 @@ class ProfileViewModel: ObservableObject {
             .receive(on: DispatchQueue.main, options: .none)
             .sink { [self] user in
                 self.user = user
-                self.getCurrentProfilePicture()
             }
             .store(in: &cancellables)
     }
@@ -50,15 +50,15 @@ class ProfileViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { image in
                 if let image = image {
-                    self.updateProfilePicture(selectedImage: image)
+                    self.updateProfilePicture(image: image)
                 }
             }
             .store(in: &cancellables)
     }
     
-    private func updateProfilePicture(selectedImage: UIImage) {
+    private func updateProfilePicture(image: UIImage) {
         isUploading = true
-        guard let image = selectedImage.jpegData(compressionQuality: 0.5) else { return }
+        guard let image = image.jpegData(compressionQuality: 0.5) else { return }
         userRepository.updateProfilePicture(imageData: image) { [self] result in
             switch result {
             case .success:
@@ -72,18 +72,12 @@ class ProfileViewModel: ObservableObject {
             }
         }
     }
-    
-    private func getCurrentProfilePicture() {
-        mediaRepository.getImageWithUrl(url: user?.imageUrl) { image in
-            self.profilePicture = image
-        }
-    }
-    
+
     func deleteProfilePicture() {
-        _Concurrency.Task {
+        Task {
             do {
                 try await userRepository.deleteProfilePicture()
-                self.profilePicture = nil
+                selectedImage = nil
             } catch {
                 error.localizedDescription.log(.error)
             }

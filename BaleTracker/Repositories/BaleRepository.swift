@@ -104,6 +104,7 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
         let _ = try await withCheckedThrowingContinuation { continuation in
             let _ = moya.request(.createBale(bale: bale)) { result in
                 continuation.resume(with: result)
+                "Bale created: \n\(bale.toString())".log(.info)
                 self.queryBales()
             }
         }
@@ -113,6 +114,7 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
         let _ = try await withCheckedThrowingContinuation { continuation in
             let _ = moya.request(.collectBale(id: id)) { result in
                 continuation.resume(with: result)
+                "Bale with id: \(id) collected".log(.info)
                 self.queryBales()
             }
         }
@@ -122,6 +124,7 @@ final class BaleRepositoryImpl: BaleRepository, ObservableObject {
         let _ = try await withCheckedThrowingContinuation { continuation in
             let _ = moya.request(.deleteBale(id: id)) { result in
                 continuation.resume(with: result)
+                "Bale with id: \(id) deleted".log(.info)
                 self.queryBales()
             }
         }

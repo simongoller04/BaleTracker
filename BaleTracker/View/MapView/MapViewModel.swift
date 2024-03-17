@@ -9,8 +9,7 @@ import Foundation
 import _MapKit_SwiftUI
 import Combine
 
-@MainActor
-class MapViewModel: ObservableObject {
+@MainActor class MapViewModel: ObservableObject {
     private var locationPermission = LocationPermission()
     private var baleRepository = BaleRepositoryImpl.shared
     private var cancellables = Set<AnyCancellable>()
@@ -18,6 +17,8 @@ class MapViewModel: ObservableObject {
     @Published var mapStyle: MapStyle = .standard
     @Published var selectedCrop: Crop = .straw
     @Published var selectedBaleType: BaleType = .round
+    @Published var selectedFarm: Farm?
+    
     @Published var bales: [Bale]?
     
     init() {
@@ -39,7 +40,8 @@ class MapViewModel: ObservableObject {
                 guard let coordinates = locationPermission.coordinates else { return }
                 try await baleRepository.createBale(bale: BaleCreate(crop: selectedCrop,
                                                                      baleType: selectedBaleType,
-                                                                     coordinate: Coordinate(latitude: coordinates.latitude.magnitude, longitude: coordinates.longitude.magnitude)))
+                                                                     coordinate: Coordinate(latitude: coordinates.latitude.magnitude, longitude: coordinates.longitude.magnitude), 
+                                                                     farm: selectedFarm?.id))
             } catch {
                 error.localizedDescription.log(.error)
             }

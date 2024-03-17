@@ -25,7 +25,6 @@ final class UserRepositoryImpl: UserRepository, ObservableObject {
     private let authRepo = AuthenticationRepositoryImpl.shared
 
     @Published private(set) var user: User?
-    @Published var users: [User]?
 
     private init() {
         observeIsLoggedIn()
@@ -93,9 +92,4 @@ final class UserRepositoryImpl: UserRepository, ObservableObject {
             }
         }
     }
-}
-
-enum UserDeletionResponse: String, Codable {
-    case deleted = "DELETED"
-    case notDeleted = "NOT_DELETED"
 }

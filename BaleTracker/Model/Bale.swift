@@ -14,6 +14,15 @@ struct BaleCreate: Codable {
     var baleType: BaleType
     var coordinate: Coordinate
     var farm: String?
+    
+    func toString() -> String {
+        return """
+            Crop: \(crop)
+            BaleType: \(baleType)
+            Coordinate: \(coordinate)
+            Farm: \(farm ?? "nil")
+        """
+    }
 }
 
 struct Bale: Codable, Hashable, Identifiable {

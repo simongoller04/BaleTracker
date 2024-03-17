@@ -65,12 +65,16 @@
 "chosseMap" = "Choose Map:";
 "addBale" = "Add Bale";
 "baleSettings" = "Bale Settings:";
+"bales" = "Bales";
+"details" = "Details";
 
 // MARK: BaleSettingsView
 "crop" = "Crop";
 "baletype" = "Baletype";
 "selectCrop" = "Select Crop";
 "selectBaletype" = "Select Baletype";
+"selectFarm" = "Select Farm";
+"noFarmSelected" = "No farm selected";
 
 // MARK: BalesNearYouView
 "bale" = "Bale";

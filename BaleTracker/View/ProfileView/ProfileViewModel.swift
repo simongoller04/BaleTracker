@@ -14,7 +14,6 @@ import Kingfisher
 class ProfileViewModel: ObservableObject {
     private let logoutUseCase = LogoutUseCase()
     private let userRepository = UserRepositoryImpl.shared
-    private let mediaRepository = MediaRepository()
     private let baleRepository = BaleRepositoryImpl.shared
     
     private var cancellables = Set<AnyCancellable>()
@@ -63,7 +62,6 @@ class ProfileViewModel: ObservableObject {
             switch result {
             case .success:
                 userRepository.fetchUser()
-                self.selectedImage = nil
                 isUploading = false
                 "Image uploaded sucessfully".log(.info)
             case .failure:

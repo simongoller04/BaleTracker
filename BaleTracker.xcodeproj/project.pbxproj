@@ -17,6 +17,7 @@
 		EC1F0D3D2AEBED1200D4DBC1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = EC1F0D3C2AEBED1200D4DBC1 /* Moya */; };
 		EC1F0D412AEBEDA900D4DBC1 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */; };
 		EC1F0D432AEBEE4B00D4DBC1 /* BaleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */; };
+		EC2443ED2BA75A9E00400AF2 /* UserDeletionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2443EC2BA75A9E00400AF2 /* UserDeletionResponse.swift */; };
 		EC26D5F52B93C28600C45524 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC26D5F42B93C28600C45524 /* LocationCell.swift */; };
 		EC2AB1B02B6E6C5F005C8C71 /* BaleQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB1AF2B6E6C5F005C8C71 /* BaleQuery.swift */; };
 		EC2AB1B42B6E6D14005C8C71 /* BaleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2AB1B32B6E6D14005C8C71 /* BaleFilter.swift */; };
@@ -52,7 +53,6 @@
 		EC74042A2B9A479900C3CB40 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7404292B9A479900C3CB40 /* Color+Extension.swift */; };
 		EC7EC8822B3207D600569238 /* SuccessfulRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EC8812B3207D600569238 /* SuccessfulRegistrationView.swift */; };
 		EC7EF1082B33584F00F154A5 /* RegistrationFLowNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7EF1072B33584F00F154A5 /* RegistrationFLowNavigationItem.swift */; };
-		EC80C28F2B64B45A005CA6C2 /* MediaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC80C28E2B64B45A005CA6C2 /* MediaRepository.swift */; };
 		EC84EF442B51E9BB00B97DEB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC84EF432B51E9BB00B97DEB /* Kingfisher */; };
 		EC84EF462B51EAAD00B97DEB /* KFImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84EF452B51EAAD00B97DEB /* KFImage+Extension.swift */; };
 		EC8767292AFF7DCC00A36AF6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8767282AFF7DCC00A36AF6 /* ActionButton.swift */; };
@@ -107,6 +107,7 @@
 		ECF2668A2A560DB000CE33AD /* BaleTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266892A560DB000CE33AD /* BaleTrackerTests.swift */; };
 		ECF266942A560DB000CE33AD /* BaleTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266932A560DB000CE33AD /* BaleTrackerUITests.swift */; };
 		ECF266962A560DB000CE33AD /* BaleTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF266952A560DB000CE33AD /* BaleTrackerUITestsLaunchTests.swift */; };
+		ECFA4A182B9DF5EB0024187A /* BaleSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA4A172B9DF5EB0024187A /* BaleSettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		EC19B6EA2B547F01001A86B4 /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
 		EC1F0D402AEBEDA900D4DBC1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		EC1F0D422AEBEE4B00D4DBC1 /* BaleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleApi.swift; sourceTree = "<group>"; };
+		EC2443EC2BA75A9E00400AF2 /* UserDeletionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeletionResponse.swift; sourceTree = "<group>"; };
 		EC26D5F42B93C28600C45524 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		EC2AB1AF2B6E6C5F005C8C71 /* BaleQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleQuery.swift; sourceTree = "<group>"; };
 		EC2AB1B32B6E6D14005C8C71 /* BaleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleFilter.swift; sourceTree = "<group>"; };
@@ -171,7 +173,6 @@
 		EC7404292B9A479900C3CB40 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		EC7EC8812B3207D600569238 /* SuccessfulRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulRegistrationView.swift; sourceTree = "<group>"; };
 		EC7EF1072B33584F00F154A5 /* RegistrationFLowNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFLowNavigationItem.swift; sourceTree = "<group>"; };
-		EC80C28E2B64B45A005CA6C2 /* MediaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRepository.swift; sourceTree = "<group>"; };
 		EC84EF452B51EAAD00B97DEB /* KFImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KFImage+Extension.swift"; sourceTree = "<group>"; };
 		EC8767282AFF7DCC00A36AF6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		EC91186D2B6ECA0800709FE9 /* ForEachWithIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachWithIndex.swift; sourceTree = "<group>"; };
@@ -229,6 +230,7 @@
 		ECF2668F2A560DB000CE33AD /* BaleTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaleTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF266932A560DB000CE33AD /* BaleTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleTrackerUITests.swift; sourceTree = "<group>"; };
 		ECF266952A560DB000CE33AD /* BaleTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECFA4A172B9DF5EB0024187A /* BaleSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaleSettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -368,6 +370,7 @@
 			children = (
 				EC320B532B34BC0600F50B25 /* MapTypeSelectionView.swift */,
 				EC4072762B3A0B2A00B31F56 /* BaleSettingsView.swift */,
+				ECFA4A172B9DF5EB0024187A /* BaleSettingsViewModel.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				EC57C5342AFC1E69004BF48B /* User.swift */,
 				EC98E08D2B2CA21700E555BF /* UserRegisterDTO.swift */,
 				ECA982472B401932002E7ED7 /* UserLoginDTO.swift */,
+				EC2443EC2BA75A9E00400AF2 /* UserDeletionResponse.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -504,7 +508,6 @@
 				ECA274BD2AF825EC00C0B3CC /* FarmRepository.swift */,
 				EC57C5362AFC20AC004BF48B /* UserRepository.swift */,
 				ECC7EEE12B2DF35A00AADE70 /* AuthenticationRepository.swift */,
-				EC80C28E2B64B45A005CA6C2 /* MediaRepository.swift */,
 				ECBC76BD2B79389500FDD3D1 /* PublicUserRepository.swift */,
 				ECC7EEE42B2E0AC700AADE70 /* Repository.swift */,
 			);
@@ -826,7 +829,6 @@
 				EC134AA62B3C6BE100CE43E6 /* BalesNearYouView.swift in Sources */,
 				EC7EC8822B3207D600569238 /* SuccessfulRegistrationView.swift in Sources */,
 				EC98E08E2B2CA21700E555BF /* UserRegisterDTO.swift in Sources */,
-				EC80C28F2B64B45A005CA6C2 /* MediaRepository.swift in Sources */,
 				ECBC76BE2B79389500FDD3D1 /* PublicUserRepository.swift in Sources */,
 				ECAAFEE12A5EEFAC00EE8CD3 /* View+Extension.swift in Sources */,
 				EC4613DE2AFE8773006D0341 /* Image+Extension.swift in Sources */,
@@ -841,6 +843,7 @@
 				ECA304E32B2A4C6700AB8D97 /* CustomSecureTextField.swift in Sources */,
 				EC98E0822B2C8F8600E555BF /* LogoHeader.swift in Sources */,
 				ECA417DB2B89C49E00A0C459 /* CLLocationCoordinate2D+Extension.swift in Sources */,
+				EC2443ED2BA75A9E00400AF2 /* UserDeletionResponse.swift in Sources */,
 				EC3DF00B2AF7C878006B29E0 /* FarmViewModel.swift in Sources */,
 				ECA9824B2B403063002E7ED7 /* Keychain.swift in Sources */,
 				ECA274B92AF8204200C0B3CC /* FarmApi.swift in Sources */,
@@ -848,6 +851,7 @@
 				EC98E0852B2C8FD600E555BF /* RegistrationView.swift in Sources */,
 				ECBD22122B4070480051DFDC /* ProfileView.swift in Sources */,
 				ECC7EEE52B2E0AC700AADE70 /* Repository.swift in Sources */,
+				ECFA4A182B9DF5EB0024187A /* BaleSettingsViewModel.swift in Sources */,
 				ECAC8D412AED6654002B4131 /* CustomMoyaProvider.swift in Sources */,
 				ECA982482B401932002E7ED7 /* UserLoginDTO.swift in Sources */,
 				ECB0F12C2B66D77A0045AA48 /* ErrorResponse.swift in Sources */,

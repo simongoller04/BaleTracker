@@ -65,12 +65,16 @@
 "chosseMap" = "Karte auswählen:";
 "addBale" = "Ballen hinzufügen";
 "baleSettings" = "Ballen Einstellungen:";
+"bales" = "Ballen";
+"details" = "Details";
 
 // MARK: BaleSettingsView
 "crop" = "Frucht";
 "baletype" = "Ballentyp";
 "selectCrop" = "Frucht auswählen";
 "selectBaletype" = "Ballentyp auswählen";
+"selectFarm" = "Hof auswählen";
+"noFarmSelected" = "Kein Hof ausgewählt";
 
 // MARK: BalesNearYouView
 "bale" = "Ballen";

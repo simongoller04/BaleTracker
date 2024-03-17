@@ -11,7 +11,6 @@ import Combine
 import MapKit
 
 class FarmDetailViewModel: SelectFarmLocationViewModel {
-    private let mediaRepository = MediaRepository()
     private let publicUserRepository = PublicUserRepositoryImpl.shared
     private let userRepository = UserRepositoryImpl.shared
     private let farmRepository = FarmRepositoryImpl.shared

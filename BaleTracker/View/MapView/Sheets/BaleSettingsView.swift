@@ -10,6 +10,9 @@ import SwiftUI
 struct BaleSettingsView: View {
     @Binding var selectedCrop: Crop
     @Binding var selectedBaleType: BaleType
+    @Binding var selectedFarm: Farm?
+    
+    @StateObject private var viewModel = BaleSettingsViewModel()
 
     var body: some View {
         Form {
@@ -19,7 +22,6 @@ struct BaleSettingsView: View {
                         Text(crop.name)
                     }
                 }
-                .pickerStyle(.navigationLink)
             } header: {
                 Text(R.string.localizable.selectCrop())
             }
@@ -30,20 +32,30 @@ struct BaleSettingsView: View {
                         Text(baleType.name)
                     }
                 }
-                .pickerStyle(.navigationLink)
             } header: {
                 Text(R.string.localizable.selectBaletype())
+            }
+            
+            if let farms = viewModel.farms {
+                Section(R.string.localizable.selectFarm()) {
+                    Picker(R.string.localizable.farm(), selection: $selectedFarm) {
+                        Text(R.string.localizable.noFarmSelected()).tag(nil as Farm?)
+                        ForEach(farms, id: \.id) { farm in
+                            Text(farm.name).tag(farm as Farm?)
+                        }
+                    }
+                }
             }
         }
     }
 }
 
 #Preview("Dark") {
-    BaleSettingsView(selectedCrop: .constant(.straw), selectedBaleType: .constant(.round))
+    BaleSettingsView(selectedCrop: .constant(.straw), selectedBaleType: .constant(.round), selectedFarm: .constant(.fixture()))
         .preferredColorScheme(.dark)
 }
 
 #Preview("Light") {
-    BaleSettingsView(selectedCrop: .constant(.straw), selectedBaleType: .constant(.round))
+    BaleSettingsView(selectedCrop: .constant(.straw), selectedBaleType: .constant(.round), selectedFarm: .constant(.fixture()))  
         .preferredColorScheme(.light)
 }

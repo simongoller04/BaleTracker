@@ -45,14 +45,14 @@ struct MapView: View {
                                         Button {
                                             viewModel.collectBale(id: bale.id)
                                         } label: {
-                                            Label("Collect", systemImage: "checkmark.circle")
+                                            Label(R.string.localizable.collect(), systemImage: "checkmark.circle")
                                         }
                                         
                                         Button(role: .destructive) {
                                             selectedBale = bale
                                             showDeletionAlert = true
                                         } label: {
-                                            Label("Delete", systemImage: "trash.circle")
+                                            Label(R.string.localizable.delete(), systemImage: "trash.circle")
                                         }
                                     }
                             }
@@ -134,17 +134,17 @@ struct MapView: View {
                 .closeSheetHeader(title: R.string.localizable.chosseMap())
                 .presentationDetents([.height(sheetHeight + 50)])
         case .baleSettings:
-            BaleSettingsView(selectedCrop: $viewModel.selectedCrop, selectedBaleType: $viewModel.selectedBaleType)
+            BaleSettingsView(selectedCrop: $viewModel.selectedCrop, selectedBaleType: $viewModel.selectedBaleType, selectedFarm: $viewModel.selectedFarm)
                 .closeSheetHeader(title: R.string.localizable.baleSettings())
-                .presentationDetents([.fraction(0.3), .medium])
+                .presentationDetents([.medium, .large])
         case .balesNearYou:
             BalesNearYouView()
-                .closeSheetHeader(title: "Bales")
+                .closeSheetHeader(title: R.string.localizable.bales())
                 .presentationDetents([.fraction(0.3), .medium, .large])
                 .environmentObject(locationPermission)
         case .baleDetails(bale: let bale):
             BaleDetailView(viewModel: BaleDetailViewModel(bale: bale))
-                .closeSheetHeader(title: "Details")
+                .closeSheetHeader(title: R.string.localizable.details())
                 .presentationDetents([.medium, .large])
                 .environmentObject(locationPermission)
         }
